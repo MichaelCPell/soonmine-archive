@@ -1,11 +1,15 @@
 source 'https://rubygems.org'
 
+gem 'coffee-rails', '~> 4.0.0'
+gem 'devise'
+gem 'jquery-rails'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'pg'
 gem 'rails', '4.0.0'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
-gem 'pg'
 gem 'zurb-foundation', '~> 4.0.0'
 
 
