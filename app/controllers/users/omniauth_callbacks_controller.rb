@@ -21,7 +21,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
           if @authentication.user.present?
             flash[:notice] = "We found your account and have logged you in!"
           else
-            @authentication.user_id = User.create_with_omniauth(auth)
+            @authentication.user_id = User.create_with_omniauth(auth).id
             @authentication.save
             flash[:notice] = "We've successfully created your new account!"
           end
