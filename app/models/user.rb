@@ -4,10 +4,18 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
+  has_many :authentications
+
   # Setup accessible (or protected) attributes for your model
 
   def self.create_with_omniauth(auth_hash)
-    binding.pry
+    info = auth_hash[:info]
+
+    create( firstname: info[:first_name], 
+            lastname: info[:lastname],
+            email: info[:email], 
+            image_url: info[:image],
+            password: Devise.friendly_token[0,20])
   end
 
 

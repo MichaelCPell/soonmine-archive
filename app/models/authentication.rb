@@ -1,6 +1,7 @@
 class Authentication < ActiveRecord::Base
 
   validates_presence_of :uid, :user_id, :provider
+  belongs_to :user
 
 
   def self.find_with_omniauth(auth_hash)
