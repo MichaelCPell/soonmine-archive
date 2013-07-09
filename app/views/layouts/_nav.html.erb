@@ -8,9 +8,14 @@
 
     <section class="top-bar-section">
       <ul class="right">
-        <li><%= link_to "Log In", new_user_session_path %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
+        <% if current_user %>
+          <li><%= link_to current_user.fullname, "#" %></li>
+          <li><%= link_to image_tag(current_user.image_url), "#", style: "line-height: 0px;" %></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
+        <% else %>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% end %>
       </ul>
     </section>
   </nav>

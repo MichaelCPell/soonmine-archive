@@ -12,12 +12,14 @@ class User < ActiveRecord::Base
     info = auth_hash[:info]
 
     create( firstname: info[:first_name], 
-            lastname: info[:lastname],
+            lastname: info[:last_name],
             email: info[:email], 
             image_url: info[:image],
             password: Devise.friendly_token[0,20])
   end
 
-
+  def fullname
+    "#{firstname} #{lastname}"
+  end
 
 end
