@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'coffee-rails', '~> 4.0.0'
-gem 'devise'
+gem 'devise', '~> 3.0.0.rc'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'omniauth'
