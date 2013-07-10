@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '~> 3.0.0.rc'
@@ -11,6 +12,7 @@ gem 'omniauth-twitter'
 gem 'pg'
 gem 'pry'
 gem 'rails', '4.0.0'
+
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
