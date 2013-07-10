@@ -1,8 +1,14 @@
-<div class="product-block">
-  <div class="product-block-image">
-      <div class="product-block-image-overlay">
-        <%= link_to "Buy", "#", class: "button" %>
-      </div>
-      <%= image_tag asset_path("missing_product_image.jpg") %>
-  </div>  
-</div>
+<li>
+  <div class="product-block">
+    <div class="product-block-image">
+        <div class="product-block-image-overlay">
+          <%= link_to "Buy", "#", onClick: "alert('Soonmine, emphasis on Soon')", class: "button" %>
+        </div>
+        <%= image_tag product.image_url %>
+    </div>  
+    <div class="block-product-info">
+      <p><%= product.name %></p>
+      <p><%= product.price %></p>
+    </div>
+  </div>
+</li>

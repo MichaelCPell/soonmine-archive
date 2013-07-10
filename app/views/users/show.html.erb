@@ -12,12 +12,7 @@
       </div>
     </li>
 
-    <% 20.times do %>
-    <li>
-      <%= render "product_block" %>
-    </li>
-    <% end %>
-
+    <%= render partial: "product_block", collection: @list.products, as: :product %>
 
   </ul>
 </div>

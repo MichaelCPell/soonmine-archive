@@ -29,6 +29,9 @@ Classes that begin in block- are elements within blocks.
   position: relative;
   text-align: center;
   padding: 10px;
+  img{
+    height: 160px;
+  }
 }
 
 .product-block-image-overlay{
@@ -36,11 +39,15 @@ Classes that begin in block- are elements within blocks.
   background: rgba(0,0,0,.7);
   display: none;
   width: 180px;
-  height: 200px;
-  padding-top: 50px;
+  height: 160px;
+  padding-top: 60px;
 
 }
 
 .product-block:hover .product-block-image-overlay{
   display: block;
+}
+
+.block-product-info{
+  text-align: center;
 }

@@ -35,19 +35,20 @@ boat_hash = {
   offsite_url: "http://www.orvis.com/store/product.aspx?pf_id=8L1T"
 }
 
-@user = FactoryGirl.create(:user, firstname: "Stephanie", lastname: "Chase", image_url: "/assets/stephanie.jpg")
-@list = @user.primary_list
-@list.create_product(capacitor_hash)
-@list.create_product(banana_hash)
-@list.create_product(compressor_hash)
-@list.create_product(boat_hash)
+user = FactoryGirl.create(:user, firstname: "Stephanie", lastname: "Chase", image_url: "/assets/stephanie.jpg")
+list = user.primary_list
+list.products.create(capacitor_hash)
+list.products.create(banana_hash)
+list.products.create(compressor_hash)
+list.products.create(boat_hash)
 
 
 
 
 
-@user = FactoryGirl.create(:user, firstname: "David", lastname: "Pell", image_url: "/assets/david.jpg")
-@list.create_product(compressor_hash)
-@list.create_product(capacitor_hash)
-@list.create_product(banana_hash)
-@list.create_product(boat_hash)
+user = FactoryGirl.create(:user, firstname: "David", lastname: "Pell", image_url: "/assets/david.jpg")
+list = user.primary_list
+list.products.create(compressor_hash)
+list.products.create(capacitor_hash)
+list.products.create(banana_hash)
+list.products.create(boat_hash)
