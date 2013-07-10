@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130709192946) do
+ActiveRecord::Schema.define(version: 20130710174259) do
 
   create_table "authentications", force: true do |t|
     t.string   "provider"
@@ -19,6 +19,26 @@ ActiveRecord::Schema.define(version: 20130709192946) do
     t.string   "access_token"
     t.string   "token_expiration"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lists", force: true do |t|
+    t.string   "title",       default: "Primary"
+    t.string   "description"
+    t.integer  "user_id"
+    t.string   "privacy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.integer  "price"
+    t.string   "image_url"
+    t.string   "state"
+    t.integer  "quantity"
+    t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
