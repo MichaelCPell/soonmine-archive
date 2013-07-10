@@ -33,11 +33,12 @@ ActiveRecord::Schema.define(version: 20130710174259) do
   end
 
   create_table "products", force: true do |t|
-    t.string   "name"
-    t.integer  "price"
-    t.string   "image_url"
+    t.string   "name",        default: "Missing Product Name"
+    t.integer  "price",       default: 0
+    t.string   "image_url",   default: "/assets/missing_product_image.jpg"
     t.string   "state"
     t.integer  "quantity"
+    t.string   "offsite_url"
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -46,11 +47,11 @@ ActiveRecord::Schema.define(version: 20130710174259) do
   create_table "users", force: true do |t|
     t.string   "firstname"
     t.string   "lastname"
-    t.string   "image_url"
+    t.string   "image_url",              default: "/assets/missing_profile_image.png"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "encrypted_password",     default: "",                                  null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

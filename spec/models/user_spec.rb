@@ -5,11 +5,11 @@ describe User do
   describe "essentials" do
     let(:user) { FactoryGirl.create(:user) }
 
-    fit "is valid with valid attributes" do 
+    it "is valid with valid attributes" do 
       user.should be_valid
     end
 
-    fit "creates a 'Primary' list after being created" do
+    it "creates a 'Primary' list after being created" do
       user.lists.find_by_title("Primary").should_not be_nil
     end
   end

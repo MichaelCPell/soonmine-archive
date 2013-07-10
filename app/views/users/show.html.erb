@@ -1,0 +1,29 @@
+<div class="row">
+  <ul class="large-block-grid-4">
+    <li>
+      <div class="user-profile-block">
+        <div class="block-user-image">
+          <%= image_tag @user.image_url %>
+        </div>
+        <div class="blcok-user-info">
+          <h5><%= @user.fullname %></h5>
+          <h5><%= @user.location rescue "No Location Provided" %></h5>
+        </div>
+      </div>
+    </li>
+
+    <% 20.times do %>
+    <li>
+      <%= render "product_block" %>
+    </li>
+    <% end %>
+
+
+  </ul>
+</div>
+
+<% content_for :header do %>
+  <div class="row">
+    Header Area
+  </div>
+<% end %>

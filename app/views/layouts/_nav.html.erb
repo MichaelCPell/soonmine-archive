@@ -10,8 +10,17 @@
       <ul class="right">
         <% if current_user %>
           <li class="divider"/>
-          <li><%= link_to image_tag(current_user.image_url), "#", style: "line-height: 0px;" %></li>
-          <li><%= link_to current_user.fullname, "#" %></li>
+          <li>
+            <%= link_to image_tag(current_user.image_url, width: 50), "#", style: "line-height: 0px;" %>
+          </li>
+
+          <% if current_user.firstname %>
+            <li><%= link_to current_user.fullname, current_user %></li>
+          <% else %>
+            <li><%= link_to current_user.email, current_user %></li>
+
+          <% end %>
+                        
           <li class="divider"/>
           <li><%= link_to "About", new_user_registration_path %></li>
           <li class="divider"/>
