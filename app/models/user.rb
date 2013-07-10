@@ -23,4 +23,8 @@ class User < ActiveRecord::Base
     "#{firstname} #{lastname}"
   end
 
+  def primary_list
+    lists.find_by_title("Primary")
+  end
+
 end

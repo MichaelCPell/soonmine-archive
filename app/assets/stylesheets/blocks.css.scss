@@ -1,7 +1,22 @@
+/*Conventions:
+Classes that end in -block define the blocks themselves.
+Classes that begin in block- are elements within blocks.
+
+*/
+
 .user-profile-block{
+  text-align: center;
   width: 200px;
   height: 240px;
   border: 1px #cdcdcd solid;
+}
+
+.block-user-image{
+  img{
+    height: 160px;
+  }
+  height: 180px;
+  padding: 10px;
 }
 
 .product-block{
@@ -11,6 +26,21 @@
 }
 
 .product-block-image{
+  position: relative;
   text-align: center;
   padding: 10px;
+}
+
+.product-block-image-overlay{
+  position: absolute;
+  background: rgba(0,0,0,.7);
+  display: none;
+  width: 180px;
+  height: 200px;
+  padding-top: 50px;
+
+}
+
+.product-block:hover .product-block-image-overlay{
+  display: block;
 }

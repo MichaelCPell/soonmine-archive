@@ -1,9 +1,9 @@
 require "spec_helper"
 
 describe User do
-  
+  let(:user) { FactoryGirl.create(:user) }
+
   describe "essentials" do
-    let(:user) { FactoryGirl.create(:user) }
 
     it "is valid with valid attributes" do 
       user.should be_valid
@@ -40,6 +40,13 @@ describe User do
       @user = User.create(auth_hash)
 
       @user.fullname.should eq("Michael Pell")
+    end
+  end
+
+
+  describe "#primary_list" do 
+    fit "returns the list titled 'Primary'" do
+      user.primary_list.title.should eq("Primary") 
     end
   end
 end

@@ -5,9 +5,9 @@
         <div class="block-user-image">
           <%= image_tag @user.image_url %>
         </div>
-        <div class="blcok-user-info">
-          <h5><%= @user.fullname %></h5>
-          <h5><%= @user.location rescue "No Location Provided" %></h5>
+        <div class="block-user-info">
+          <p><%= @user.fullname.present? ? @user.fullname : @user.email %></p>
+          <p><%= @user.location rescue "No Location Provided" %></p>
         </div>
       </div>
     </li>

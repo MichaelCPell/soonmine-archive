@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-    @list = @user.lists.find_by_title("Primary")
+    @list = @user.primary_list
   end
 
   def index
