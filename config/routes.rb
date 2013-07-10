@@ -9,11 +9,12 @@ Soonmine::Application.routes.draw do
 
 
   get "/about", to: "static_pages#about"
+  get "/welcome", to: "static_pages#welcome"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  root 'users#index'
+  root 'static_pages#welcome'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
