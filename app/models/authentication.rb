@@ -12,7 +12,14 @@ class Authentication < ActiveRecord::Base
     new(uid: auth_hash['uid'], 
            provider: auth_hash['provider'],
            access_token: auth_hash['credentials'][:token],
-           token_expiration: DateTime.strptime(auth_hash['credentials'][:expires_at].to_s,"%s"))
+           token_expiration: date_or_nil(auth_hash['credentials'][:expires_at]))
   end
 
+
+
+  private
+
+  def self.date_or_nil(date)
+    DateTime.strptime(date.to_s,"%s") rescue nil
+  end
 end

@@ -3,7 +3,15 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
   end
 
+  def twitter
+    general_omniauth_login_strategy
+  end
+
   def facebook
+    general_omniauth_login_strategy
+  end
+
+  def general_omniauth_login_strategy
     auth = request.env['omniauth.auth']
     @authentication = Authentication.find_with_omniauth(auth)    
 
@@ -32,5 +40,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         sign_in_and_redirect(User.find(@authentication.user_id))  
       end
   end
+
+
+
 
 end
