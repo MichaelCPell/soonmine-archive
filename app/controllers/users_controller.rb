@@ -3,11 +3,11 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-
     @list = @user.primary_list
   end
 
   def index
+    @users = User.all
   end
 
   def purgatory

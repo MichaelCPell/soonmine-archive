@@ -17,4 +17,19 @@ describe UsersController do
       assigns(:list).title.should eq("Primary")
     end
   end 
+
+  describe "GET index" do 
+    before do 
+      3.times do
+        FactoryGirl.create(:user)
+      end
+    end
+
+    let(:users) {User.all}
+
+    fit "without params, it retrieves all users" do 
+      User.should_receive(:all)
+      get :index
+    end
+  end
 end
