@@ -5,6 +5,8 @@ Soonmine::Application.routes.draw do
     get "users/complete_email", :to => "users#purgatory", :as => "user_complete_email"
   end
 
+  resources :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -5,8 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :omniauthable
 
   has_many :authentications
+  has_many :lists
 
-  # Setup accessible (or protected) attributes for your model
+  after_create {lists.create(title: "Primary")}
+
 
   def self.create_with_omniauth(auth_hash)
     info = auth_hash[:info]
@@ -19,11 +21,6 @@ class User < ActiveRecord::Base
 
   def fullname
     "#{firstname} #{lastname}"
-  end
-
-
-  def auth_with_omniauth?
-    authentications.any?
   end
 
 end

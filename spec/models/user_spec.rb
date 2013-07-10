@@ -2,16 +2,15 @@ require "spec_helper"
 
 describe User do
   
-  describe "validations" do
-    it "is valid with valid attributes" do 
-      auth_hash = { :email=>"michaelcpell@example.com",  
-                    :firstname=>"Michael", 
-                    :lastname=>"Pell",
-                    password: "password"}
+  describe "essentials" do
+    let(:user) { FactoryGirl.create(:user) }
 
-      @user = User.create(auth_hash)
+    fit "is valid with valid attributes" do 
+      user.should be_valid
+    end
 
-      @user.should be_valid
+    fit "creates a 'Primary' list after being created" do
+      user.lists.find_by_title("Primary").should_not be_nil
     end
   end
 
