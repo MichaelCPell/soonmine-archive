@@ -11,7 +11,7 @@
         <% if current_user %>
           <li class="divider"/>
           <li>
-            <%= link_to  "#", style: "line-height: 0px;" do %>
+            <%= link_to  current_user, style: "line-height: 0px;" do %>
               <%= image_tag(current_user.image_url, width: 50) %>
             <% end %>
           </li>                        
