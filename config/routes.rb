@@ -1,8 +1,9 @@
 Soonmine::Application.routes.draw do
-  devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"}
+  devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks", registrations: "users/registrations"}
 
   devise_scope :user do
     get "users/complete_email", :to => "users#purgatory", :as => "user_complete_email"
+    get "users/new_from_email", to: "users/registrations#new_from_email", as: "new_from_email"
   end
 
   resources :users
