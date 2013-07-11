@@ -11,24 +11,55 @@
         <% if current_user %>
           <li class="divider"/>
           <li>
-            <%= link_to image_tag(current_user.image_url, width: 50), "#", style: "line-height: 0px;" %>
-          </li>
-
-          <% if current_user.firstname %>
-            <li><%= link_to current_user.fullname, current_user %></li>
-          <% else %>
-            <li><%= link_to current_user.email, current_user %></li>
-
-          <% end %>
-                        
+            <%= link_to  "#", style: "line-height: 0px;" do %>
+              <%= image_tag(current_user.image_url, width: 50) %>
+            <% end %>
+          </li>                        
+          <li class="has-dropdown">
+              <a><%= current_user.firstname ? current_user.fullname : current_user.email %></a>
+              <ul class="dropdown">
+                <li>
+                  <%= link_to "My Soonmine", current_user%>
+                </li>
+                <li>
+                  <a>Add Products</a>
+                </li>
+                <li>
+                  <a>Share My List</a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+                <li>
+                  <%= link_to "Sign Out", destroy_user_session_path, method: "delete" %>
+                </li>
+              </ul>
+          </li> 
           <li class="divider"/>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
         <% else %>
           <li><%= link_to "Log In", new_user_session_path %></li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
         <li class="divider"/>
-        <li><%= link_to "About", about_path %></li>
+        <li class="has-dropdown">
+          <%= link_to "About", about_path %>
+          <ul class="dropdown">
+            <li>
+              <%= link_to "How it works", how_it_works_path %> 
+            </li>
+
+            <li>
+              <%= link_to "Contact", contact_path %> 
+            </li>
+
+            <li>
+              <%= link_to "Privacy", privacy_path %> 
+            </li>
+            <li>
+              <%= link_to "Copyright Info", copyright_path %> 
+            </li>
+          </ul>
+        </li>
         <li><%= link_to image_tag("search.png", width: 30, class: "search-icon"), users_path %></li>
 
       </ul>

@@ -11,6 +11,10 @@ Soonmine::Application.routes.draw do
 
   get "/about", to: "static_pages#about"
   get "/welcome", to: "static_pages#welcome"
+  get "/how_it_works", to: "static_pages#how_it_works"
+  get "/contact", to: "static_pages#contact"
+  get "/privacy", to: "static_pages#privacy"
+  get "/copyright", to: "static_pages#copyright"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
