@@ -1,5 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-	before_filter :configure_permitted_parameters#, if: :devise_controller?
+	before_filter :configure_permitted_parameters, if: :devise_controller?
 
 	def new_from_email
 		build_resource({})
@@ -30,28 +30,28 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
 
 
-  		protected
+	protected
 
-		  def configure_permitted_parameters
-		    devise_parameter_sanitizer.for(:sign_up) do |u|
-		      u.permit(:first_name, :last_name, :username, :email, :password, 
-		      	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy)
-		    end
-		    devise_parameter_sanitizer.for(:account_update) do |u|
-		      u.permit(:first_name, :last_name, :username, :email, :password, 
-		      	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy)
-		    end
-		  end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) do |u|
+      u.permit(:first_name, :last_name, :username, :email, :password, 
+      	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy)
+    end
+    devise_parameter_sanitizer.for(:account_update) do |u|
+      u.permit(:first_name, :last_name, :username, :email, :password, 
+      	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy)
+    end
+  end
 
 
-		private
+	private
 
-			# check if we need password to update user data
-			# ie if password or email was changed
-			# extend this as needed
-		def needs_password?(user, params)
-				user.email != params[:user][:email] ||
-				params[:user][:password].present?
-		end
+		# check if we need password to update user data
+		# ie if password or email was changed
+		# extend this as needed
+	def needs_password?(user, params)
+			user.email != params[:user][:email] ||
+			params[:user][:password].present?
+	end
 
 end

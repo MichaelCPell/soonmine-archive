@@ -1,0 +1,57 @@
+
+<%= @product.errors.full_messages.first if @product.errors.any? %>
+
+<%= form_for @product do |f| %>
+  <div class="row">      
+    <div class="large-4 columns">
+      <%= f.label :name, class: "inline" %>
+    </div>
+    <div class="large-8 columns">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+
+  <div class="row">      
+    <div class="large-4 columns">
+      <%= f.label :price, class: "inline" %>
+    </div>
+    <div class="large-8 columns">
+      <%= f.text_field :price %>
+    </div>
+  </div>
+
+  <div class="row">      
+    <div class="large-4 columns">
+      <%= f.label :image_url, class: "inline" %>
+    </div>
+    <div class="large-8 columns">
+      <%= f.text_field :image_url %>
+    </div>
+  </div>
+
+  <div class="row">      
+    <div class="large-4 columns">
+      <%= f.label :offsite_url, class: "inline" %>
+    </div>
+    <div class="large-8 columns">
+      <%= f.text_field :offsite_url  %>
+    </div>
+  </div>
+
+  <div class="row">      
+    <div class="large-4 columns">
+      <%= f.label "Mine?", class: "inline" %>
+    </div>
+    <div class="large-8 columns">
+      <div class="switch">
+        <input id="product[state]" name="switch-state" type="radio" <%= "checked" if @product.state.blank? %>>
+        <label for="state" onClick="">Soonmine</label>
+        <input id="product[state]" name="switch-state" type="radio" <%= "checked" if @product.state %>>
+        <label for="state" onClick="">Mine.</label> 
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div><%= f.submit "Add to List", class: "button small push-9" %></div>
+<% end %>

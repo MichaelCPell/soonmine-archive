@@ -7,6 +7,7 @@ Soonmine::Application.routes.draw do
   end
 
   resources :users, only: [:show, :index]
+  resources :products
 
 
   get "/about", to: "static_pages#about"

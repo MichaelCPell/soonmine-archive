@@ -12,7 +12,7 @@
       </div>
     </li>
 
-    <%= render partial: "product_block", collection: @list.products, as: :product %>
+    <%= render partial: "users/product_block", collection: @user.primary_list.products, as: :product %>
 
   </ul>
 </div>
