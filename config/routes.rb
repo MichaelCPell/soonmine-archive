@@ -6,7 +6,7 @@ Soonmine::Application.routes.draw do
     get "users/new_from_email", to: "users/registrations#new_from_email", as: "new_from_email"
   end
 
-  resources :users
+  resources :users, only: [:show, :index]
 
 
   get "/about", to: "static_pages#about"

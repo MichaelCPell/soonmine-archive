@@ -27,7 +27,7 @@ describe UsersController do
 
     let(:users) {User.all}
 
-    fit "without params, it retrieves all users" do 
+    it "without params, it retrieves all users" do 
       User.should_receive(:all)
       get :index
     end

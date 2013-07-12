@@ -45,7 +45,7 @@ describe User do
 
 
   describe "#primary_list" do 
-    fit "returns the list titled 'Primary'" do
+    it "returns the list titled 'Primary'" do
       user.primary_list.title.should eq("Primary") 
     end
   end
