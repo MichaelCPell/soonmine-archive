@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20130710174259) do
   end
 
   create_table "products", force: true do |t|
-    t.string   "name",        default: "Missing Product Name"
+    t.string   "name",        default: "No Product Name"
     t.integer  "price",       default: 0
-    t.string   "image_url",   default: "/assets/missing_product_image.jpg"
+    t.string   "image_url",   default: "/assets/no_product_image.jpg"
     t.string   "state"
     t.integer  "quantity"
     t.string   "offsite_url"
