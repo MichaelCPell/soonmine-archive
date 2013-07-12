@@ -21,6 +21,11 @@ module Soonmine
     # config.i18n.default_locale = :de
 
 
-    # This line allows me to override devise controllers and not have to restructure the views.
+
+    #Prints logger to STDOUT for Unicorn
+    config.logger = Logger.new(STDOUT)
+    config.logger.level = Logger.const_get(
+      ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'DEBUG'
+    )
   end
 end
