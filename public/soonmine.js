@@ -16,7 +16,7 @@
   var interfaceContent = "<div>This is the interface</div>"
   var interfaceContainer = document.createElement("div")
   interfaceContainer.id = "sm-bookmarklet";
-  newDiv.innerHTML = interfaceContent;
-  document.getElementsByTagName("body")[0].appendChild(newDiv);
+  interfaceContainer.innerHTML = interfaceContent;
+  document.getElementsByTagName("body")[0].appendChild(interfaceContainer);
 
 })
