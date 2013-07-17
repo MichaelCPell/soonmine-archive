@@ -1,0 +1,9 @@
+#_sm_bookmarklet{
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  z-index: 999999;
+  display: block;
+  width: 480px;
+  overflow: visible;
+}
