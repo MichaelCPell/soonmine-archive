@@ -1,4 +1,4 @@
-(function() {
+
   //Load the CSS
   var css = document.getElementById('sm-css');
   if (css) {
@@ -19,4 +19,3 @@
   interfaceContainer.innerHTML = interfaceContent;
   document.getElementsByTagName("body")[0].appendChild(interfaceContainer);
 
-})
