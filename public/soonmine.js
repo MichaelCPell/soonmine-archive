@@ -37,7 +37,7 @@ var interfaceContent = "<form >\
   <br/>\
   Image: <img src='http://placehold.it/50x50' id='product[image]'/>\
   <br/><br/>\
-  <input type='button' value='Submit' onClick='setInputValues()'></input>\
+  <input type='button' value='Scrape!' onClick='setInputValues()'></input>\
   </form>";
 
 /*Begin Execution*/
