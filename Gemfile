@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'compass-rails'
 gem 'devise', '~> 3.0.0.rc'
 gem 'factory_girl_rails'
 gem 'jbuilder', '~> 1.2'

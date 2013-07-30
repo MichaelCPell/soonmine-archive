@@ -15,7 +15,7 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-// $body-bg: #fff;
+$body-bg: #ebebeb;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -75,7 +75,7 @@
 
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: 10px;
+$block-grid-default-spacing: 30px;
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
@@ -968,7 +968,7 @@ $paragraph-margin-bottom: emCalc(10px);
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+$topbar-bg: #fff;
 
 // Height and margin
 $topbar-height: 50px;
@@ -982,7 +982,7 @@ $topbar-height: 50px;
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
+$topbar-link-color: #616161;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 

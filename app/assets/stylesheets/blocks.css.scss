@@ -6,31 +6,36 @@ Classes that begin in block- are elements within blocks.
 
 .user-profile-block{
   text-align: center;
-  width: 200px;
-  height: 240px;
-  border: 1px #cdcdcd solid;
+  width: 220px;
 }
 
 .block-user-image{
+  height: 220px;
   img{
-    height: 160px;
+    height: 220px;
   }
-  height: 180px;
-  padding: 10px;
+}
+
+.block-user-info{
+  text-align: center;
+  height: 60px;
+  padding-bottom: 15px;
+  padding-top: 12px;
+  background-color: #d3a33f;
+  color: white;
 }
 
 .product-block{
-  width: 200px;
-  height: 240px;
-  border: 1px black solid;
+  width: 220px;
 }
 
 .product-block-image{
   position: relative;
   text-align: center;
-  padding: 10px;
+  background-color: #fff;
+  height: 220px;
   img{
-    height: 160px;
+    max-height: 220px;
   }
 }
 
@@ -38,10 +43,9 @@ Classes that begin in block- are elements within blocks.
   position: absolute;
   background: rgba(0,0,0,.7);
   display: none;
-  width: 180px;
-  height: 160px;
-  padding-top: 60px;
-
+  width: 220px;
+  height: 220px;
+  padding-top: 90px;
 }
 
 .product-block:hover .product-block-image-overlay{
@@ -50,6 +54,11 @@ Classes that begin in block- are elements within blocks.
 
 .block-product-info{
   text-align: center;
+  height: 60px;
+  padding-bottom: 15px;
+  padding-top: 12px;
+  background-color: #889faf;
+  color: white;
 }
 
 
