@@ -1,0 +1,27 @@
+.button { 
+  @include button-base;
+  @include button-size;
+  @include button-style(#d3a33f, false, false);
+  padding-left: 45px;
+  padding-right: 45px;
+
+  &:hover{
+    background-color: lighten(#d3a33f, 10%);
+  }
+
+  &:active{
+    background-color: darken(#d3a33f, 10%);
+  }
+}
+
+.top-bar-section .dropdown li a {
+  background-color: rgba(71,71,71,.9); 
+  &:hover:not(.button) {background-color:rgba(71,71,71,1)}
+}
+
+.top-bar-section li a{
+   &:hover:not(.button){
+    color: white;
+    background-color:rgba(71,71,71,.9);
+  }
+}

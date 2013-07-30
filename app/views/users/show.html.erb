@@ -6,7 +6,7 @@
           <%= image_tag @user.image_url %>
         </div>
         <div class="block-user-info">
-          <p><%= @user.fullname.present? ? @user.fullname : @user.email %></p>
+          <p class="uppercase"><%= @user.fullname.present? ? @user.fullname : @user.email %></p>
           <p><%= @user.location rescue "No Location Provided" %></p>
         </div>
       </div>

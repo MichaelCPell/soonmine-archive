@@ -2,12 +2,12 @@
   <div class="product-block">
     <div class="product-block-image">
         <div class="product-block-image-overlay">
-          <%= link_to "Buy", product.offsite_url, class: "button medium", target: "_blank" %>
+          <%= link_to "BUY", product.offsite_url, class: "button medium", target: "_blank" %>
         </div>
         <%= image_tag product.image_url %>
     </div>  
     <div class="block-product-info">
-      <p><%= product.name %></p>
+      <p class="uppercase"><%= product.name %></p>
       <p><%= product.price %></p>
     </div>
   </div>

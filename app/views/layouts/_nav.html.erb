@@ -9,7 +9,6 @@
     <section class="top-bar-section">
       <ul class="right">
         <% if current_user %>
-          <li class="divider"/>
           <li>
             <%= link_to  current_user, style: "line-height: 0px;" do %>
               <%= image_tag(current_user.image_url, width: 50) %>
@@ -19,44 +18,45 @@
               <a><%= current_user.firstname ? current_user.fullname : current_user.email %></a>
               <ul class="dropdown">
                 <li>
-                  <%= link_to "My Soonmine", current_user%>
+                  <%= link_to "MY SOOMINE", current_user%>
                 </li>
                 <li>
-                  <%= link_to "Add Products", new_product_path %>
+                  <%= link_to "ADD PRODUCTS", new_product_path %>
                 </li>
                 <li>
-                  <a href="#" data-reveal-id="socialShare">Share My List</a>
+                  <a href="#" data-reveal-id="socialShare">SHARE MY LIST</a>
                 </li>
                 <li>
-                  <%= link_to "Settings", edit_user_registration_path %>
+                  <%= link_to "SETTINGS", edit_user_registration_path %>
                 </li>
                 <li>
-                  <%= link_to "Sign Out", destroy_user_session_path, method: "delete" %>
+                  <%= link_to "SIGN OUT", destroy_user_session_path, method: "delete" %>
                 </li>
               </ul>
           </li> 
-          <li class="divider"/>
         <% else %>
           <li><%= link_to "Log In", new_user_session_path %></li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
-        <li class="divider"/>
         <li class="has-dropdown">
           <%= link_to "About", about_path %>
           <ul class="dropdown">
             <li>
-              <%= link_to "How it works", how_it_works_path %> 
+              <%= link_to "HOW IT WORKS", how_it_works_path %> 
+            </li>
+            <li>
+              <%= link_to "THE TEAM", contact_path %> 
             </li>
 
             <li>
-              <%= link_to "Contact", contact_path %> 
+              <%= link_to "CONTACT", contact_path %> 
             </li>
 
             <li>
-              <%= link_to "Privacy", privacy_path %> 
+              <%= link_to "PRIVACY", privacy_path %> 
             </li>
             <li>
-              <%= link_to "Copyright Info", copyright_path %> 
+              <%= link_to "COPYRIGHT", copyright_path %> 
             </li>
           </ul>
         </li>

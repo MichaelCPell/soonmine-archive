@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'coffee-rails', '~> 4.0.0'
-gem 'compass-rails'
 gem 'devise', '~> 3.0.0.rc'
 gem 'factory_girl_rails'
 gem 'jbuilder', '~> 1.2'
@@ -18,6 +17,9 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
 gem 'zurb-foundation', '~> 4.0.0'
+
+  gem 'compass'
+gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
 
 group :development do 
   gem 'better_errors'

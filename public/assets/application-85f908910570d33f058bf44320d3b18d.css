@@ -1,18 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
-
-
-
- */
-
 *,
 *:before,
 *:after {
@@ -25,7 +10,7 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
+  background: #ebebeb;
   color: #222222;
   padding: 0;
   margin: 0;
@@ -780,7 +765,7 @@ th.hide-for-touch {
   [class*="block-grid-"] {
     display: block;
     padding: 0;
-    margin: 0 -10px;
+    margin: 0 -30px;
     *zoom: 1; }
     [class*="block-grid-"]:before, [class*="block-grid-"]:after {
       content: " ";
@@ -791,150 +776,150 @@ th.hide-for-touch {
       display: block;
       height: auto;
       float: left;
-      padding: 0 10px 10px; }
+      padding: 0 30px 30px; }
 
   .small-block-grid-1 > li {
     width: 100%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-1 > li:nth-of-type(1n+1) {
       clear: both; }
 
   .small-block-grid-2 > li {
     width: 50%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-2 > li:nth-of-type(2n+1) {
       clear: both; }
 
   .small-block-grid-3 > li {
     width: 33.33333%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-3 > li:nth-of-type(3n+1) {
       clear: both; }
 
   .small-block-grid-4 > li {
     width: 25%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-4 > li:nth-of-type(4n+1) {
       clear: both; }
 
   .small-block-grid-5 > li {
     width: 20%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-5 > li:nth-of-type(5n+1) {
       clear: both; }
 
   .small-block-grid-6 > li {
     width: 16.66667%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-6 > li:nth-of-type(6n+1) {
       clear: both; }
 
   .small-block-grid-7 > li {
     width: 14.28571%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-7 > li:nth-of-type(7n+1) {
       clear: both; }
 
   .small-block-grid-8 > li {
     width: 12.5%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-8 > li:nth-of-type(8n+1) {
       clear: both; }
 
   .small-block-grid-9 > li {
     width: 11.11111%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-9 > li:nth-of-type(9n+1) {
       clear: both; }
 
   .small-block-grid-10 > li {
     width: 10%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-10 > li:nth-of-type(10n+1) {
       clear: both; }
 
   .small-block-grid-11 > li {
     width: 9.09091%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-11 > li:nth-of-type(11n+1) {
       clear: both; }
 
   .small-block-grid-12 > li {
     width: 8.33333%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .small-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
 /* Foundation Block Grids for above small breakpoint */
 @media only screen and (min-width: 48em) {
   .large-block-grid-1 > li {
     width: 100%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-1 > li:nth-of-type(1n+1) {
       clear: both; }
 
   .large-block-grid-2 > li {
     width: 50%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-2 > li:nth-of-type(2n+1) {
       clear: both; }
 
   .large-block-grid-3 > li {
     width: 33.33333%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-3 > li:nth-of-type(3n+1) {
       clear: both; }
 
   .large-block-grid-4 > li {
     width: 25%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-4 > li:nth-of-type(4n+1) {
       clear: both; }
 
   .large-block-grid-5 > li {
     width: 20%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-5 > li:nth-of-type(5n+1) {
       clear: both; }
 
   .large-block-grid-6 > li {
     width: 16.66667%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-6 > li:nth-of-type(6n+1) {
       clear: both; }
 
   .large-block-grid-7 > li {
     width: 14.28571%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-7 > li:nth-of-type(7n+1) {
       clear: both; }
 
   .large-block-grid-8 > li {
     width: 12.5%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-8 > li:nth-of-type(8n+1) {
       clear: both; }
 
   .large-block-grid-9 > li {
     width: 11.11111%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-9 > li:nth-of-type(9n+1) {
       clear: both; }
 
   .large-block-grid-10 > li {
     width: 10%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-10 > li:nth-of-type(10n+1) {
       clear: both; }
 
   .large-block-grid-11 > li {
     width: 9.09091%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-11 > li:nth-of-type(11n+1) {
       clear: both; }
 
   .large-block-grid-12 > li {
     width: 8.33333%;
-    padding: 0 10px 10px; }
+    padding: 0 30px 30px; }
     .large-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; }
 
@@ -1749,7 +1734,7 @@ form.custom {
     background: white;
     background: -moz-linear-gradient(top, white 0%, #f3f3f3 100%);
     background: -webkit-linear-gradient(top, white 0%, #f3f3f3 100%);
-    background: linear-gradient(to bottom, white 0%, #f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 100%);
     -webkit-box-shadow: none;
     box-shadow: none;
     font-size: 0.875em;
@@ -2315,7 +2300,7 @@ form.custom {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #111111; }
+  background: white; }
 
 .fixed {
   width: 100%;
@@ -2329,7 +2314,7 @@ form.custom {
   height: 50px;
   line-height: 50px;
   position: relative;
-  background: #111111;
+  background: white;
   margin-bottom: 1.875em; }
   .top-bar ul {
     margin-bottom: 0;
@@ -2357,7 +2342,7 @@ form.custom {
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: bold;
-        color: white;
+        color: #616161;
         width: 50%;
         display: block;
         padding: 0 16.66667px; }
@@ -2366,7 +2351,7 @@ form.custom {
     right: 0;
     top: 0; }
     .top-bar .toggle-topbar a {
-      color: white;
+      color: #616161;
       text-transform: uppercase;
       font-size: 0.8125em;
       font-weight: bold;
@@ -2399,7 +2384,7 @@ form.custom {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #111111; }
+      background: white; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -2429,7 +2414,7 @@ form.custom {
   .top-bar-section ul li > a {
     display: block;
     width: 100%;
-    color: white;
+    color: #616161;
     padding: 12px 0 12px 0;
     padding-left: 16.66667px;
     font-size: 0.8125em;
@@ -2466,7 +2451,7 @@ form.custom {
       width: 0;
       height: 0;
       border: solid 5px;
-      border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+      border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
       margin-right: 16.66667px;
       margin-top: -4.5px;
       position: absolute;
@@ -2490,7 +2475,7 @@ form.custom {
       .top-bar-section .dropdown li.title h5 {
         margin-bottom: 0; }
         .top-bar-section .dropdown li.title h5 a {
-          color: white;
+          color: #616161;
           line-height: 25px;
           display: block; }
     .top-bar-section .dropdown label {
@@ -2510,7 +2495,7 @@ form.custom {
 
 @media only screen and (min-width: 58.75em) {
   .top-bar {
-    background: #111111;
+    background: white;
     *zoom: 1;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
@@ -2533,7 +2518,7 @@ form.custom {
       position: relative;
       top: 8px; }
     .top-bar.expanded {
-      background: #111111; }
+      background: white; }
 
   .contain-to-grid .top-bar {
     max-width: 62.5em;
@@ -2555,7 +2540,7 @@ form.custom {
     .top-bar-section li a:not(.button) {
       padding: 0 16.66667px;
       line-height: 50px;
-      background: #111111; }
+      background: white; }
       .top-bar-section li a:not(.button):hover {
         background: black; }
     .top-bar-section .has-dropdown > a {
@@ -2566,7 +2551,7 @@ form.custom {
         width: 0;
         height: 0;
         border: solid 5px;
-        border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
+        border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;
         margin-top: -2.5px; }
     .top-bar-section .has-dropdown.moved {
       position: relative; }
@@ -2589,23 +2574,23 @@ form.custom {
         line-height: 1;
         white-space: nowrap;
         padding: 7px 16.66667px;
-        background: #1e1e1e; }
+        background: white; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
-        background: #1e1e1e; }
+        background: white; }
       .top-bar-section .dropdown li .dropdown {
         left: 100%;
         top: 0; }
     .top-bar-section > ul > .divider {
       border-bottom: none;
       border-top: none;
-      border-right: solid 1px #2b2b2b;
-      border-left: solid 1px black;
+      border-right: solid 1px white;
+      border-left: solid 1px #e6e6e6;
       clear: none;
       height: 50px;
       width: 0px; }
     .top-bar-section .has-form {
-      background: #111111;
+      background: white;
       padding: 0 16.66667px;
       height: 50px; }
     .top-bar-section ul.right li .dropdown {
@@ -3552,14 +3537,14 @@ kbd {
       background: white;
       background: -moz-linear-gradient(top, white 0%, #f2f2f2 100%);
       background: -webkit-linear-gradient(top, white 0%, #f2f2f2 100%);
-      background: linear-gradient(to bottom, white 0%, #f2f2f2 100%);
+      background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
       -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #e1f5d1, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
       box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #e1f5d1, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke; }
     div.switch:hover > span, div.switch:focus > span {
       background: white;
       background: -moz-linear-gradient(top, white 0%, #e6e6e6 100%);
       background: -webkit-linear-gradient(top, white 0%, #e6e6e6 100%);
-      background: linear-gradient(to bottom, white 0%, #e6e6e6 100%); }
+      background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%); }
     div.switch:active {
       background: transparent; }
     div.switch.large {
@@ -3831,6 +3816,7 @@ table {
     max-width: 500px; }
   .f-dropdown.large {
     max-width: 800px; }
+
 /*Conventions:
 Classes that end in -block define the blocks themselves.
 Classes that begin in block- are elements within blocks.
@@ -3838,46 +3824,74 @@ Classes that begin in block- are elements within blocks.
 */
 .user-profile-block {
   text-align: center;
-  width: 200px;
-  height: 240px;
-  border: 1px #cdcdcd solid; }
+  width: 220px; }
 
 .block-user-image {
-  height: 180px;
-  padding: 10px; }
+  height: 220px; }
   .block-user-image img {
-    height: 160px; }
+    height: 220px; }
+
+.block-user-info {
+  text-align: center;
+  height: 60px;
+  padding-bottom: 15px;
+  padding-top: 12px;
+  background-color: #d3a33f;
+  color: white;
+  font-size: 16px;
+  line-height: 24px; }
 
 .product-block {
-  width: 200px;
-  height: 240px;
-  border: 1px black solid; }
+  width: 220px; }
 
 .product-block-image {
   position: relative;
   text-align: center;
-  padding: 10px; }
+  background-color: #fff;
+  height: 220px; }
   .product-block-image img {
-    height: 160px; }
+    max-height: 220px; }
 
 .product-block-image-overlay {
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
   display: none;
-  width: 180px;
-  height: 160px;
-  padding-top: 60px; }
+  width: 220px;
+  height: 220px;
+  padding-top: 90px; }
 
 .product-block:hover .product-block-image-overlay {
   display: block; }
 
 .block-product-info {
-  text-align: center; }
-.search-icon {
-  position: relative;
-  top: 10px; }
-.top-margin-20 {
-  margin-top: 20px !important; }
+  text-align: center;
+  height: 60px;
+  padding-bottom: 15px;
+  padding-top: 12px;
+  background-color: #889faf;
+  color: white;
+  font-size: 16px;
+  line-height: 24px; }
+
+.user-signup-block {
+  border: 1px black solid;
+  padding: 20px; }
+
+.user-settings-block {
+  border: 1px black solid;
+  padding: 20px; }
+
+.new-product-block {
+  border: 1px black solid;
+  padding: 20px; }
+
+.edit-product-block {
+  border: 1px black solid;
+  padding: 20px; }
+
+.header {
+  min-height: 45px; }
+
 .row-user-name {
   position: relative;
   top: 1.2em; }
@@ -3890,3 +3904,43 @@ Classes that begin in block- are elements within blocks.
 
 .row-user-image-container {
   text-align: center; }
+
+.button {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 1.25em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0.75em;
+  padding-right: 1.5em;
+  padding-bottom: 0.8125em;
+  padding-left: 1.5em;
+  font-size: 1em;
+  background-color: #d3a33f;
+  border-color: #b5882a;
+  color: white;
+  padding-left: 45px;
+  padding-right: 45px; }
+  .button:hover, .button:focus {
+    background-color: #b5882a; }
+  .button:hover, .button:focus {
+    color: white; }
+  .button:hover {
+    background-color: #ddb768; }
+  .button:active {
+    background-color: #b5882a; }
+
+.top-bar-section .dropdown li a {
+  background-color: rgba(71, 71, 71, 0.9); }
+  .top-bar-section .dropdown li a:hover:not(.button) {
+    background-color: #474747; }
+
+.top-bar-section li a:hover:not(.button) {
+  color: white;
+  background-color: rgba(71, 71, 71, 0.9); }

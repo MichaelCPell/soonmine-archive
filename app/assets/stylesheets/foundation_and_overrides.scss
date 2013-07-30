@@ -12,7 +12,7 @@
 //
 
 // This is the default html and body font-size for the base em value.
-// $em-base: 16px;
+$em-base: 16px;
 
 // We use these to control various global styles
 $body-bg: #ebebeb;
@@ -987,10 +987,10 @@ $topbar-link-color: #616161;
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
+//$topbar-dropdown-bg: #000;  
+$topbar-dropdown-link-color: #FFF;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-color: #000;
 // $topbar-dropdown-toggle-alpha: 0.5;
 // $dropdown-label-color: #555;
 
@@ -1009,4 +1009,4 @@ $topbar-link-color: #616161;
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
 
-@import 'foundation';
+@import "foundation"
