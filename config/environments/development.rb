@@ -28,4 +28,5 @@ Soonmine::Application.configure do
   config.assets.debug = true
 
 
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 end
