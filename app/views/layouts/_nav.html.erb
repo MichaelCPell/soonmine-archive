@@ -10,12 +10,12 @@
       <ul class="right">
         <% if current_user %>
           <li>
-            <%= link_to  current_user, style: "line-height: 0px;" do %>
-              <%= image_tag(current_user.image_url, width: 50) %>
+            <%= link_to current_user, class: "top-bar-image-link", id:"top-bar-user-image-link" do %>
+              <%= image_tag current_user.image_url, width: 33, class: "top-bar-image"%>
             <% end %>
           </li>                        
           <li class="has-dropdown">
-              <a><%= current_user.firstname ? current_user.fullname : current_user.email %></a>
+              <a class="uppercase"><%= current_user.firstname ? current_user.fullname : current_user.email %></a>
               <ul class="dropdown">
                 <li>
                   <%= link_to "MY SOOMINE", current_user%>
@@ -39,7 +39,7 @@
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
         <li class="has-dropdown">
-          <%= link_to "About", about_path %>
+          <%= link_to "ABOUT", about_path %>
           <ul class="dropdown">
             <li>
               <%= link_to "HOW IT WORKS", how_it_works_path %> 
@@ -60,7 +60,7 @@
             </li>
           </ul>
         </li>
-        <li><%= link_to image_tag("search.png", width: 30, class: "search-icon"), users_path %></li>
+        <li><%= link_to image_tag("search-icon@2x.png", width: 33, class: "top-bar-image"), users_path, class: "top-bar-image-link" %></li>
 
       </ul>
     </section>

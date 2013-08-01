@@ -973,7 +973,7 @@ $paragraph-margin-bottom: emCalc(10px);
 $topbar-bg: #fff;
 
 // Height and margin
-$topbar-height: 50px;
+$topbar-height: 80px;
 // $topbar-margin-bottom: emCalc(30px);
 
 // Control Input height for top bar
@@ -1011,4 +1011,4 @@ $topbar-dropdown-toggle-color: #000;
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
 
-@import "foundation"
+@import "foundation";
