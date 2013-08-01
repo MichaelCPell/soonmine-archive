@@ -28,6 +28,9 @@
 
 #top-bar-user-image-link{
   padding-right: 0px !important; 
+  &:hover{
+    background-color: #fff;
+  }
 }
 
 .top-bar-image-link{
