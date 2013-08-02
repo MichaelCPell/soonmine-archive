@@ -10,6 +10,9 @@ class StaticPagesController < ApplicationController
 
   def how_it_works
   end
+
+  def team
+  end
   
   def welcome
   end

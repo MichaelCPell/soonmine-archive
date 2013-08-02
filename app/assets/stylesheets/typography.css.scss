@@ -8,5 +8,34 @@
 
 
 body{
-  font-family: "P22und"
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  color: #4a4a4a;
+}
+
+
+h1{
+  font-family: "P22undBold";
+  color: #d3a33f;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+h2{
+  font-family: "P22und";
+  color: #4a4a4a;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.static-heading{
+  padding: 40px;
+}
+
+.static-block p{
+  padding-top: 5px;
+  padding-bottom: 25px;
+  line-height: 22px;
 }
