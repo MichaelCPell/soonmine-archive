@@ -8,9 +8,11 @@
 
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-      <%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook), class: "button expand" %>
+      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "button expand" %>
       
-      <%= link_to "Sign up with Twitter", user_omniauth_authorize_path(:twitter), class: "button expand" %>
+      <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter), class: "button expand" %>
+
+      <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), class: "button expand" %>
 
       <%= f.email_field :email, :autofocus => true, placeholder: "Email Address" %>
 

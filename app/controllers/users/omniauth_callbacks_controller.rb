@@ -11,6 +11,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     general_omniauth_login_strategy
   end
 
+  def google_oauth2
+    general_omniauth_login_strategy
+  end
+
   def general_omniauth_login_strategy
     auth = request.env['omniauth.auth']
     @authentication = Authentication.find_with_omniauth(auth)    

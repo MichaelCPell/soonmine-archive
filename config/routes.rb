@@ -8,12 +8,17 @@ Soonmine::Application.routes.draw do
 
   resources :users, only: [:show, :index]
   resources :products
+  resources :contacts do
+    collection do 
+      get "add_from_google", to: "contacts#add_from_google", as: "add_google"
+    end
+  end
 
 
   get "/about", to: "static_pages#about"
   get "/welcome", to: "static_pages#welcome"
   get "/how_it_works", to: "static_pages#how_it_works"
-  get "/contact", to: "static_pages#contact"
+  get "/contact_us", to: "static_pages#contact_us"
   get "/privacy", to: "static_pages#privacy"
   get "/copyright", to: "static_pages#copyright"
   get "/team", to: "static_pages#team"

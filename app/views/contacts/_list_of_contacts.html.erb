@@ -1,0 +1,6 @@
+<form>
+  <% @results.each do |parsed_user| %>
+    <input type="checkbox">Name: <%= parsed_user.name %>  || Email: <%= parsed_user.email %></input>
+    <br/>
+  <% end %>
+</form>

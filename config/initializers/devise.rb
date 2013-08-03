@@ -224,6 +224,10 @@ Devise.setup do |config|
   when "development"
     config.omniauth :facebook, '538739446163661', 'a90f6aeda6b2197d47d895426fc3a136'
     config.omniauth :twitter, 'mF8NC5lP3HdewBcfRehA', '6Z5V6l5GCSboxb1nwuhce0NFiJ9UC9WOwJbPP4nZ1Dw'
+    config.omniauth :google_oauth2, '249589806282.apps.googleusercontent.com', 'moNGTFhniRA-4iHWc-XiuMgX',
+      {
+        scope: "userinfo.email, userinfo.profile, https://www.google.com/m8/feeds"
+      }
   when "staging"
     config.omniauth :facebook, '211614912321753', '8857ad428fe76ed9701be547cd50e478'
     config.omniauth :twitter, 'cXvEYUXCWZ5p3MWt7LByIw', '4sSZqooKRfWxea2Dt7ghy5KEDZ3ZQSzGT8aUyZ7uKA'
