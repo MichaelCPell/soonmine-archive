@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
     # This enter code to make the http requrest
     authentication = current_user.authentications.where(provider: "google_oauth2").first
     access_token = authentication.access_token
-    api_uri = URI("https://www.google.com/m8/feeds/contacts/default/full?access_token=#{access_token}")
+    api_uri = URI("https://www.google.com/m8/feeds/contacts/default/full?access_token=#{access_token}&max-results=999999")
 
     results = Net::HTTP.get(api_uri)
 
@@ -29,7 +29,7 @@ class ContactsController < ApplicationController
       new_contact.name = "No Name Retrieved" if new_contact.name == ""
       new_contact.email = entry.at_xpath('email/@address').value rescue "No Email"
       new_contact.email = "No Email Retrieved" if new_contact.email == ""
-      array_of_contacts << new_contact
+      array_of_contacts << new_contact if new_contact.email != "No Email"
     end
 
     @results = array_of_contacts
