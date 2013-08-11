@@ -231,7 +231,12 @@ Devise.setup do |config|
   when "staging"
     config.omniauth :facebook, '211614912321753', '8857ad428fe76ed9701be547cd50e478'
     config.omniauth :twitter, 'cXvEYUXCWZ5p3MWt7LByIw', '4sSZqooKRfWxea2Dt7ghy5KEDZ3ZQSzGT8aUyZ7uKA'
-  end    
+    config.omniauth :google_oauth2, '249589806282.apps.googleusercontent.com', 'moNGTFhniRA-4iHWc-XiuMgX',
+      {
+        scope: "userinfo.email, userinfo.profile, https://www.google.com/m8/feeds"
+      }  
+  end
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
