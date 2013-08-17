@@ -1,37 +1,32 @@
 class ContactsController < ApplicationController
-  class ParsedContact
-    attr_accessor :name, :email
+
+  def create
+    if params[:source] == "manual"
+
+      params[:contact].each do |data|
+        Contact.create(firstname: data[:firstname], email: data[:lastname])
+      end
+
+    else
+      contacts_array = params[:contact]
+      
+      contacts_array.each do |x|
+        split_contact = x.split(",")
+        firstname = split_contact[0]
+        email = split_contact[1]
+        Contact.create(firstname: firstname, email: email, user_id: current_user.id)
+      end
+    end
+
+    redirect_to current_user
   end
 
   def new
   end
 
   def add_from_google
-
-    
-    array_of_contacts = []
-
     @user = current_user
-    # This enter code to make the http requrest
-    authentication = current_user.authentications.where(provider: "google_oauth2").first
-    access_token = authentication.access_token
-    api_uri = URI("https://www.google.com/m8/feeds/contacts/default/full?access_token=#{access_token}&max-results=999999")
 
-    results = Net::HTTP.get(api_uri)
-
-    parse = Nokogiri::XML.parse(results)
-
-    entries = parse.remove_namespaces!.xpath("*/entry")
-
-    entries.each do |entry|
-      new_contact = ParsedContact.new
-      new_contact.name = entry.at_xpath('title').text rescue "No Name"
-      new_contact.name = "No Name Retrieved" if new_contact.name == ""
-      new_contact.email = entry.at_xpath('email/@address').value rescue "No Email"
-      new_contact.email = "No Email Retrieved" if new_contact.email == ""
-      array_of_contacts << new_contact if new_contact.email != "No Email"
-    end
-
-    @results = array_of_contacts
+    @results = @user.fetch_google_contacts
   end
 end

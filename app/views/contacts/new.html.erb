@@ -1,18 +1,12 @@
-
 <div class="row large-6 large-centered center-text columns">
-  Hello, please add a new contact.
+  
+  <%= link_to "Add Contacts by Hand", "#", :"data-reveal-id" => "add-manual-container", class: "button expand" %>
   <br/>
   <% if current_user.authentications.where(provider: "google_oauth2").first %>
     <%= link_to "Add Google Contacts", add_google_contacts_path, remote: true, class: "button expand" %>
   <% else %>
     Authorize with Google to access your Google contacts
   <% end %> 
-  <br/>
-  <% if current_user.authentications.where(provider: "facebook").first %>
-    <%= link_to "Add Facebook Contacts", "#", :"data-reveal-id" => "add-facebook-container" %>
-  <% else %>
-    Authorize with Facebook to access your Facebook contacts
-  <% end %>
 </div>
 
 
@@ -22,6 +16,22 @@
   <h1>Google</h1>
 </div>
 
-<div id="add-facebook-container" class="reveal-modal">
-  <h1>Facebook</h1>
+<div id="add-manual-container" class="reveal-modal">
+  <h1>Share with your Friends and Family</h1>
+  <div id="manual-contacts-container">
+    <%= form_for :contact, url: "/contacts", method: "POST" do |f| %>
+      <div class="row" id="manual-contact-fieldsets">
+          <div class="large-6 columns">
+            Name: <input  name="contact[][firstname]" type="text" />
+          </div>
+          <div class="large-6 columns">
+            Email: <input  name="contact[][email]" type="text" />
+          </div>
+      </div>
+      <div id="field-marker"></div>
+      <%= link_to "Add Another Contact", "#", id: "add-another-contact", class: "button" %>
+      <input name="source" type="hidden" value="manual"/>
+      <%= f.submit :submit %>
+    <% end %>
+  </div>
 </div>
