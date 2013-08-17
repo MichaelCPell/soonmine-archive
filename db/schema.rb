@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130802205538) do
+ActiveRecord::Schema.define(version: 20130817182856) do
 
   create_table "authentications", force: true do |t|
     t.string   "provider"
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(version: 20130802205538) do
     t.integer  "quantity"
     t.string   "offsite_url"
     t.integer  "list_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reminders", force: true do |t|
+    t.string   "name"
+    t.string   "date"
+    t.integer  "user_id"
+    t.string   "recipient_email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

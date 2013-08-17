@@ -5,15 +5,18 @@ Soonmine::Application.routes.draw do
     get "users/complete_email", :to => "users#purgatory", :as => "user_complete_email"
     get "users/new_from_email", to: "users/registrations#new_from_email", as: "new_from_email"
   end
+  
 
-  resources :users, only: [:show, :index]
-  resources :products
   resources :contacts do
     collection do 
       get "add_from_google", to: "contacts#add_from_google", as: "add_google"
     end
   end
+  resources :users, only: [:show, :index]
+  resources :products
+  resources :reminders
 
+  
 
   get "/about", to: "static_pages#about"
   get "/welcome", to: "static_pages#welcome"

@@ -1,0 +1,5 @@
+<% if current_user.contacts.any? %>
+  <%= render "_form" %>
+<% else %>
+  <%= link_to "Please Add Contacts Before Adding Reminders", new_contact_path %>
+<% end %>
