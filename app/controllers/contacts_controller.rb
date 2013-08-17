@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
     if params[:source] == "manual"
 
       params[:contact].each do |data|
-        Contact.create(firstname: data[:firstname], email: data[:lastname])
+        Contact.create(firstname: data[:firstname], email: data[:lastname], user_id: current_user.id)
       end
 
     else
