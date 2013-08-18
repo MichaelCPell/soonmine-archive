@@ -1,4 +1,4 @@
-.button { 
+input.button { 
   @include button-base;
   @include button-size;
   @include button-style(#d3a33f, false, false);
@@ -13,6 +13,31 @@
     background-color: darken(#d3a33f, 10%);
   }
 }
+
+select.button{
+  color: #4a4a4a;
+  background-color: #ebebeb;
+  border-color: #ababab;
+
+  &:active{
+    color: inherit;
+    background-color: #ebebeb;
+    border-color: inherit;
+
+  }
+  &:focus{
+    color: inherit;
+    background-color: #ebebeb;
+    border-color: inherit;
+
+  }
+  &:hover{
+    color: inherit;
+    background-color: #ebebeb;
+    border-color: inherit;
+  }
+}
+
 
 .top-bar-section .dropdown li a {
   background-color: rgba(71,71,71,.9); 
@@ -48,3 +73,4 @@
 .right{
   margin-right: -18px !important;
 }
+
