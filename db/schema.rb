@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130817182856) do
     t.string   "access_token"
     t.string   "token_expiration"
     t.integer  "user_id"
+    t.string   "refresh_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,7 +57,7 @@ ActiveRecord::Schema.define(version: 20130817182856) do
 
   create_table "reminders", force: true do |t|
     t.string   "name"
-    t.string   "date"
+    t.date     "date"
     t.integer  "user_id"
     t.string   "recipient_email"
     t.datetime "created_at"

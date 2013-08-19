@@ -6,6 +6,7 @@ class CreateAuthentications < ActiveRecord::Migration
       t.string :access_token
       t.string :token_expiration
       t.integer :user_id
+      t.string :refresh_token
 
       t.timestamps
     end

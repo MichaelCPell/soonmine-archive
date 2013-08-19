@@ -8,13 +8,15 @@ class ContactsController < ApplicationController
       end
 
     else
-      contacts_array = params[:contact]
-      
-      contacts_array.each do |x|
-        split_contact = x.split(",")
-        firstname = split_contact[0]
-        email = split_contact[1]
-        Contact.create(firstname: firstname, email: email, user_id: current_user.id)
+      if contacts_array
+        contacts_array = params[:contact]
+        
+        contacts_array.each do |x|
+          split_contact = x.split(",")
+          firstname = split_contact[0]
+          email = split_contact[1]
+          Contact.create(firstname: firstname, email: email, user_id: current_user.id)
+        end
       end
     end
 

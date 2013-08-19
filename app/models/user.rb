@@ -54,21 +54,6 @@ class User < ActiveRecord::Base
 
   end
 
-
-  def prefriended_facebook_friends_on_offline
-    array_of_fb_uids = fetch_facebook_friends.map{|x|x["id"]}
-    array_of_friend_ids = friends.map(&:id)
-    array_of_friend_ids << 0
-
-    array_of_exfriend_ids = exfriends.map(&:id)
-    array_of_exfriend_ids << 0
-
-    res = User.select("users.id, users.profile_image_url, users.name").joins(:identities)
-    .where("identities.uid in (?)", array_of_fb_uids).where("users.id NOT IN (?)", array_of_friend_ids)
-    .where("users.id NOT IN (?)", array_of_exfriend_ids)
-
-  end
-
   def fetch_google_contacts
     array_of_contacts = []
     authentication = authentications.where(provider: "google_oauth2").first

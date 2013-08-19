@@ -10,9 +10,10 @@ class Authentication < ActiveRecord::Base
 
   def self.new_with_omniauth(auth_hash)
     new(uid: auth_hash['uid'], 
-           provider: auth_hash['provider'],
-           access_token: auth_hash['credentials'][:token],
-           token_expiration: date_or_nil(auth_hash['credentials'][:expires_at]))
+        provider: auth_hash['provider'],
+        access_token: auth_hash['credentials'][:token],
+        token_expiration: date_or_nil(auth_hash['credentials'][:expires_at]),
+        refresh_token: auth_hash['credentials'][:refresh_token])
   end
 
 

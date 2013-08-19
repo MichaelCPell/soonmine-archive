@@ -226,7 +226,8 @@ Devise.setup do |config|
     config.omniauth :twitter, 'mF8NC5lP3HdewBcfRehA', '6Z5V6l5GCSboxb1nwuhce0NFiJ9UC9WOwJbPP4nZ1Dw'
     config.omniauth :google_oauth2, '249589806282.apps.googleusercontent.com', 'moNGTFhniRA-4iHWc-XiuMgX',
       {
-        scope: "userinfo.email, userinfo.profile, https://www.google.com/m8/feeds"
+        scope: "userinfo.email, userinfo.profile, https://www.google.com/m8/feeds",
+        prompt: 'select_account consent'
       }
   when "staging"
     config.omniauth :facebook, '211614912321753', '8857ad428fe76ed9701be547cd50e478'
