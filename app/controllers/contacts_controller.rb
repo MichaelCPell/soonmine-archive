@@ -8,8 +8,8 @@ class ContactsController < ApplicationController
       end
 
     else
+      contacts_array = params[:contact]
       if contacts_array
-        contacts_array = params[:contact]
         
         contacts_array.each do |x|
           split_contact = x.split(",")
@@ -19,7 +19,7 @@ class ContactsController < ApplicationController
         end
       end
     end
-
+    flash[:notice] = "Successfully Added Contacts!"
     redirect_to current_user
   end
 

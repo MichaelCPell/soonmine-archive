@@ -26,6 +26,11 @@
   <body>
 
     <%= render "layouts/nav" %>
+    <header class="row center-text" style="background: #889faf;">
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, style: "padding: 20px;", :id => "flash_#{name}" if msg.is_a?(String) %>
+      <%- end -%>
+    </header>
 
     <%= yield :header %>
 
