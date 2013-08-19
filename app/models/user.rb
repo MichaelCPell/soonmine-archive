@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
     array_of_contacts = []
     authentication = authentications.where(provider: "google_oauth2").first
     access_token = authentication.access_token
-    api_uri = URI("https://www.google.com/m8/feeds/contacts/default/full?access_token=#{access_token}&max-results=100")
+    api_uri = URI("https://www.google.com/m8/feeds/contacts/default/full?access_token=#{access_token}&max-results=9999999")
 
     results = Net::HTTP.get(api_uri)
 

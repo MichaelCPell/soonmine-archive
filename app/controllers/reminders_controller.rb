@@ -15,8 +15,8 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new(reminder_params(processed_params))
 
 
-
-    redirect_to @user
+    flash[:notice] = "We have successfully created your reminder!"
+    redirect_to current_user
   end
 
   def show

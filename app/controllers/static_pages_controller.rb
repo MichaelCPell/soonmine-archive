@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def contact
+  def contact_us
   end
 
   def copyright
