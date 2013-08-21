@@ -5,91 +5,95 @@
     </div>
     <div class="large-5 large-centered columns user-settings-block">
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-      <%= devise_error_messages! %>
+        <%= devise_error_messages! %>
 
-      <div class="row">      
-        <div class="large-4 columns">
-          <%= f.label :email, class: "inline" %>
-        </div>
-
-        <div class="large-8 columns">
-          <%= f.email_field :email, :autofocus => true %>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-4 columns">
-          <%= f.label :state, class: "inline" %>
-        </div>
-
-        <div class="large-8 columns">
-          <%= f.select(:state, ["Alabama", "Alaska", "Arizona", "Arkansas", "North Carolina", "Mississippi"],{}, class: "small button dropdown") %>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-4 columns">
-          <%= f.label :town, class: "inline" %>
-        </div>
-
-        <div class="large-8 columns">
-          <%= f.text_field :town %>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-4 columns">
-          <%= f.label :birthday, class: "inline" %>
-        </div>
-        <div class="large-8 columns">
-          <%= f.date_select :birthday,{ 
-                            order: [:day, :month, :year], 
-                            start_year: 1913, 
-                            end_year: 2003},
-                            {:class => "small button dropdown"} %>
-        </div>
-      </div>
-
-      <div class="large-12">
-        &nbsp;
-      </div>
-
-      <div class="row">
-        <%= f.fields_for :primary_list do |list| %>
+        <div class="row">      
           <div class="large-4 columns">
-            <%= list.label :privacy, class: "" %>
+            <%= f.label :email, class: "inline" %>
           </div>
-          <div class="large-8 columns">
-            <ul class="inline-list">
-              <li>
-                <label>
-                  Public:  <%= list.radio_button :privacy, "public" %>
-                </label>
-              </li>
-              <li>
-                <label>
-                  Private: 
-                  <%= list.radio_button :privacy, "private" %>
-                </label>
-              </li>
-            </ul>
-          </div>
-        <% end %>
-      </div>
 
-      <% unless current_user.encrypted_password.blank? %>
+          <div class="large-8 columns">
+            <%= f.email_field :email, :autofocus => true %>
+          </div>
+        </div>
+
         <div class="row">
           <div class="large-4 columns">
-            <%= f.label :password, class: "inline" %>
+            <%= f.label :state, class: "inline" %>
+          </div>
+
+          <div class="large-8 columns">
+            <%= f.select(:state, ["Alabama", "Alaska", "Arizona", "Arkansas", "North Carolina", "Mississippi"],{}, class: "small button dropdown") %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-4 columns">
+            <%= f.label :town, class: "inline" %>
+          </div>
+
+          <div class="large-8 columns">
+            <%= f.text_field :town %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-4 columns">
+            <%= f.label :birthday, class: "inline" %>
           </div>
           <div class="large-8 columns">
-            <%= link_to "Change Password", "#", :"data-reveal-id" => "change-password-form" %>
+            <%= f.date_select :birthday,{ 
+                              order: [:day, :month, :year], 
+                              start_year: 1913, 
+                              end_year: 2003},
+                              {:class => "small button dropdown"} %>
           </div>
-        </div>        
-      <% end %>
+        </div>
 
-        <div class="large-3 push-10">
-          <%= f.submit "Save", class: "button small" %>
+        <div class="large-12">
+          &nbsp;
+        </div>
+
+        <div class="row">
+          <%= f.fields_for :primary_list do |list| %>
+            <div class="large-4 columns">
+              <%= list.label :privacy, class: "" %>
+            </div>
+            <div class="large-8 columns">
+              <ul class="inline-list">
+                <li>
+                  <label>
+                    Public:  <%= list.radio_button :privacy, "public" %>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    Private: 
+                    <%= list.radio_button :privacy, "private" %>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+
+        <% unless current_user.encrypted_password.blank? %>
+          <div class="row">
+            <div class="large-4 columns">
+              <%= f.label :password %>
+            </div>
+            <div class="large-8 columns">
+                <%= link_to "Change Password", "#", :"data-reveal-id" => "change-password-form" %>
+            </div>
+          </div>        
+        <% end %>
+        <br/>
+        <br/>
+
+        <div class="row">
+          <div class="large-2 push-8">
+            <%= f.submit "SAVE SETTINGS", class: "button small" %>
+          </div>
         </div>
       <% end %>
     </div>

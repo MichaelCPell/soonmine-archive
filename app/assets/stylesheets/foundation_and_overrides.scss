@@ -132,7 +132,7 @@ $paragraph-margin-bottom: emCalc(10px);
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: #558ccf;
 // $anchor-font-color-hover: darken($primary-color, 5%);
 
 // We use these to style the <hr> element
@@ -192,12 +192,12 @@ $paragraph-margin-bottom: emCalc(10px);
 // We use these to style the labels in different ways
 // $label-pointer: pointer;
 // $label-font-size: emCalc(14px);
-// $label-font-weight: 500;
-// $label-font-color: lighten(#000, 30%);
+$label-font-weight: 300;
+$label-font-color: rgba(171,171,171,.8);
 // $label-bottom-margin: emCalc(3px);
-// $input-font-family: inherit;
-// $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: emCalc(14px);
+$input-font-family: inherit;
+$input-font-color: rgba(171,171,171,.8);
+$input-font-size: emCalc(16px);
 $input-bg-color: #ebebeb;
 $input-focus-bg-color: #fff;
 $input-border-color: #ababab;
