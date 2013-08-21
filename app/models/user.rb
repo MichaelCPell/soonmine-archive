@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   end
 
   def fullname
-    "#{firstname} #{lastname}"
+    firstname.blank? ? email : "#{firstname} #{lastname}"
   end
 
   def primary_list
