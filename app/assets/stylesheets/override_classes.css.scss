@@ -67,6 +67,10 @@ input[type="radio"]{
   }
 }
 
+.top-bar-section .has-form{
+  background-color: rgba(71,71,71,.9);   
+}
+
 #top-bar-user-image-link{
   padding-right: 0px !important; 
   &:hover{

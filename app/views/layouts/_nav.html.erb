@@ -73,10 +73,10 @@
               <%= form_tag "/users", {method: :get} do %>
                 <div class="row collapse" style= "width: 300px;">
                   <div class="large-9 columns">
-                    <%= search_field_tag :search,nil, placeholder: "Name" %>
+                    <%= search_field_tag :search,nil, placeholder: "Find Users" %>
                   </div>
                   <div class="large-3 columns">
-                    <%= submit_tag :search %>
+                    <%= submit_tag "", id: "user-search-submit" %>
                   </div>
                 </div>
               <% end %>
