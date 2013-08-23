@@ -24,34 +24,19 @@ class User < ActiveRecord::Base
     firstname.blank? ? email : "#{firstname} #{lastname}"
   end
 
-  def primary_list
-    lists.find_by_title("Primary")
-  end
+  def primary_list_of_products(sort = nil)
+    list = lists.find_by_title("Primary").products
 
-  def fetch_facebook_friends
-    # identity = Identity.where(user_id: id, provider: "facebook").first
-
-    # uri_string = "https://graph.facebook.com/#{identity.uid}/friends?access_token=#{identity.access_token}"
-
-    # uri = URI(uri_string)
-
-    # https = Net::HTTP.new(uri.host, uri.port)
-    # https.use_ssl = true
-    # https.ca_file = 'cacert.pem' if Rails.env == "development"
-    # response_object = https.request_get(uri.path+"?"+uri.query)
-    # response_body = response_object.body
-
-    # parse = JSON.parse(response_body)
-    # friends = parse["data"]
-
-    authentication = Authentication.where(user_id: id, provider: "facebook").first
-
-    uri_string = "https://graph.facebook.com/#{authentication.uid}/friends?access_token=#{authentication.access_token}"
-    uri = URI(uri_string)
-    results = Net::HTTP.get(uri)
-
-    
-
+    case sort
+    when "date"
+      list.order(:created_at)
+    when "lowest"
+      list.order("price ASC")
+    when "highest"
+      list.order("price DESC")
+    else
+      list
+    end
   end
 
   def fetch_google_contacts

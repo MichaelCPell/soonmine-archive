@@ -12,9 +12,18 @@
       </div>
     </li>
 
-    <%= render partial: "users/product_block", collection: @user.primary_list.products, as: :product %>
+    <%= render partial: "users/product_block", collection: @list, as: :product %>
 
   </ul>
+</div>
+
+<div id="sort-container">
+  SORT
+  <%= link_to "Date Added", user_path(@user, sort: "date") %>
+  <br/> 
+  <%= link_to "Price: Low to High", user_path(@user, sort: "lowest") %>
+  <br/> 
+  <%= link_to "Price: High to Low", user_path(@user, sort: "highest") %> 
 </div>
 
 <% content_for :header do %>

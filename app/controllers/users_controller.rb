@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @list = @user.primary_list
+    @list = @user.primary_list_of_products(params[:sort])
   end
 
   def index
