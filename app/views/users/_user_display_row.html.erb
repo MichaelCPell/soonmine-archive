@@ -11,9 +11,9 @@
         <%= image_tag user.image_url, class: "row-user-image" %>
       </div>
       <%= render partial: "row_product_display", 
-      collection: user.primary_list.products.limit(5), 
+      collection: user.primary_list_of_products.limit(5), 
       as: :product, locals: {user: user} %>
-      <div class="large-offset-<%= (5 - user.primary_list.products.length) if user.primary_list.products.length <= 5 %>">
+      <div class="large-offset-<%= (5 - user.primary_list_of_products.length) if user.primary_list_of_products.length <= 5 %>">
       </div>
     </div>
   </div>

@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
     firstname.blank? ? email : "#{firstname} #{lastname}"
   end
 
+  def primary_list
+    lists.find_by_title("Primary")
+  end
+
   def primary_list_of_products(sort = nil)
     list = lists.find_by_title("Primary").products
 
