@@ -66,7 +66,23 @@
             </li>
           </ul>
         </li>
-        <li><%= link_to image_tag("search-icon@2x.png", width: 33, class: "top-bar-image"), users_path, class: "top-bar-image-link" %></li>
+        <li class="has-dropdown">
+          <%= link_to image_tag("search-icon@2x.png", width: 33, class: "top-bar-image"), users_path, class: "top-bar-image-link" %>
+          <ul class="dropdown">
+            <li class="has-form search">
+              <%= form_tag "/users", {method: :get} do %>
+                <div class="row collapse" style= "width: 300px;">
+                  <div class="large-9 columns">
+                    <%= search_field_tag :search,nil, placeholder: "Name" %>
+                  </div>
+                  <div class="large-3 columns">
+                    <%= submit_tag :search %>
+                  </div>
+                </div>
+              <% end %>
+            </li>
+          </ul>
+        </li>
 
       </ul>
     </section>

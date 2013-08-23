@@ -7,7 +7,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    if params[:search]
+      search = params[:search].gsub(/\s/,'')
+      @users = User.where("CONCAT(firstname, lastname) ILIKE ?","%#{search}%")
+    else
+      @users = User.all
+    end
   end
 
   def purgatory
