@@ -38,6 +38,12 @@ class User < ActiveRecord::Base
       list.order("price ASC")
     when "highest"
       list.order("price DESC")
+    when "want"
+      list.where(intensity: 3)
+    when "really"
+      list.where(intensity: 2)
+    when "need"
+      list.where(intensity: 1)
     else
       list
     end

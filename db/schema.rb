@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20130817182856) do
     t.string   "state"
     t.integer  "quantity"
     t.string   "offsite_url"
+    t.integer  "intensity"
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"

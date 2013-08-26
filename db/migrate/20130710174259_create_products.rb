@@ -7,6 +7,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :state
       t.integer :quantity
       t.string :offsite_url
+      t.integer :intensity
       t.integer :list_id
 
       t.timestamps

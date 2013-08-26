@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
     @product.list_id = current_user.primary_list.id
 
     if @product.save
+      @list = @user.primary_list_of_products(params[:sort])
       render "users/show"
     else
       render :edit
@@ -22,6 +23,6 @@ class ProductsController < ApplicationController
 	private
 
   def product_params
-    params.require(:product).permit(:name, :price, :image_url, :state, :offsite_url)
+    params.require(:product).permit(:name, :price, :image_url, :state, :offsite_url, :intensity)
   end
 end
