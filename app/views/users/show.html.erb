@@ -17,20 +17,22 @@
   </ul>
 </div>
 
-<div id="sort-container">
-  SORT
-  <br/>
-  <%= link_to "Date Added", user_path(@user, sort: "date") %>
-  <br/> 
-  <%= link_to "Price: Low to High", user_path(@user, sort: "lowest") %>
-  <br/> 
-  <%= link_to "Price: High to Low", user_path(@user, sort: "highest") %> 
-  <br/> 
-  <%= link_to "Need", user_path(@user, sort: "need") %> 
-  <br/> 
-  <%= link_to "Really Want", user_path(@user, sort: "really") %> 
-  <br/> 
-  <%= link_to "Want", user_path(@user, sort: "want") %> 
+<div id="sort-container" style="width: 200px;">
+
+  <%= link_to "SORT", "#", id: "sort-show" %>
+  <div id="sort-contents">
+    <%= link_to "Date Added", user_path(@user, sort: "date") %>
+    <br/> 
+    <%= link_to "Price: Low to High", user_path(@user, sort: "lowest") %>
+    <br/> 
+    <%= link_to "Price: High to Low", user_path(@user, sort: "highest") %> 
+    <br/> 
+    <%= link_to "Need", user_path(@user, sort: "need") %> 
+    <br/> 
+    <%= link_to "Really Want", user_path(@user, sort: "really") %> 
+    <br/> 
+    <%= link_to "Want", user_path(@user, sort: "want") %> 
+  </div>
 </div>
 
 <% content_for :header do %>
@@ -38,5 +40,15 @@
 
   </div>
 <% end %>
+
+
+
+
+
+
+
+
+
+
 
 
