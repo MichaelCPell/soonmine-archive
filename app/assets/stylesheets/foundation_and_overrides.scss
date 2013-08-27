@@ -119,7 +119,7 @@ $block-grid-default-spacing: 30px;
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
 $paragraph-font-size: .75em;
-$paragraph-line-height: 1;
+$paragraph-line-height: emCalc(20px);
 $paragraph-margin-bottom: emCalc(10px);
 // $paragraph-aside-font-size: emCalc(14px);
 // $paragraph-aside-line-height: 1.35;
@@ -254,7 +254,7 @@ $input-focus-border-color: #ababab;
 // $button-font-tny: emCalc(11px);
 // $button-font-sml: emCalc(13px);
 // $button-font-lrg: emCalc(20px);
-// $button-font-weight: bold;
+$button-font-weight: normal;
 // $button-font-align: center;
 
 // We use these to control various hover effects.

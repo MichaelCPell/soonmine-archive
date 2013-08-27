@@ -4,6 +4,8 @@ input.button {
   @include button-style(#d3a33f, false, false);
   padding-left: 45px;
   padding-right: 45px;
+  font-family: "p22-underground"; 
+  font-weight: 100;
 
   &:hover{
     background-color: lighten(#d3a33f, 10%);
