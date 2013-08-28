@@ -15,5 +15,6 @@ class StaticPagesController < ApplicationController
   end
   
   def welcome
+    render layout: "welcome_layout" 
   end
 end

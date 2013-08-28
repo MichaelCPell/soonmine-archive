@@ -1,30 +1,140 @@
-<div class="row" style="text-align: center">
-  <h1>Start getting the gifts you want for a change</h1>
+<style>
+  ul, li, a:not(.button){
+    background-color: transparent !important;
+    color: white !important;
+  }
+
+  .big-white{
+    color: white !important;
+    font-size: 36px;
+    font-family: "p22-underground";
+  }
+
+  .small-white{
+    font-size: 24px;
+    line-height: 30px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  }
+
+  .bold{
+    font-weight: 400;
+  }
+  .normal{
+    font-weight: 100;
+  }
+
+  .button{
+    background-color: #d3a33f;
+    border: none;
+    font-family: "p22-underground";
+    font-weight: 500;
+  }
+
+  .button:hover{
+    background-color: #d3a33f;
+  }
+
+  .button:active{
+    background-color: #d3a33f;
+  }
+</style>
+<div class="row">
+  <!-- <div class="contain-to-grid" style="background-color: transparent;"> -->
+    <nav class="top-bar" style="background-color: transparent;">
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <%= link_to image_tag("logo@2x.png", width: 150, style: "padding-top: 20px;"), root_path %>
+          </h1>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          <li><%= link_to "LOG IN", new_user_session_path %></li>
+          <li><%= link_to "SIGN UP", new_user_registration_path %></li>
+          <li>
+            <%= link_to "ABOUT", about_path %>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  <!-- </div> -->
+</div>
+
+<div class="row" style="height: 5em;">
 </div>
 
 <div class="row">
-  <div class="large-6 columns">
-    <div class="row">
-      <p>
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet semper est. Vestibulum mollis velit porta eros tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum ac augue et ornare. Aliquam auctor pulvinar enim, sit amet lobortis urna aliquet non. Aenean gravida commodo sem at consectetur. Mauris non justo posuere nibh tristique consectetur. Vestibulum egestas, lacus vel tempus bibendum, mauris arcu varius nisl, sed molestie nulla tortor a nunc.
-      </p>
-    </div>
-
-    <div class="top-margin-20 row">
-      <div class="large-6 large-centered columns" style="text-align: center">
-        <%= link_to "Sign Up", new_user_registration_path, class: "button large" %>
+  <div class="large-4">
+    <div class="row big-white bold">
+      <div class="large-12 columns">
+        SHARE.
       </div>
     </div>
-
-    <div class="row">
-      <div class="large-6 large-centered columns" style="text-align: center">
-        <%= link_to "Login", new_user_session_path, class: "button large" %>
+    <div class="row big-white bold">
+      <div class="large-12 columns">
+        WHAT YOU WANT.
       </div>
     </div>
   </div>
-
-  <div class="large-6 columns">
-    <iframe width="500" height="315" src="//www.youtube.com/embed/Of2HU3LGdbo" frameborder="0" allowfullscreen></iframe>
-  </div>
-
 </div>
+
+<div class="row" style="height: 2em;">
+</div>
+
+<div class="row">
+  <div class="large-4">
+
+    <div class="row  small-white">
+      <div class="large-12 columns normal">
+        soonmine keeps all of the gifts you want to receive in one place so you can easily share with loved ones.
+      </div>
+    </div>
+
+    <div class="row" style="height: 1em;">
+    </div>
+
+    <div class="row small-white">
+      <div class="large-8 columns normal">
+        (>)find out more
+      </div>
+    </div>
+
+    <div class="row" style="height: 2em;">
+    </div>
+
+    <div class="row small-white">
+      <div class="large-10 columns normal">
+        <%= link_to "SIGN UP", new_user_registration_path, class: "button expand" %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
