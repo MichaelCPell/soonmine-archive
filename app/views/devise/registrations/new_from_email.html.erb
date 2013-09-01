@@ -1,3 +1,6 @@
+
+<div class="sign-up-wrap">
+
 <div class="row">
   <div class="row">
     <div class="large-4 large-centered columns center-text">
@@ -6,8 +9,8 @@
   </div>
 
   <div class="row">
-    <div class="large-4 large-centered columns user-signup-block">
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <div class="large-4 large-centered columns user-signup-block signup-form-wrap">
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { class: "custom" }) do |f| %>
         <%= devise_error_messages! %>
 
         <div><%= f.label :firstname %><br />
@@ -21,9 +24,14 @@
 
         <div><%= f.label :password %><br />
         <%= f.password_field :password %></div>
+        
+        <%= f.label :state, class: "inline" %>
+        <div> <%= f.select(:state, ["Alabama", "Alaska", "Arizona", "Arkansas", "North Carolina", "Mississippi"],{}, class: "small button dropdown") %></div>
 
         <div><%= f.submit "Sign up", class: "button small push-9" %></div>
       <% end %>
     </div>    
   </div>
 </div>
+
+</div><!-- end signup wrap -->
