@@ -1,0 +1,265 @@
+/* === GLOBAL SETTINGS === */
+
+ul, li, a:not(.button){
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.big-white{
+  color: white !important;
+  font-size: 36px;
+  font-family: "p22-underground";
+}
+
+.small-white{
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+.bold{
+  font-weight: 400;
+}
+.normal{
+  font-weight: 100;
+}
+
+.button{
+  background-color: #d3a33f;
+  border: none;
+  font-family: "p22-underground";
+  font-weight: 500;
+}
+
+.button:hover{
+  background-color: #d3a33f;
+}
+
+.button:active{
+  background-color: #d3a33f;
+}
+
+/* === Styling the splash page === */
+
+.home-main-section {
+  margin-top: 156px;
+}
+
+.home-nav .toggle-topbar span {
+    font-size:13px;
+}
+
+.home-nav .top-bar-section ul li > a {
+  padding-left:0 !important;
+}
+
+.tagline span {
+  display: block;
+  font-size: 36px;
+  font-family: "p22-underground";
+}
+
+.tagline span:first-child {
+  margin-bottom: 15px;
+}
+
+.video-icon {
+  display: inline-block;
+  width: 70px;
+  height: 60px;
+  background: url(video-icon.png) no-repeat;
+  position: relative;
+  top: 21px;
+}
+
+.tagline-text {
+  margin-top:58px;
+  margin-bottom: 40px;
+}
+
+.video-tagline {
+  margin-bottom: 35px;
+}
+
+.button.expand.signup-btn {
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+/* === Inner page nav  === */
+
+.inner-page-nav ul li a {
+  color:#626262 !important;
+  text-transform: uppercase;
+  font-size:14px;
+  padding-top:10px;
+}
+
+.inner-page-nav .top-bar-section .has-dropdown > a {
+  padding-right:47px !important;
+}
+
+
+.inner-page-logo img {
+  margin-top:25px;
+}
+
+.inner-page-nav .dropdown, .inner-page-nav .has-dropdown:hover, .inner-page-nav li:hover {
+  background:#474747 !important;
+}
+
+.inner-page-nav .dropdown a, .inner-page-nav .has-dropdown:hover a, .inner-page-nav li:hover a {
+    color:#fff !important;
+}
+
+.inner-page-nav .dropdown a {
+  padding:10px 0;
+}
+
+.inner-page-nav .dropdown a:hover {
+    background:#2e2e2e !important;
+}
+
+li:hover.inner-page-logo {
+  background:none !important;
+}
+
+.inner-page-nav #search  {
+   position:relative;
+   top:25px;
+   background:#fff;
+   padding-top:18px;
+   padding-bottom:18px;
+}
+
+#user-search-submit {
+  background: url(search-icon-input.png) no-repeat;
+  position:absolute;
+  top:35px;
+  right:0;
+  border:none;
+}
+
+/* === Signup === */
+
+.sign-up-wrap {
+  margin-top:20px;
+}
+
+.sign-up-wrap h2 {
+  font-size:30px;
+  color: #d2a33f;
+  font-weight:700;
+}
+
+.user-signup-block {
+  background:#fff;
+}
+
+/* we are using top and bottom instead of the shortheand so we don't interfere with the foundations styling */
+.user-signup-block .button {
+  position: relative;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.user-signup-block .login-button-standalone {
+  color: #558ccf !important;
+  text-decoration: underline;
+}
+
+.facebook-signup-button:after, .twitter-signup-button:after, .google-signup-button:after, .email-signup-button:after {
+  content: " ";
+  background:#000;
+  position:absolute;
+  top:0;
+  left:0;
+  width:16px;
+  height:47px;
+}
+
+.facebook-signup-button:after {
+   background: url(facebook-icon.png) no-repeat;
+   top:5px;
+   left:20px;
+}
+
+.twitter-signup-button:after {
+   background: url(twitter-icon.png) no-repeat;
+   top:10px;
+   left:20px;
+   width:30px;
+}
+
+.google-signup-button:after {
+   background: url(google-icon.png) no-repeat;
+   top:5px;
+   left:20px;
+   width:22px;
+}
+
+.email-signup-button:after {
+   background: url(email-icon.png) no-repeat;
+   top:15px;
+   left:20px;
+   width:24px;
+   height:20px;
+}
+
+.facebook-signup-button {
+  background-color:#3b5998;
+}
+
+.twitter-signup-button {
+  background-color:#4099ff;
+}
+
+.google-signup-button {
+  background-color:#d34836;
+}
+
+/* === Custom dropdowns === */
+
+.signup-form-wrap form.custom .custom.dropdown.small {
+   max-width: 100%;
+   background: #ebebeb;
+   border:1px solid #cbcbcb;
+}
+
+.signup-form-wrap form.custom .custom.dropdown.open.small ul {
+  min-width: 100%;
+  background: #eee !important;
+}
+
+form.custom .custom.dropdown a:not(.button), form.custom .custom.dropdown ul li {
+  color:#919191 !important;
+}
+
+form.custom .custom.dropdown .selector {
+cursor: default;
+position: absolute;
+width: 2.5em;
+height: 2.11em;
+display: block;
+right: 0px;
+top: 0px;
+background: #fff !important;
+
+}
+form.custom .custom.dropdown ul li:hover {
+  background:#fff !important;
+}
+
+/* === Respnsive styles === */
+
+@media only screen and (max-width: 1030px) {
+  .home-main-section {
+    padding:0 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home-main-section {
+    margin-top: 0;
+  }
+}
