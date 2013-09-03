@@ -1,9 +1,25 @@
 $(document).ready(function(){
 
-  $("#sort-show").click(function(e){
-    e.preventDefault();
-    $("#sort-contents").slideToggle("slow");
-  });
+(function () {
+
+  var initialPos = 0;
+
+    $("#sort-show").click(function(e) {
+        e.preventDefault();
+        $("#sort-container").animate({ left: initialPos }, 300, 'linear', function() {
+          if(initialPos == 0) { initialPos = -200; }
+          else { initialPos = 0; }
+        });
+      });
+
+})();  
+
+(function () {
+
+  $('.responsive-sort-menu').on('click', function() {
+      $("#sort-container").slideToggle();
+  }); 
+
 
   $(".product-name").shorten({showChars: 24});
 
@@ -33,6 +49,8 @@ $(document).ready(function(){
   $("#sort-container input").click(function(){
     window.location.href = $(this).data('target');
   })
+
+})();  
 
 });
 
