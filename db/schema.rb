@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130817182856) do
+ActiveRecord::Schema.define(version: 20130901190518) do
 
   create_table "authentications", force: true do |t|
     t.string   "provider"
@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20130817182856) do
     t.string   "state"
     t.integer  "quantity"
     t.string   "offsite_url"
-    t.integer  "intensity"
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -85,6 +84,7 @@ ActiveRecord::Schema.define(version: 20130817182856) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "filepicker_url"
   end
 
 end

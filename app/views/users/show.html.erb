@@ -21,17 +21,16 @@
 
   <%= link_to "SORT", "#", id: "sort-show" %>
   <div id="sort-contents">
-    <%= link_to "Date Added", user_path(@user, sort: "date") %>
-    <br/> 
-    <%= link_to "Price: Low to High", user_path(@user, sort: "lowest") %>
-    <br/> 
-    <%= link_to "Price: High to Low", user_path(@user, sort: "highest") %> 
-    <br/> 
-    <%= link_to "Need", user_path(@user, sort: "need") %> 
-    <br/> 
-    <%= link_to "Really Want", user_path(@user, sort: "really") %> 
-    <br/> 
-    <%= link_to "Want", user_path(@user, sort: "want") %> 
+    <form>
+      <% %W(date lowest highest need really\swant want).each do |sort_value| %>
+        <input type="radio" name="sort" 
+               data-target= "<%= user_path(@user, sort: sort_value.split[0])%>"
+               <%= "checked" if params[:sort] == sort_value.split[0] %>>
+          <%= sort_value.camelize %>
+        </input>
+      <br/>
+      <% end %>
+    </form>  
   </div>
 </div>
 
