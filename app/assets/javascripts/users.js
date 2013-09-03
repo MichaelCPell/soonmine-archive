@@ -1,7 +1,3 @@
-var fakeClick = function(path){
-  window.location.href = path;
-}
-
 $(document).ready(function(){
 
   $("#sort-show").click(function(e){
@@ -35,7 +31,7 @@ $(document).ready(function(){
   });
 
   $("#sort-container input").click(function(){
-    fakeClick($(this).data('target'))
+    window.location.href = $(this).data('target');
   })
 
 });
