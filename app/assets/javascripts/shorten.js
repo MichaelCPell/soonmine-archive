@@ -24,8 +24,8 @@
         var config = {
             showChars: 10,
             ellipsesText: "...",
-            moreText: "more",
-            lessText: "less",
+            moreText: "",
+            lessText: "",
             errMsg: null
         };
 
