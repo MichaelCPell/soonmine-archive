@@ -20,6 +20,10 @@ class User < ActiveRecord::Base
             image_url: info[:image])
   end
 
+  def avatar_url
+    filepicker_url ? filepicker_url : profile_image_url
+  end
+
   def fullname
     firstname.blank? ? email : "#{firstname} #{lastname}"
   end

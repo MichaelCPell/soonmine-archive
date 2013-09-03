@@ -21,6 +21,8 @@ module Soonmine
     # config.i18n.default_locale = :de
 
 
+    #File Picker Config... this could go into an initializer
+    config.filepicker_rails.api_key = "ABW0Ti7xaS32Z414SQO13z"
 
     #Prints logger to STDOUT for Unicorn
     config.logger = Logger.new(STDOUT)
