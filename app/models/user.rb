@@ -49,7 +49,29 @@ class User < ActiveRecord::Base
     end
   end
 
+  def refresh_google_token
+    authentication = authentications.where(provider: "google_oauth2").first
+    uri = "https://accounts.google.com/o/oauth2/token"
+    refresh_token = authentication.refresh_token
+    client_id = "249589806282.apps.googleusercontent.com"
+    client_secret = "moNGTFhniRA-4iHWc-XiuMgX"
+    grant_type = "refresh_token"
+
+
+    result = HTTParty.post(uri,
+                            body: { refresh_token: refresh_token,
+                                    client_id: client_id,
+                                    client_secret: client_secret,
+                                    grant_type: grant_type})
+
+    parse = JSON.parse(result.body)
+
+    authentication.update_attribute(:access_token, parse["access_token"])
+  end
+
+
   def fetch_google_contacts
+    refresh_google_token
     array_of_contacts = []
     authentication = authentications.where(provider: "google_oauth2").first
     access_token = authentication.access_token
