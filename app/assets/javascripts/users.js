@@ -5,7 +5,7 @@ $(document).ready(function(){
     $("#sort-contents").slideToggle("slow");
   });
 
-  $(".product-name").shorten({showChars: 20});
+  $(".product-name").shorten({showChars: 17});
 
   $(".morelink").on('click', function() {
 

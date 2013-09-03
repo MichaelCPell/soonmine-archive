@@ -22,7 +22,7 @@
     "use strict";
 
         var config = {
-            showChars: 100,
+            showChars: 10,
             ellipsesText: "...",
             moreText: "more",
             lessText: "less",
