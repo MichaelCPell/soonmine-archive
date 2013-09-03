@@ -1,5 +1,9 @@
 <div class="row">
-  <ul class="large-block-grid-4" style="height:9000px;">
+
+  <div class="responsive-sort-menu">
+    <span>Sort</span>
+  </div>
+  <ul class="large-block-grid-4 products-grid-list">
     <li>
       <div class="user-profile-block">
         <div class="block-user-image">
@@ -17,18 +21,24 @@
   </ul>
 </div>
 
-<div id="sort-container" style="width: 200px;">
+<div id="sort-container">
 
-  <%= link_to "SORT", "#", id: "sort-show" %>
+<div class="sort-show-wrap">
+     <%= link_to "SORT", "#", id: "sort-show" %>
+</div>
+ 
   <div id="sort-contents">
     <form>
       <% %W(date lowest highest need really\swant want).each do |sort_value| %>
+      <div class="sort-filter">
+
         <input type="radio" name="sort" 
                data-target= "<%= user_path(@user, sort: sort_value.split[0])%>"
                <%= "checked" if params[:sort] == sort_value.split[0] %>>
           <%= sort_value.camelize %>
         </input>
-      <br/>
+      </div>
+
       <% end %>
     </form>  
   </div>

@@ -151,14 +151,11 @@ li:hover.inner-page-logo {
 
 /* === Signup === */
 
-.sign-up-wrap {
-  margin-top:20px;
-}
-
-.sign-up-wrap h2 {
+.center-text h2 {
   font-size:30px;
   color: #d2a33f;
   font-weight:700;
+  margin-top:20px;
 }
 
 .user-signup-block {
@@ -229,13 +226,13 @@ li:hover.inner-page-logo {
 
 /* === Custom dropdowns === */
 
-.signup-form-wrap form.custom .custom.dropdown.small {
+form.custom .custom.dropdown.small {
    max-width: 100%;
    background: #ebebeb;
    border:1px solid #cbcbcb;
 }
 
-.signup-form-wrap form.custom .custom.dropdown.open.small ul {
+form.custom .custom.dropdown.open.small ul {
   min-width: 100%;
   background: #eee !important;
 }
@@ -245,18 +242,52 @@ form.custom .custom.dropdown a:not(.button), form.custom .custom.dropdown ul li 
 }
 
 form.custom .custom.dropdown .selector {
-cursor: default;
-position: absolute;
-width: 2.5em;
-height: 2.11em;
-display: block;
-right: 0px;
-top: 0px;
-background: #fff !important;
-
+  cursor: default;
+  position: absolute;
+  width: 2.5em;
+  height: 2.11em;
+  display: block;
+  right: 0px;
+  top: 0px;
+  background: #fff !important;
 }
+
 form.custom .custom.dropdown ul li:hover {
   background:#fff !important;
+}
+
+#sort-container {
+  width:200px;
+}
+
+.sort-show-wrap {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  background-color: rgba(71, 71, 71, 0.9);
+  width: 60px;
+  height: 60px;
+}
+
+#sort-show {
+    font-weight: 700;
+    display: inline-block;
+    margin:21px 0 0 5px;
+}
+
+.sort-filter {
+  margin:7px 0;
+}
+
+.responsive-sort-menu {
+  padding:15px 10px;
+  width: 300px;
+  text-transform: uppercase;
+  margin:0 auto;
+  display: none;
+  background: url(sort-responsive-arrows.png) no-repeat 95% center rgba(71, 71, 71, 0.9);
+  color:#fff;
+  cursor: pointer;
 }
 
 /* === Respnsive styles === */
@@ -271,4 +302,25 @@ form.custom .custom.dropdown ul li:hover {
   .home-main-section {
     margin-top: 0;
   }
+
+  .products-grid-list {
+    margin-top: 40px;
+  }
+
+  #sort-container {
+    top: 201px;
+    left: 50%;
+    margin-left: -150px;
+    display: none;
+    width:300px;
+  }
+
+  .sort-show-wrap {
+    display: none;
+  }
+
+  .responsive-sort-menu {
+    display:block;
+  }
+
 }
