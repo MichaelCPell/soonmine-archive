@@ -23,22 +23,25 @@
 
 <div id="sort-container">
 
-<div class="sort-show-wrap">
-     <%= link_to "SORT", "#", id: "sort-show" %>
-</div>
+  <div class="sort-show-wrap">
+       <%= link_to "SORT", "#", id: "sort-show" %>
+  </div>
  
   <div id="sort-contents">
     <form>
-      <% %W(date lowest highest need really\swant want).each do |sort_value| %>
-      <div class="sort-filter">
-
-        <input type="radio" name="sort" 
-               data-target= "<%= user_path(@user, sort: sort_value.split[0])%>"
-               <%= "checked" if params[:sort] == sort_value.split[0] %>>
-          <%= sort_value.camelize %>
-        </input>
-      </div>
-
+      <% [["date", "Date"], 
+          ["lowest", "Price: Low to High"],
+          ["highest", "Price: High to Low"],
+          ["need", "Need"],
+          ["really", "Really want"],
+          ["want", "Want"]].each do |sort_value| %>
+        <div class="sort-filter">
+          <input type="radio" name="sort" 
+                 data-target= "<%= user_path(@user, sort: sort_value[0])%>"
+                 <%= "checked" if params[:sort] == sort_value[0] %>>
+            <%= sort_value[1] %>
+          </input>
+        </div>
       <% end %>
     </form>  
   </div>
