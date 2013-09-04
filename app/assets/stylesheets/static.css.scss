@@ -17,7 +17,9 @@
 }
 
 #welcome-body{
-  background-image: url("soonmine-bg.jpg");
+  background-image: url("soonmine-bg.jpg") no-repeat;
   background-size: 100%;
+  background-position:center center;
+  background-size: cover;
   color: white;
 }

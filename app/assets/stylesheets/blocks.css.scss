@@ -17,10 +17,9 @@ Classes that begin in block- are elements within blocks.
 }
 
 .block-user-info{
-  text-align: center;
+  text-align: left;
   height: 60px;
-  padding-bottom: 15px;
-  padding-top: 12px;
+  padding: 12px 10px 15px 10px;
   background-color: #d3a33f;
   color: white;
   font-size: 16px;
@@ -70,6 +69,15 @@ Classes that begin in block- are elements within blocks.
   width: 100%;
 }
 
+.product-name {
+  font-family: "p22-underground";
+  font-weight: 500;
+}
+
+.no-product-image {
+  margin-top:20px;
+}
+
 .user-signup-block{
   padding: 20px;
 }
@@ -103,6 +111,7 @@ Classes that begin in block- are elements within blocks.
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 18px;
+  margin-top: 10px;
 }
 
 .scrollup{

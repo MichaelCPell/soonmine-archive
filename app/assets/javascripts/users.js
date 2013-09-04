@@ -50,7 +50,9 @@ $(document).ready(function(){
     window.location.href = $(this).data('target');
   })
 
-})();  
+})();
+
+$('img[src="/assets/no_product_image.jpg"]').addClass('no-product-image');
 
 });
 
