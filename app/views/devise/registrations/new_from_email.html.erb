@@ -1,4 +1,6 @@
-
+<% states_array = 
+%W(Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New\sHampshire New\sJersey New\sMexico New\sYork North\sCarolina North\sDakota Ohio Oklahoma Oregon Pennsylvania Rhode Island South\sCarolina South\sDakota Tennessee Texas Utah Vermont Virginia Washington West\sVirginia Wisconsin Wyoming)
+%>
 <div class="sign-up-wrap">
 
 <div class="row">
@@ -26,7 +28,9 @@
         <%= f.password_field :password %></div>
         
         <%= f.label :state, class: "inline" %>
-        <div> <%= f.select(:state, ["Alabama", "Alaska", "Arizona", "Arkansas", "North Carolina", "Mississippi"],{}, class: "small button dropdown") %></div>
+        <div> 
+          <%= f.select(:state, states_array, {}, class: "small button dropdown") %>
+        </div>
 
         <div><%= f.submit "Sign up", class: "button small push-9" %></div>
       <% end %>
