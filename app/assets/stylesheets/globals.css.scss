@@ -41,6 +41,18 @@ ul, li, a:not(.button){
 
 /* === Styling the splash page === */
 
+.logo a {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 145px !important;
+  height:27px;
+  background-image: url(logo@2x.png);
+  background-size:145px 27px;
+  margin-top: 24px;
+}
+
 .home-main-section {
   margin-top: 156px;
 }
@@ -86,13 +98,39 @@ ul, li, a:not(.button){
   padding-bottom:11px;
 }
 
+
 /* === Inner page nav  === */
+
+.menu-search {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 20px !important;
+  height:20px;
+  background: url(search-icon@2x.png) center center no-repeat !important;
+  background-size:20px 20px !important;
+  padding-bottom: 40px !important;
+  padding-top: 40px !important;
+}
+
+.top-bar-section .has-form {
+  height:73px;
+  padding-left:15px;
+  padding-right: 15px;
+}
 
 .inner-page-nav ul li a {
   color:#626262 !important;
   text-transform: uppercase;
   font-size:14px;
   padding-top:10px;
+  font-family: "p22-underground";
+  font-weight: 700;
+}
+
+.top-bar-section .has-dropdown > a:after {
+  display:none;
 }
 
 .inner-page-nav .top-bar-section .has-dropdown > a {
@@ -113,7 +151,16 @@ ul, li, a:not(.button){
 }
 
 .inner-page-nav .dropdown a {
-  padding:10px 0;
+  padding-top:10px !important;
+  padding-bottom:10px !important
+}
+
+.inner-page-nav .dropdown li:nth-child(2) {
+  margin-top: 15px;
+}
+
+.inner-page-nav .dropdown .has-form {
+  margin-top: 0 !important;
 }
 
 .inner-page-nav .dropdown a:hover {
@@ -126,17 +173,18 @@ li:hover.inner-page-logo {
 
 .inner-page-nav #search  {
    position:relative;
-   top:25px;
+   top:18px;
    background:#fff;
    padding-top:18px;
    padding-bottom:18px;
+   border: none;
 }
 
 #user-search-submit {
   background: url(search-icon-input.png) no-repeat;
   position:absolute;
-  top:35px;
-  right:0;
+  top: 28px;
+  right: 15px;
   border:none;
 }
 
@@ -272,7 +320,8 @@ form.custom .custom.dropdown ul li:hover {
 #sort-show {
     font-weight: 700;
     display: inline-block;
-    margin:21px 0 0 5px;
+    margin:21px 0 0 7px;
+    font-family: "p22-underground";
 }
 
 .sort-filter {
@@ -288,6 +337,29 @@ form.custom .custom.dropdown ul li:hover {
   background: url(sort-responsive-arrows.png) no-repeat 95% center rgba(71, 71, 71, 0.9);
   color:#fff;
   cursor: pointer;
+}
+
+/* === Overriding Foundation UI styles === */
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.alert-box.alert.soonmine-alert {
+  background: #889faf;
+  margin-top:50px;
+  border: none; 
+}
+
+.button {
+  box-shadow: none !important;
+  border:none !important 
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], 
+input[type="month"], input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+  color: #919191;
 }
 
 /* === Respnsive styles === */

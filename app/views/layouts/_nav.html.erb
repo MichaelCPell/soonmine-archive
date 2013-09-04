@@ -2,7 +2,9 @@
   <nav class="top-bar inner-page-nav">
     <ul class="title-area">
       <li class="name inner-page-logo">
-        <h1><%= link_to image_tag("logo@2x.png", width: 150), root_path %></h1>
+        <h1 class="logo">
+          <a href="/">soonmine. Start giving better gifts. Start Getting better gifts.</a>
+        </h1> 
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
     </ul>
@@ -68,12 +70,11 @@
           </ul>
         </li>
         <li class="has-dropdown">
-          <%= link_to image_tag("search-icon@2x.png", width: 25,  class: "top-bar-image"), users_path, class: "top-bar-image-link" %>
+          <a class="menu-search" href="/users">search</a>
           <ul class="dropdown">
             <li class="has-form search">
               <%= form_tag "/users", {method: :get} do %>
                 <div class="row collapse inner-nav-search-form">
-                  <div class="large-12 columns">
                     <%= search_field_tag :search,nil, placeholder: "Find Users" %>
                     <%= submit_tag "", id: "user-search-submit" %>
                   </div>
