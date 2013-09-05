@@ -1,5 +1,11 @@
 <% if current_user.contacts.any? %>
   <%= render "form" %>
 <% else %>
-  <%= link_to "Please Add Contacts Before Adding Reminders", new_contact_path %>
+  <div class="row center-text">
+    <h2>
+      <%= link_to "Please Add Contacts Before Adding Reminders", 
+                  new_contact_path, 
+                  style: "color: #000 !important;" %>
+    </h2>
+  </div>
 <% end %>

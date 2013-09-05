@@ -1,25 +1,3 @@
-<div class="row large-centered center-text">
-  <div class="row large-4 push-4">
-    <%= link_to "Add Contacts by Hand", "#", :"data-reveal-id" => "add-manual-container", class: "button expand" %>
-    <br/>
-    <% if current_user.authentications.where(provider: "google_oauth2").first %>
-      <%= link_to "Add Google Contacts", add_google_contacts_path, remote: true, class: "button expand" %>
-    <% else %>
-      Authorize with Google to access your Google contacts
-    <% end %> 
-  </div>
-</div>
-
-
-
-<div class="row">
-  <div class="large-8 push-2">
-    <div id="add-google-container" class="reveal-modal">
-      <h1>Google</h1>
-    </div>
-  </div>
-</div>
-
 <div class="row">
   <div class="large-8 push-2">
     <div id="add-manual-container" class="reveal-modal">
@@ -52,3 +30,29 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="large-8 push-2">
+    <div id="add-google-container" class="reveal-modal">
+      <h1>Google</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row large-centered center-text">
+  <div class="row large-4 push-4">
+    <%= link_to "Add Contacts by Hand", "#", :"data-reveal-id" => "add-manual-container", class: "button expand" %>
+    <br/>
+    <% if current_user.authentications.where(provider: "google_oauth2").first %>
+      <%= link_to "Add Google Contacts", add_google_contacts_path, remote: true, class: "button expand" %>
+    <% else %>
+      Authorize with Google to access your Google contacts
+    <% end %> 
+  </div>
+</div>
+
+
+
+
+
+
