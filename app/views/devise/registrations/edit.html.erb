@@ -7,6 +7,19 @@
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
         <%= devise_error_messages! %>
 
+
+        <div class="row">      
+          <div class="large-4 columns">
+            <%= f.label :image_url, class: "inline" %>
+          </div>
+
+          <div class="large-8 columns">
+            <input type="filepicker" 
+                   data-fp-apikey="ABW0Ti7xaS32Z414SQO13z"
+                   name="user[image_url]"></input>
+          </div>
+        </div>
+
         <div class="row">      
           <div class="large-4 columns">
             <%= f.label :email, class: "inline" %>

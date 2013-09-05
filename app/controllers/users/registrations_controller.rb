@@ -40,7 +40,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.for(:account_update) do |u|
       u.permit(:first_name, :last_name, :username, :email, :password, 
       	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy, :current_password,
-        :filepicker_url)
+        :image_url)
     end
   end
 
