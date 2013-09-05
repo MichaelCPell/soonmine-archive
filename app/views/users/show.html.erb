@@ -1,5 +1,9 @@
 <div class="row">
-  <ul class="large-block-grid-4">
+
+  <div class="responsive-sort-menu">
+    <span>Sort</span>
+  </div>
+  <ul class="large-block-grid-4 products-grid-list">
     <li>
       <div class="user-profile-block">
         <div class="block-user-image">
@@ -17,23 +21,33 @@
   </ul>
 </div>
 
-<div id="sort-container" style="width: 200px;">
+<div id="sort-container">
 
-  <%= link_to "SORT", "#", id: "sort-show" %>
+  <div class="sort-show-wrap">
+       <%= link_to "SORT", "#", id: "sort-show" %>
+  </div>
+ 
   <div id="sort-contents">
-    <%= link_to "Date Added", user_path(@user, sort: "date") %>
-    <br/> 
-    <%= link_to "Price: Low to High", user_path(@user, sort: "lowest") %>
-    <br/> 
-    <%= link_to "Price: High to Low", user_path(@user, sort: "highest") %> 
-    <br/> 
-    <%= link_to "Need", user_path(@user, sort: "need") %> 
-    <br/> 
-    <%= link_to "Really Want", user_path(@user, sort: "really") %> 
-    <br/> 
-    <%= link_to "Want", user_path(@user, sort: "want") %> 
+    <form>
+      <% [["date", "Date"], 
+          ["lowest", "Price: Low to High"],
+          ["highest", "Price: High to Low"],
+          ["need", "Need"],
+          ["really", "Really want"],
+          ["want", "Want"]].each do |sort_value| %>
+        <div class="sort-filter">
+          <input type="radio" name="sort" 
+                 data-target= "<%= user_path(@user, sort: sort_value[0])%>"
+                 <%= "checked" if params[:sort] == sort_value[0] %>>
+            <%= sort_value[1] %>
+          </input>
+        </div>
+      <% end %>
+    </form>  
   </div>
 </div>
+
+<a href="#" class="scrollup">Scroll</a>
 
 <% content_for :header do %>
   <div class="row header">

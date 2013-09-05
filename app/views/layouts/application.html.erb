@@ -30,7 +30,7 @@
     <%= render "layouts/nav" %>
     <header class="row center-text">
       <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, style: "padding: 20px;", class: "alert-box alert", :id => "flash_#{name}" if msg.is_a?(String) %>
+        <%= content_tag :div, msg, style: "padding: 20px;", class: "alert-box alert soonmine-alert", :id => "flash_#{name}" if msg.is_a?(String) %>
       <%- end -%>
     </header>
 

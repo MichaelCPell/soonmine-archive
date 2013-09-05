@@ -1,6 +1,59 @@
 $(document).ready(function(){
-  $("#sort-show").click(function(e){
-    e.preventDefault();
-    $("#sort-contents").slideToggle("slow");
+
+(function () {
+
+  var initialPos = 0;
+
+    $("#sort-show").click(function(e) {
+        e.preventDefault();
+        $("#sort-container").animate({ left: initialPos }, 300, 'linear', function() {
+          if(initialPos == 0) { initialPos = -200; }
+          else { initialPos = 0; }
+        });
+      });
+
+})();  
+
+(function () {
+
+  $('.responsive-sort-menu').on('click', function() {
+      $("#sort-container").slideToggle();
+  }); 
+
+
+  $(".product-name").shorten({showChars: 24});
+
+  $(".block-product-info").hover(
+    function(){
+      $(this).animate({height: "90px"}, 300);
+      $(this).find(".morelink").click();
+    },
+    function(){
+      $(this).animate({height: "60px"}, 300);
+      $(this).find(".less").click();
+  });
+  
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+      } else {
+          $('.scrollup').fadeOut();
+      }
+  }); 
+
+  $('.scrollup').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+  });
+
+  $("#sort-container input").click(function(){
+    window.location.href = $(this).data('target');
   })
+
+})();
+
+$('img[src="/assets/no_product_image.jpg"]').addClass('no-product-image');
+
 });
+
+

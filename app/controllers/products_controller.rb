@@ -1,6 +1,14 @@
 class ProductsController < ApplicationController
 
   def new
+    if request.env["HTTP_USER_AGENT"].match(/firefox/i)
+      @agent = "firefox"
+    elsif request.env["HTTP_USER_AGENT"].match(/chrome/i)
+      @agent = "chrome"
+    else
+      @agent = "other"
+    end
+    
     @product = Product.new
   end
 

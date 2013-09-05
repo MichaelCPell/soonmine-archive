@@ -234,7 +234,8 @@ Devise.setup do |config|
     config.omniauth :twitter, 'cXvEYUXCWZ5p3MWt7LByIw', '4sSZqooKRfWxea2Dt7ghy5KEDZ3ZQSzGT8aUyZ7uKA'
     config.omniauth :google_oauth2, '249589806282.apps.googleusercontent.com', 'moNGTFhniRA-4iHWc-XiuMgX',
       {
-        scope: "userinfo.email, userinfo.profile, https://www.google.com/m8/feeds"
+        scope: "userinfo.email, userinfo.profile, https://www.google.com/m8/feeds",
+        prompt: 'select_account consent'
       }  
   end
 
