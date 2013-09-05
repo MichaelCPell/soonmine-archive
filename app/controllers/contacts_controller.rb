@@ -2,10 +2,26 @@ class ContactsController < ApplicationController
 
   def create
     if params[:source] == "manual"
-
+      valid_contacts = true
+      
       params[:contact].each do |data|
-        Contact.create(firstname: data[:firstname], email: data[:lastname], user_id: current_user.id)
+        contact = Contact.new(firstname: data[:firstname], 
+                       lastname: data[:lastname], 
+                       email: data[:email],
+                       user_id: current_user.id)
+        if contact.save == false
+          valid_contacts = false
+        end
       end
+
+      if valid_contacts
+        flash[:notice] = "Successfully Added Contacts!"
+        redirect_to current_user
+      else
+        flash[:notice] = "Add least one of your contacts failed to save because of a blank email address."
+        redirect_to current_user
+      end
+
 
     else
       contacts_array = params[:contact]
@@ -18,9 +34,10 @@ class ContactsController < ApplicationController
           Contact.create(firstname: firstname, email: email, user_id: current_user.id)
         end
       end
+      
+      flash[:notice] = "Successfully Added Contacts!"
+      redirect_to current_user
     end
-    flash[:notice] = "Successfully Added Contacts!"
-    redirect_to current_user
   end
 
   def new

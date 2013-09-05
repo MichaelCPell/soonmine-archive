@@ -1,30 +1,41 @@
-<%= form_for @reminder do |f| %>  
-  <div class="row">      
-    <div class="large-4 columns">
-      <%= f.label :"Email", class: "inline" %>
-    </div>
-    <div class="large-8 columns">
-      <%= f.collection_select :recipient_email, current_user.contacts, :email, :firstname %>
-    </div>
-  </div>
+<div class="row">
+  <div class="large-5 large-centered columns user-settings-block">
+    <%= form_for @reminder do |f| %>  
+      
+      <div class="row">      
+        <div class="large-4 columns">
+          <%= f.label :"Email", class: "inline" %>
+        </div>
+        <div class="large-8 columns">
+          <%= f.collection_select :recipient_email, 
+                                  current_user.contacts, 
+                                  :email, :firstname,{},
+                                  {:class => "small button dropdown"} %>
+        </div>
+      </div>
 
-  <div class="row">      
-    <div class="large-4 columns">
-      <%= f.label :"Occasion Name", class: "inline" %>
-    </div>
-    <div class="large-8 columns">
-      <%= f.text_field :name %>
-    </div>
-  </div>
+      <div class="row">      
+        <div class="large-4 columns">
+          <%= f.label :"Occasion Name", class: "inline" %>
+        </div>
+        <div class="large-8 columns">
+          <%= f.text_field :name %>
+        </div>
+      </div>
 
-  <div class="row">      
-    <div class="large-4 columns">
-      <%= f.label :"Occasion Date", class: "inline" %>
-    </div>
-    <div class="large-8 columns">
-      <%= f.date_select :date, discard_year: true, allow_blank: true %>
-    </div>
-  </div>
+      <div class="row">      
+        <div class="large-4 columns">
+          <%= f.label :"Occasion Date", class: "inline" %>
+        </div>
+        <div class="large-8 columns">
+          <%= f.date_select :date,{ 
+                            discard_year: true, 
+                            allow_blank: true},
+                            {:class => "small button dropdown"} %>
+        </div>
+      </div>
 
-  <div><%= f.submit "Add Reminder", class: "button small push-9" %></div>
-<% end %>
+      <div><%= f.submit "Add Reminder", class: "button small push-8" %></div>
+    <% end %>
+  </div>
+</div>

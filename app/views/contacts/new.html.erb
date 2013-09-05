@@ -1,37 +1,54 @@
-<div class="row large-6 large-centered center-text columns">
-  
-  <%= link_to "Add Contacts by Hand", "#", :"data-reveal-id" => "add-manual-container", class: "button expand" %>
-  <br/>
-  <% if current_user.authentications.where(provider: "google_oauth2").first %>
-    <%= link_to "Add Google Contacts", add_google_contacts_path, remote: true, class: "button expand" %>
-  <% else %>
-    Authorize with Google to access your Google contacts
-  <% end %> 
+<div class="row large-centered center-text">
+  <div class="row large-4 push-4">
+    <%= link_to "Add Contacts by Hand", "#", :"data-reveal-id" => "add-manual-container", class: "button expand" %>
+    <br/>
+    <% if current_user.authentications.where(provider: "google_oauth2").first %>
+      <%= link_to "Add Google Contacts", add_google_contacts_path, remote: true, class: "button expand" %>
+    <% else %>
+      Authorize with Google to access your Google contacts
+    <% end %> 
+  </div>
 </div>
 
 
 
-
-<div id="add-google-container" class="reveal-modal">
-  <h1>Google</h1>
+<div class="row">
+  <div class="large-8 push-2">
+    <div id="add-google-container" class="reveal-modal">
+      <h1>Google</h1>
+    </div>
+  </div>
 </div>
 
-<div id="add-manual-container" class="reveal-modal">
-  <h1>Share with your Friends and Family</h1>
-  <div id="manual-contacts-container">
-    <%= form_for :contact, url: "/contacts", method: "POST" do |f| %>
-      <div class="row" id="manual-contact-fieldsets">
-          <div class="large-6 columns">
-            Name: <input  name="contact[][firstname]" type="text" />
-          </div>
-          <div class="large-6 columns">
-            Email: <input  name="contact[][email]" type="text" />
-          </div>
+<div class="row">
+  <div class="large-8 push-2">
+    <div id="add-manual-container" class="reveal-modal">
+      <div class="row">
+        <div class="large-12 columns center-text">
+          <h3>Share with Friends and Family</h3>
+        </div>
+
+        <div id="manual-contacts-container">
+          <%= form_for :contact, url: "/contacts", method: "POST" do |f| %>
+
+            <div id="manual-contact-fieldsets" class="row">
+                <div class="large-6 columns">
+                  <input  name="contact[][firstname]" type="text" placeholder= "Name"/>
+                </div>
+                <div class="large-6 columns">
+                  <input  name="contact[][email]" type="text" placeholder= "Email"/>
+                </div>
+            </div>
+
+            <div id="field-marker"></div>
+
+            <%= link_to "Add Another Contact", "#", id: "add-another-contact", class: "button" %>
+            <input name="source" type="hidden" value="manual"/>
+            <br/>
+            <%= f.submit "Submit", class: "button" %>
+          <% end %>
+        </div>
       </div>
-      <div id="field-marker"></div>
-      <%= link_to "Add Another Contact", "#", id: "add-another-contact", class: "button" %>
-      <input name="source" type="hidden" value="manual"/>
-      <%= f.submit :submit, class: "button" %>
-    <% end %>
+    </div>
   </div>
 </div>

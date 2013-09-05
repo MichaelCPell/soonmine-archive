@@ -3,7 +3,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
 	def new_from_email
 		build_resource({})
-		respond_with self.resource
+    render layout: "minimal"
 	end
 
 	def update
@@ -27,6 +27,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 				render "edit"
 		end
 	end
+
+  def new
+    build_resource({})
+    render layout: "minimal"
+  end
 
 
 

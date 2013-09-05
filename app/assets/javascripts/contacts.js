@@ -3,10 +3,10 @@ $(document).ready(function(){
     e.preventDefault()
     $("#manual-contact-fieldsets").append(" \
         <div class='large-6 columns'> \
-          Name: <input  name='contact[][firstname]' type='text' /> \
+          <input  name='contact[][firstname]' type='text' placeholder='Name' /> \
         </div> \
         <div class='large-6 columns'> \
-          Email: <input  name='contact[][email]' type='text' /> \
+          <input  name='contact[][email]' type='text' placeholder='Email'/> \
         </div>")
   });
 });

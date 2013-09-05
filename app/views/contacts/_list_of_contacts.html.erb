@@ -1,15 +1,17 @@
 <%= form_tag("/contacts", method: "post") do %>
-  <div class="row" id="contacts-container">
+  <div class="row" id="google-contacts-container">
     <% @results.each do |parsed_user| %>
       <span class="custom checkbox">
-        <input name="contact[]" type="checkbox" 
-        value="<%= parsed_user.name %>,<%= parsed_user.email %>" >
-          <%= parsed_user.name %> - <%= parsed_user.email %>
+        <input  name="contact[]" 
+                type="checkbox" 
+                value="<%= parsed_user.name %>,<%= parsed_user.email %>" >
+
+        <%= parsed_user.name %> - <%= parsed_user.email %>
       </span>
       <br/>
       <br/>
     <% end %>
   </div>
 
-  <%= submit_tag "Add Selected Contacts" %>
+  <%= submit_tag "Add Selected Contacts", class: "button expand" %>
 <% end %>
