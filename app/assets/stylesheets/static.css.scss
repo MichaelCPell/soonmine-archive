@@ -17,9 +17,11 @@
 }
 
 #welcome-body{
-  background-image: url("soonmine-bg.jpg");
-  background-repeat:no-repeat;
-  background-size: 100%;
+  background: url("soonmine-bg.jpg") top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   color: white;
 }
+

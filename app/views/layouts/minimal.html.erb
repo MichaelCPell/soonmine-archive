@@ -18,4 +18,9 @@
     <script type="text/javascript" src="//use.typekit.net/rum6add.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
+<div class="standalone-layout-wrap">
 <%= yield %>
+</div>
+<%= javascript_include_tag "application" %>
+</body>
+</html>
