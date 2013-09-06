@@ -32,11 +32,11 @@ ul, li, a:not(.button){
 }
 
 .button:hover{
-  background-color: #d3a33f;
+  background-color: #e5bc64;
 }
 
 .button:active{
-  background-color: #d3a33f;
+  background-color: #bf8c34;
 }
 
 /* === Styling the splash page === */
@@ -349,6 +349,30 @@ form.custom .custom.dropdown .selector:after {
   top: 16px;
 }
 
+form.custom .custom {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: 2px;
+  border: solid 4px #cccccc;
+  background: white;
+
+}
+
+form.custom .custom.radio.checked:before {
+  background:#77a3d9;
+}
+
+form.custom .custom.radio.checked {
+  border: solid 4px #77a3d9;
+}
+
+.settings-wrap form.custom .custom {
+  top: 4px;
+  left: 1px;
+}
+
 .standalone-layout-wrap form.custom .custom.dropdown .selector {
   top: 1px;
 }
@@ -396,6 +420,19 @@ form.custom .custom.dropdown .selector:after {
   cursor: pointer;
 }
 
+.settings-wrap {
+  padding:61px 50px 46px 50px !important;
+  margin-bottom:40px;
+}
+
+.intro-text {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size:24px;
+  font-weight:100;
+  line-height:48px;
+}
+
+
 /* === Overriding Foundation UI styles === */
 
 h1, h2, h3, h4, h5, h6 {
@@ -425,6 +462,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 input[type="month"], input[type="week"], input[type="email"], input[type="number"], 
 input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   color: #919191;
+}
+
+.save-settings-btn {
+  margin-right:-15px;
 }
 
 /* === Respnsive styles === */
