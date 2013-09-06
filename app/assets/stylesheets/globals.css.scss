@@ -32,11 +32,11 @@ ul, li, a:not(.button){
 }
 
 .button:hover{
-  background-color: #d3a33f;
+  background-color: #e5bc64;
 }
 
 .button:active{
-  background-color: #d3a33f;
+  background-color: #bf8c34;
 }
 
 /* === Styling the splash page === */
@@ -347,6 +347,30 @@ form.custom .custom.dropdown .selector:after {
   width:18px;
   left: 9px;
   top: 16px;
+}
+
+form.custom .custom {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: 2px;
+  border: solid 4px #cccccc;
+  background: white;
+
+}
+
+form.custom .custom.radio.checked:before {
+  background:#77a3d9;
+}
+
+form.custom .custom.radio.checked {
+  border: solid 4px #77a3d9;
+}
+
+.settings-wrap form.custom .custom {
+  top: 4px;
+  left: 1px;
 }
 
 .standalone-layout-wrap form.custom .custom.dropdown .selector {
