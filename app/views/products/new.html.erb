@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="push-2 large-8 columns center-text">
+  <div class="large-centered large-10 columns center-text add-products-wrap">
     <h1>
       Add Products
     </h1>
@@ -9,19 +9,17 @@
     </h3>
   </div>
 </div>
-<div class="row" style="height: 1em;"></div>
 </div>
 <div class="row center-text">
-  <div class="push-5 large-2 columns">
+  <div class="large-centered large-6 columns">
     <a href="javascript:void((function(){var closeContent = &#34;var closeBm = function(){document.getElementById('sm-bookmarklet').remove()}&#34;;var interfaceContent = &#34;<a href= '#' onclick='closeBm()' style='position: fixed; top: 20px; right: 20px; background: #474747; z-index: 999999; width: 222px; height: 70px; padding-top: 15px; color: #fff; font-size: 24px;
     text-align: center;'>Close</a><iframe src='http://bm-soonmine.herokuapp.com?haderach=<%= current_user.primary_list.id %>' id='sm-iframe' style='position: fixed; top: 83px; right: 20px; background: white; z-index: 999999; border: none; width:222px; height: 380px;'></iframe>;&#34;;var interfaceContainer = document.createElement('div');interfaceContainer.id = 'sm-bookmarklet';interfaceContainer.innerHTML = interfaceContent;document.getElementsByTagName('body')[0].appendChild(interfaceContainer);var e = document.createElement('script');e.setAttribute('src', 'http://bm-soonmine.herokuapp.com/default_scraper.js');var c = document.createElement('script');c.innerHTML = closeContent; document.body.appendChild(c);setTimeout(function(){document.body.appendChild(e)}, 1000);}()));" 
     onclick="return false"
-    class="button expand" style="background: #d3a33f; border: none;">SOONMINE</a>
+    class="button add-product-button">SOONMINE</a>
   </div>
 </div>
-<div class="row" style="height: 1em;"></div>
 <div class="row">
-  <div class="push-3 large-6 new-product-block">
+  <div class="large-6 columns large-centered new-product-block">
     <%= render "instructions" %>
   </div>
 </div>

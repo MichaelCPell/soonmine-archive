@@ -299,7 +299,8 @@ li:hover.inner-page-logo {
 form.custom .custom.dropdown.small {
    max-width: 100%;
    background: #ebebeb;
-   border:1px solid #cbcbcb;
+   border:1px solid #cbcbcb !important;
+   height:41px;
 }
 
 form.custom .custom.dropdown.open.small ul {
@@ -314,16 +315,38 @@ form.custom .custom.dropdown a:not(.button), form.custom .custom.dropdown ul li 
 form.custom .custom.dropdown .selector {
   cursor: default;
   position: absolute;
-  width: 2.5em;
-  height: 2.11em;
+  width: 34px;
+  height: 38px;
   display: block;
-  right: 0px;
-  top: 0px;
+  right: 1px;
+  top: 1px;
   background: #fff !important;
+}
+
+form.custom .custom.dropdown:hover a.selector:after, form.custom .custom.dropdown.open a.selector:after {
+  border: none;
+  background: url('select-arrow.png') no-repeat;
+  height:15px;
+  width:18px;
+  left: 9px;
+  top: 16px;
+}
+
+form.custom .custom.dropdown .current {
+  line-height:3.1em;
 }
 
 form.custom .custom.dropdown ul li:hover {
   background:#fff !important;
+}
+
+form.custom .custom.dropdown .selector:after {
+  border: none;
+  background: url('select-arrow.png') no-repeat;
+  height:15px;
+  width:18px;
+  left: 9px;
+  top: 16px;
 }
 
 .standalone-layout-wrap form.custom .custom.dropdown .selector {
