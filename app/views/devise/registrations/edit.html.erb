@@ -97,20 +97,30 @@
             <div class="large-8 columns">
               <ul class="inline-list">
                 <li>
-                  <label>
-                    Public:  <%= list.radio_button :privacy, "public" %>
+                  <label for="user_primary_list_privacy_public">
+                    Public:
+                    <input name="user[primary_list][privacy]" 
+                      type="radio" id="user_primary_list_privacy_public" 
+                      style="display:none;" class="hidden-field" value="private">
+                    <span class="custom radio checked"></span> 
+
                   </label>
                 </li>
                 <li>
-                  <label>
-                    Private: 
-                    <%= list.radio_button :privacy, "private" %>
+                  <label for="user_primary_list_privacy_private">
+                    Private:
+                    <input name="user[primary_list][privacy]" 
+                      type="radio" id="user_primary_list_privacy_private" 
+                      style="display:none;" class="hidden-field" value="private">
+                    <span class="custom radio checked"></span> 
                   </label>
                 </li>
               </ul>
             </div>
           <% end %>
         </div>
+
+
 
         <% unless current_user.encrypted_password.blank? %>
           <div class="row">
