@@ -161,6 +161,33 @@ Classes that begin in block- are elements within blocks.
   margin-bottom:66px;
 }
 
+/* === How it works === */
+
+.circle {
+  font-family: "p22-underground";
+  cursor: pointer;
+  display:block;
+}
+
+.circle:hover {
+  background: #4f6b7e;
+}
+
+.large-4.columns .text-box {
+  padding:10px;
+  height:88px;
+}
+
+.large-4.columns .text-box p {
+  font-size:18px;
+}
+
+a#row-user-name {
+  font-size: 16px;
+  color:#889faf !important;
+}
+
+
 @media only screen and (max-width: 480px) {
   .user-profile-block, .product-block {
     margin:0 auto !important;
