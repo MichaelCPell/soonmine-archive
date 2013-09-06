@@ -16,10 +16,11 @@
   	<title><%= content_for?(:title) ? yield(:title) : "Soonmine" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
+
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
     
-    <%= filepicker_js_include_tag %>
+    
     
     <script type="text/javascript" src="//use.typekit.net/rum6add.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -44,5 +45,6 @@
 
     
     <%= javascript_include_tag "application" %>
+    <%= filepicker_js_include_tag %>
   </body>
 </html>
