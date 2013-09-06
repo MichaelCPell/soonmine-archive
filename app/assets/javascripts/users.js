@@ -46,7 +46,7 @@ $(document).ready(function(){
       return false;
   });
 
-  $("#sort-container input").click(function(){
+  $("#sort-container span").click(function(){
     window.location.href = $(this).data('target');
   })
 

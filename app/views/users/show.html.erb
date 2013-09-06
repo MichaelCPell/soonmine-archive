@@ -28,20 +28,26 @@
   </div>
  
   <div id="sort-contents">
-    <form>
+    <form class="custom">
       <% [["date", "Date"], 
           ["lowest", "Price: Low to High"],
           ["highest", "Price: High to Low"],
           ["need", "Need"],
           ["really", "Really want"],
           ["want", "Want"]].each do |sort_value| %>
-        <div class="sort-filter">
-          <input type="radio" name="sort" 
-                 data-target= "<%= user_path(@user, sort: sort_value[0])%>"
-                 <%= "checked" if params[:sort] == sort_value[0] %>>
-            <%= sort_value[1] %>
-          </input>
-        </div>
+        
+        <label for="<%= sort_value[1] %>">
+          
+          <input name="sort" 
+            type="radio" id="<%= sort_value[1] %>"
+            <%= "CHECKED" if params[:sort] == sort_value[0] %>
+            style="display:none;" class="hidden-field"></input>
+          <span class="custom radio <%= "checked" if params[:sort] == sort_value[0] %>"
+                data-target= "<%= user_path(@user, sort: sort_value[0])%>"></span>
+          <%= sort_value[1] %> 
+        </label>
+
+
       <% end %>
     </form>  
   </div>
@@ -54,15 +60,3 @@
 
   </div>
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
