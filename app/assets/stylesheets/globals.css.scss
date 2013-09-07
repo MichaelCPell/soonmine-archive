@@ -166,11 +166,6 @@ ul, li, a:not(.button){
   margin-bottom:15px;
 }
 
-
-.inner-page-nav .dropdown li.has-form {
-  margin-bottom:0;
-}
-
 .inner-page-nav .dropdown .has-form {
   margin-top: 0 !important;
 }
@@ -185,17 +180,17 @@ li:hover.inner-page-logo {
 
 .inner-page-nav #search  {
   position: relative;
-  top: 5px;
   background: none repeat scroll 0% 0% rgb(255, 255, 255);
   margin-top: 18px;
   margin-bottom: 18px;
   border: medium none;
+  height:38px;
 }
 
 #user-search-submit {
   background: url(search-icon-input.png) no-repeat;
   position:absolute;
-  top: 28px;
+  top: 36px;
   right: 15px;
   border:none;
 }
@@ -203,7 +198,9 @@ li:hover.inner-page-logo {
 .inner-page-nav .top-bar-section .has-dropdown > a {
   padding-right:0 !important;
   padding-left:0 !important;
-  padding:5px 21px !important;
+  padding:0 21px !important;
+  position: relative;
+  top:5px;
 }
 
 .has-dropdown a#search-dropdown {
@@ -315,8 +312,12 @@ form.custom .custom.dropdown.open.small ul {
   background: #eee !important;
 }
 
-form.custom .custom.dropdown a:not(.button), form.custom .custom.dropdown ul li {
+form.custom .custom.dropdown a.current {
   color:#919191 !important;
+  text-align: left;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size:16px;
+  margin-top: -5px;
 }
 
 form.custom .custom.dropdown .selector {
@@ -380,6 +381,19 @@ form.custom .custom.radio.checked {
   left: 1px;
 }
 
+.settings-wrap label.inline {
+  padding: 0.875em 0;
+}
+
+.row.change-password-row {
+  margin-top: 10px;
+}
+
+.settings-wrap a#change-password-link {
+  color: #77a3d9 !important;
+}
+
+
 .standalone-layout-wrap form.custom .custom.dropdown .selector {
   top: 1px;
 }
@@ -400,20 +414,28 @@ form.custom .custom.radio.checked {
   position: absolute;
   right: -60px;
   top: 0;
-  background-color: rgba(71, 71, 71, 0.9);
+  background-color: rgba(171,171,171,0.8);
   width: 60px;
   height: 60px;
 }
 
+.sort-show-wrap:hover, .sort-show-wrap.active {
+   background-color: rgba(71, 71, 71, 0.9);
+}
+
 #sort-show {
-    font-weight: 700;
+    font-weight: 500;
     display: inline-block;
-    margin:26px 0 0 7px;
+    margin:26px 0 0 9px;
     font-family: "p22-underground";
 }
 
 .sort-filter {
   margin:7px 0;
+}
+
+.products-grid-list {
+  height:9000px;
 }
 
 .responsive-sort-menu {
@@ -472,8 +494,9 @@ input[type="search"], input[type="tel"], input[type="time"], input[type="url"], 
   color: #919191;
 }
 
-.save-settings-btn {
+.button.save-settings-btn {
   margin-right:-15px;
+  margin-bottom: 0;
 }
 
 /* === Respnsive styles === */

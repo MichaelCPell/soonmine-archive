@@ -88,6 +88,15 @@ Classes that begin in block- are elements within blocks.
   background-color: white;
 }
 
+.pick-file-wrap button {
+  background: #889faf;
+  border: none;
+  text-transform: uppercase;
+  font-family: "p22-underground";
+  font-weight: 500;
+  padding-bottom:10px;
+}
+
 .new-product-block{
   padding: 20px;
   background-color: white;
@@ -118,7 +127,7 @@ Classes that begin in block- are elements within blocks.
     width:63px;
     height:63px;
     position:fixed;
-    bottom:50px;
+    bottom:0px;
     right:100px;
     display:none;
     text-indent:-9999px;
@@ -138,6 +147,8 @@ Classes that begin in block- are elements within blocks.
   font-weight:100;
   line-height:46px;
   margin-bottom:50px;
+  text-align: center;
+  text-transform: none;
 }
 
 .button.add-product-button {
