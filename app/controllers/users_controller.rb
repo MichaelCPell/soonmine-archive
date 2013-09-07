@@ -16,5 +16,6 @@ class UsersController < ApplicationController
   end
 
   def purgatory
+    @user = current_user
   end
 end

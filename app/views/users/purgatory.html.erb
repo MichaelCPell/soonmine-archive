@@ -1,4 +1,33 @@
-<p>
-  TODO:
-  Last Step!  Please Complete Your E-mail!
-</p>
+
+
+<div class="row">
+  <div class="row">
+    <div class="row center-text static-heading">
+      <div class="row">
+        <p>
+          E-mail Completion
+        </p>
+      </div>
+    </div>
+
+    <div class="large-8 large-centered columns user-settings-block settings-wrap">
+      <%= form_for(@user, :html => { :method => :put, class: "custom" }) do |f| %>
+        <div class="row">
+          <div class="large-4 columns">
+            <%= f.label :email, "Email Address", class: "inline" %>
+          </div>
+          <div class="large-8 columns">
+              <%= f.text_field :email %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-8 columns" style="float:right">
+            <%= f.submit "SAVE EMAIL", class: "button save-settings-btn", style: "float:right" %>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>  
