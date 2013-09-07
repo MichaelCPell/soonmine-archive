@@ -3,7 +3,11 @@
     <ul class="title-area">
       <li class="name inner-page-logo">
         <h1 class="logo">
-          <a href="/">soonmine. Start giving better gifts. Start Getting better gifts.</a>
+          <% if current_user %>
+            <%= link_to "soonmine", current_user %>
+          <% else %>
+            <a href="/">soonmine. Start giving better gifts. Start Getting better gifts.</a>
+          <% end %>
         </h1> 
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>

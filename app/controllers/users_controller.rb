@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :check_for_email, if: :current_user, :except => [:purgatory]
+  before_filter :check_for_email
   
   def show
     @user = User.find(params[:id])
@@ -15,7 +15,5 @@ class UsersController < ApplicationController
     end
   end
 
-  def purgatory
-    @user = current_user
-  end
+
 end
