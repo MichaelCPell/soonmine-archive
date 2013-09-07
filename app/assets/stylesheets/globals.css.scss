@@ -69,8 +69,33 @@ ul, li, a:not(.button){
     font-size:13px;
 }
 
-.home-nav .top-bar-section ul li > a {
+.home-nav .top-bar-section ul li > a, .home-nav .top-bar-section ul li.has-dropdown > a {
   padding-left:0 !important;
+  padding-right:0 !important;
+  padding:0 21px !important;
+}
+
+.home-nav .top-bar-section ul li.has-dropdown > a {
+  top:0;
+}
+
+.home-nav .top-bar-section ul li .dropdown {
+    background:#474747 !important;
+}
+
+.home-nav .top-bar-section ul li.has-dropdown:hover > #search-dropdown {
+  background: url(search-icon@2x.png) center center no-repeat #474747 !important;
+  background-size:20px 20px !important;
+}
+
+.home-nav .inner-nav-search-form {
+  width:280px !important;
+}
+
+.home-nav li.has-dropdown a#search-dropdown {
+  padding-top:83px !important;
+  padding-bottom: 0 !important;
+  position:static;
 }
 
 .tagline span {
@@ -134,7 +159,7 @@ ul, li, a:not(.button){
   font-size:14px;
   padding-top:10px;
   font-family: "p22-underground";
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .top-bar-section .has-dropdown > a:after {
@@ -178,13 +203,21 @@ li:hover.inner-page-logo {
   background:none !important;
 }
 
-.inner-page-nav #search  {
+.inner-page-nav #search, .home-nav #search  {
   position: relative;
   background: none repeat scroll 0% 0% rgb(255, 255, 255);
   margin-top: 18px;
   margin-bottom: 18px;
   border: medium none;
   height:38px;
+}
+
+.home-nav #search {
+  margin-top:10px;
+}
+
+.home-nav #user-search-submit {
+  top:28px;
 }
 
 #user-search-submit {
@@ -195,7 +228,7 @@ li:hover.inner-page-logo {
   border:none;
 }
 
-.inner-page-nav .top-bar-section .has-dropdown > a {
+.inner-page-nav .top-bar-section .has-dropdown > a, .home-nav .top-bar-section .has-dropdown > a {
   padding-right:0 !important;
   padding-left:0 !important;
   padding:0 21px !important;
