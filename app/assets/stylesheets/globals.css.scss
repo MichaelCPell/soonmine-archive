@@ -462,10 +462,41 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 input[type="month"], input[type="week"], input[type="email"], input[type="number"], 
 input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   color: #919191;
+  height:43px;
+}
+
+input.parsley-error, input:focus.parsley-error {
+  border:1px solid #db4141;
+  background:#fff;
+}
+
+.parsley-error-list {
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 30px;
+  list-style: none;
+}
+
+.parsley-error-list li {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #db4141 !important;
+  font-size: 14px;
 }
 
 .save-settings-btn {
   margin-right:-15px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    /* Safari only override */
+    ::i-block-chrome,#user-search-submit {
+       background-size: 19px 19px !important;
+    }
+
+     ::i-block-chrome,#search {
+        -webkit-appearance: none;
+     }
 }
 
 /* === Respnsive styles === */
