@@ -4,8 +4,8 @@
 
 <div class="row">
   <div class="row">
-    <div class="row center-text static-heading">
-      <h2>Settings</h2>
+    <div class="row">
+      <h2 class="static-heading">Settings</h2>
     </div>
     <div class="large-8 large-centered columns user-settings-block settings-wrap">
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: "custom", 'data-validate' => 'parsley'}) do |f| %>
@@ -79,7 +79,7 @@
             <%= f.label :image_url, class: "inline" %>
           </div>
 
-          <div class="large-8 columns">
+          <div class="large-8 columns pick-file-wrap">
             <input type="filepicker" 
                    data-fp-apikey="ABW0Ti7xaS32Z414SQO13z"
                    name="user[image_url]"
@@ -123,12 +123,12 @@
 
 
         <% unless current_user.encrypted_password.blank? %>
-          <div class="row">
+          <div class="row change-password-row">
             <div class="large-4 columns">
               <%= f.label :password %>
             </div>
             <div class="large-8 columns">
-                <%= link_to "Change Password", "#", :"data-reveal-id" => "change-password-form" %>
+                <%= link_to "Change Password", "#", :"data-reveal-id" => "change-password-form", id: "change-password-link" %>
             </div>
           </div>        
         <% end %>

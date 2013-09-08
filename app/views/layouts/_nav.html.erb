@@ -14,15 +14,14 @@
     </ul>
 
     <section class="top-bar-section">
-      <ul class="right">
-        <% if current_user %>
-          <li>
-            <%= link_to current_user, class: "top-bar-image-link", id:"top-bar-user-image-link" do %>
-              <%= image_tag current_user.image_url, width: 33, class: "top-bar-image"%>
-            <% end %>
-          </li>                        
+      <ul class="right">           
           <li class="has-dropdown">
-              <a class="uppercase"><%= current_user.firstname ? current_user.fullname : current_user.email %></a>
+              <% if current_user %>
+                <%= link_to current_user do %>
+                <%= image_tag current_user.image_url, width: 33, class: "avatar-img" %>
+                <%= current_user.firstname ? current_user.fullname : current_user.email %>
+              <% end %>      
+              </a>
               <ul class="dropdown">
                 <li>
                   <%= link_to "MY SOONMINE", current_user%>
@@ -74,7 +73,7 @@
           </ul>
         </li>
         <li class="has-dropdown">
-          <a class="menu-search" href="/users"></a>
+          <a class="menu-search" id="search-dropdown" href="/users"></a>
           <ul class="dropdown">
             <li class="has-form search">
               <%= form_tag "/users", {method: :get} do %>
