@@ -3,12 +3,19 @@ $(document).ready(function(){
 (function () {
 
   var initialPos = 0;
+  var sortButtonWrap = $(".sort-show-wrap");
 
-    $("#sort-show").click(function(e) {
+    sortButtonWrap.click(function(e) {
         e.preventDefault();
         $("#sort-container").animate({ left: initialPos }, 300, 'linear', function() {
-          if(initialPos == 0) { initialPos = -200; }
-          else { initialPos = 0; }
+          sortButtonWrap.addClass('active');
+          if(initialPos == 0) { 
+            initialPos = -200; 
+          }
+          else { 
+            sortButtonWrap.removeClass('active');
+            initialPos = 0; 
+          }
         });
       });
 
