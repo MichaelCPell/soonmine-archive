@@ -19,6 +19,7 @@ Soonmine::Application.routes.draw do
   
 
   get "/about", to: "static_pages#about"
+  get "/share", to: "static_pages#share"
   get "/welcome", to: "static_pages#welcome"
   get "/how_it_works", to: "static_pages#how_it_works"
   get "/contact_us", to: "static_pages#contact_us"
