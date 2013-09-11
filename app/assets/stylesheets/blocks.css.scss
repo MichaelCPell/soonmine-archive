@@ -142,14 +142,16 @@ Classes that begin in block- are elements within blocks.
 
 /* === Add products === */
 
-.add-products-wrap h3 {
+.add-products-wrap .intro-instructions p {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight:100;
-  line-height:46px;
-  margin-bottom:50px;
   text-align: center;
   text-transform: none;
+}
+
+.add-products-wrap .intro-instructions p:last-child {
+  margin-bottom:50px;
 }
 
 .button.add-product-button {
@@ -234,6 +236,10 @@ a#row-user-name {
   padding:76px 65px 91px 68px;
 }
 
+section .content.content-no-padding {
+  padding:37px 16px !important;
+}
+
 .section-container.auto section .title {
   background: #d1d1d1;
 }
@@ -257,6 +263,40 @@ a#row-user-name {
 .intro-instructions.single-line p {
   margin-bottom:40px;
 
+}
+
+.add-reminders-form label {
+  color:#6e6e6e;
+  font-size: 18px;
+  font-weight:300;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.add-reminder-btn {
+  float:right;
+  margin-bottom:0;
+
+}
+
+#save-contacts, #add-another-contact, .add-reminder-btn {
+  text-transform: uppercase;
+  font-family: "p22-underground";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#add-another-contact {
+  background:#889faf;
+}
+
+#add-by-hand h2 {
+    font-family: "p22-underground";
+    font-size:24px;
+}
+
+#save-contacts {
+  float: right;
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 480px) {

@@ -25,21 +25,65 @@
 		  <section>
 		    <p class="title" data-section-title><a href="#panel1">Add Contacts</a></p>
 		    <div class="content" data-section-content>
-		      <button class="button large">Add Contacts by hand</button>
+		      <button data-reveal-id="add-by-hand" class="button large">Add Contacts by hand</button>
 		      <button class="button large">Add Google contacts</button>
 		    </div>
 		  </section>
 		  <section>
 		    <p class="title" data-section-title><a href="#panel2">Add Reminders</a></p>
-		    <div class="content" data-section-content>
+		    <div class="content content-no-padding" data-section-content>
+			 <form action="" class="custom add-reminders-form">
+
+		    	<div class="row">
+		    	  <div class="small-4 columns">
+		    	    <label for="right-label" class="left inline">Contact</label>
+		    	  </div>
+		    	  <div class="small-8 columns">
+		    	   <select class="small button dropdowno" name="" id="">
+		    	   		<option value="">Fake static option</option>
+		    	   </select>
+		    	  </div>
+		    	</div>
+
+
 		      	<div class="row">
-		      	  <div class="small-3 columns">
-		      	    <label for="right-label" class="left inline">Label</label>
+		      	  <div class="small-4 columns">
+		      	    <label for="right-label" class="left inline">Occasion</label>
 		      	  </div>
-		      	  <div class="small-9 columns">
+		      	  <div class="small-8 columns">
 		      	    <input type="text" id="right-label" placeholder="Inline Text Input">
 		      	  </div>
 		      	</div>
+
+
+		      	<div class="row">
+		      	  <div class="small-4 columns">
+		      	    <label for="right-label" class="left inline">Occasion date</label>
+		      	  </div>
+		      	  <div class="small-8 columns">
+		      	   <select class="small button dropdowno" name="" id="">
+		      	   		<option value="">Fake static option</option>
+		      	   </select>
+		      	  </div>
+		      	</div>
+
+		      	<div class="row">
+		      	  <div class="small-4 columns">
+		      	  </div>
+		      	  <div class="small-8 columns">
+		      	   <select class="small button dropdowno" name="" id="">
+		      	   		<option value="">Fake static option</option>
+		      	   </select>
+		      	  </div>
+		      	</div>
+		      	<div class="row">
+		      		<div class="small-12 columns">
+		      			<button class="add-reminder-btn button">Add reminder</button>
+		      		</div>
+		      		
+		      	</div>
+		      	
+			</form>
 		    </div>
 		  </section>
 		</div>
@@ -52,9 +96,30 @@
   </div>
 </div>
 <div class="row">
-	<div class="large-centered large-5 columns user-signup-block share-social-block">
+	<div class="large-centered large-6 columns user-signup-block share-social-block">
 		<a class="button expand facebook-signup-button" href="#">Share Via Facebook</a>
 		<a class="button expand twitter-signup-button" href="#">Share via Twitter</a>
 		<a class="button expand email-signup-button" href="#">Share via email</a>
 	</div>
+</div>
+
+<div id="add-by-hand" class="reveal-modal medium">
+  <h2 class="text-center">Add contact information</h2>
+  <div class="row">
+  	<div class="small-6 columns"><input type="text"></div>
+  	<div class="small-6 columns"><input type="text"></div>
+  </div>
+  
+  <div class="row">
+  	<div class="small-12 columns">
+  		<button class="button" id="add-another-contact">Add another</button>
+  	</div>
+  </div>
+
+  <div class="row">
+  	<div class="small-12 columns">
+  		<button class="button" id="save-contacts">Save contacts</button>
+  	</div>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
 </div>
