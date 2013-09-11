@@ -142,14 +142,16 @@ Classes that begin in block- are elements within blocks.
 
 /* === Add products === */
 
-.add-products-wrap h3 {
+.add-products-wrap .intro-instructions p {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight:100;
-  line-height:46px;
-  margin-bottom:50px;
   text-align: center;
   text-transform: none;
+}
+
+.add-products-wrap .intro-instructions p:last-child {
+  margin-bottom:50px;
 }
 
 .button.add-product-button {
@@ -187,6 +189,115 @@ a#row-user-name {
   color:#889faf !important;
 }
 
+/* === Share my list === */
+
+.intro-instructions h4 {
+  font-family: "p22-underground";
+  font-size:24px;
+  margin:55px 0 30px 0;
+  color:#4d4d4d;
+}
+
+.intro-instructions p {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight:100;
+  font-size:18px;
+  color:#4a4a4a;
+}
+
+.section-container {
+    margin-top:31px;
+}
+
+.section-container.auto section .title, .section-container.auto .section .title {
+  border:none;
+}
+
+.section-container.auto section .title a {
+  color:#889faf !important;
+  text-transform: uppercase;
+  font-family: "p22-underground";
+  font-size:20px;
+  padding:25px 0 18px;
+  width:235px !important;
+  text-align:center !important;
+}
+
+.section-container.auto section:last-child .title, .section-container.auto .section:last-child .title {
+  border:none;
+}
+
+.section-container.auto section .content, .section-container.auto .section .content {
+  border: none;
+}
+
+.section-container section .content, .section-container .section .content, .section-container.auto section .content, .section-container.auto .section .content {
+  padding:76px 65px 91px 68px;
+}
+
+section .content.content-no-padding {
+  padding:37px 16px !important;
+}
+
+.section-container.auto section .title {
+  background: #d1d1d1;
+}
+
+.share-tabs-wrap .button.large {
+  padding:22px 40px !important;
+  text-align:center;
+  min-width: 337px;
+}
+
+.share-social-block {
+  margin-bottom:40px;
+}
+
+.share-social-block .button {
+  text-transform: uppercase;
+  font-family: "p22-underground";
+  font-size: 22px;
+}
+
+.intro-instructions.single-line p {
+  margin-bottom:40px;
+
+}
+
+.add-reminders-form label {
+  color:#6e6e6e;
+  font-size: 18px;
+  font-weight:300;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.add-reminder-btn {
+  float:right;
+  margin-bottom:0;
+
+}
+
+#save-contacts, #add-another-contact, .add-reminder-btn {
+  text-transform: uppercase;
+  font-family: "p22-underground";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#add-another-contact {
+  background:#889faf;
+}
+
+#add-by-hand h2 {
+    font-family: "p22-underground";
+    font-size:24px;
+}
+
+#save-contacts {
+  float: right;
+  margin-bottom: 0;
+}
 
 @media only screen and (max-width: 480px) {
   .user-profile-block, .product-block {
