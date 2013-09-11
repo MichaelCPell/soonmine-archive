@@ -6,7 +6,7 @@
           <% if current_user %>
             <%= link_to "soonmine", current_user %>
           <% else %>
-            <a href="/">soonmine. Start giving better gifts. Start Getting better gifts.</a>
+            <a>Give Better Gifts. Get Better Gifts.</a>
           <% end %>
         </h1> 
       </li>
@@ -16,11 +16,11 @@
     <section class="top-bar-section">
       <ul class="right">           
           <li class="has-dropdown">
-              <% if current_user %>
-                <%= link_to current_user do %>
+        <% if current_user %>
+              <a>        
                 <%= image_tag current_user.image_url, width: 33, class: "avatar-img" %>
                 <%= current_user.firstname ? current_user.fullname : current_user.email %>
-              <% end %>      
+              </a>
               </a>
               <ul class="dropdown">
                 <li>
@@ -51,7 +51,7 @@
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
         <li class="has-dropdown">
-          <%= link_to "ABOUT", about_path %>
+          <a>ABOUT</a>
           <ul class="dropdown">
             <li>
               <%= link_to "HOW IT WORKS", how_it_works_path %> 
@@ -73,7 +73,7 @@
           </ul>
         </li>
         <li class="has-dropdown">
-          <a class="menu-search" id="search-dropdown" href="/users"></a>
+          <a class="menu-search" id="search-dropdown"></a>
           <ul class="dropdown">
             <li class="has-form search">
               <%= form_tag "/users", {method: :get} do %>
