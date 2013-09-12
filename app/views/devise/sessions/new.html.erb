@@ -20,15 +20,13 @@
       <%= f.password_field :password, placeholder: "Password" %>
 
       <div class="row">
-        <div class="large-8 columns">
-          <p><%= link_to "Forgot Your Password?", new_user_password_path %></p>
-        </div>
-        <div class="large-4 columns">
-            <div class="large-5 push-1">
-              <%= f.submit "Log in", class: "button small" %>
-            </div>
+        <div class="large-6 columns">
+          <%= link_to "Forgot Your Password?", new_user_password_path %>
         </div>
       </div>
+
+
+      <%= f.submit "LOG IN", class: "button  expand" %>
     <% end %>
   </div>
 </div>
