@@ -440,7 +440,7 @@ form.custom .custom.radio.checked {
 }
 
 #sort-container {
-  width:200px;
+  width:200px; 
 }
 
 .sort-show-wrap {
@@ -461,6 +461,38 @@ form.custom .custom.radio.checked {
     display: inline-block;
     margin:26px 0 0 9px;
     font-family: "p22-underground";
+}
+
+#sort-contents form.custom .custom {
+  border:none;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  right: 5px;
+  top: 3px;
+}
+
+#sort-contents form.custom .custom.radio.checked:before {
+    
+    width: 10px;
+    height:10px;
+    top: 4px;
+    left: 4px;
+    background: #d2a33f;
+  
+}
+
+#sort-contents label {
+  color:#fff;
+  font-weight:300;
+  font-size: 16px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin:15px 0;
+
+}
+
+#sort-contents label:first-child {
+  margin-top: 0;
 }
 
 .sort-filter {
@@ -599,7 +631,7 @@ input.parsley-error, input:focus.parsley-error {
 
   #sort-container {
     top: 201px;
-    left: 50%;
+    left: 50% !important;
     margin-left: -150px;
     display: none;
     width:300px;
