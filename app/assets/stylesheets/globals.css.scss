@@ -233,7 +233,6 @@ li:hover.inner-page-logo {
   padding-left:0 !important;
   padding:0 21px !important;
   position: relative;
-  top:5px;
 }
 
 .has-dropdown a#search-dropdown {
@@ -375,6 +374,13 @@ form.custom .custom.dropdown:hover a.selector:after, form.custom .custom.dropdow
 
 form.custom .custom.dropdown .current {
   line-height:3.1em;
+}
+
+form.custom .custom.dropdown ul li {
+  color: #919191 !important;
+  text-align: left;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
 }
 
 form.custom .custom.dropdown ul li:hover {
