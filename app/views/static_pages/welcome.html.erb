@@ -1,47 +1,40 @@
-<div class="row">
-  <div class="large-12 columns">
-      <nav class="top-bar home-nav" style="background-color: transparent;">
-        <ul class="title-area">
-          <!-- Title Area -->
-          <li class="name">
-            <h1 class="logo">
-              <a href="/">soonmine. Start giving better gifts. Start Getting better gifts.</a>
-            </h1>    
-          </li>
-          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-        </ul>
+<div class="inner-wrap-all">
+<div class="row home-header-wrap">
+  <div class="large-4 small-6 columns">
+    <h1 class="logo">
+      <a href="/">soonmine. Start giving better gifts. Start Getting better gifts.</a>
+    </h1> 
+  </div>
 
-        <section class="top-bar-section">
-          <!-- Left Nav Section -->
-          <ul class="right">
+  <div class="large-8 small-6 columns">
+    <nav>
+      <div class="responsive-nav-btn right"><%= image_tag "menu-icon@2x.png",  height: '25', width: '25' %></div>
+      <ul class="so-home-menu so-main-menu right">
             <li><%= link_to "LOG IN", new_user_session_path %></li>
             <li><%= link_to "SIGN UP", new_user_registration_path %></li>
             <li><%= link_to "ABOUT", about_path %></li>
-            <li class="has-dropdown">
+            <li class="dropdown so-menu-search">
               <a class="menu-search" id="search-dropdown" href="/users"></a>
-              <ul class="dropdown">
-               <li class="has-form search">
-                 <%= form_tag "/users", {method: :get} do %>
-                   <div class="row collapse inner-nav-search-form">
-                       <%= search_field_tag :search,nil, placeholder: "Find Users" %>
-                       <%= submit_tag "", id: "user-search-submit" %>
-                     </div>
-                   </div>
-                 <% end %>
-               </li>
+
+              <ul class="dropdown-so-search">
+                  <li>
+                    <%= form_tag "/users", {method: :get} do %>
+                      <div class="row collapse so-menu-search-form">
+                          <%= search_field_tag :search,nil, placeholder: "Find Users" %>
+                          <%= submit_tag "", id: "user-search-submit" %>
+                        </div>
+                    <% end %>
+                  </li>
               </ul>
             </li>
-
-          </ul>
-        </section>
-      </nav>
+      </ul>
+    </nav>
   </div>
 </div>
 
 <div class="home-main-section"> 
 <div class="row">
-  <div class="large-4 tagline">
+  <div class="large-4 tagline columns">
         <span>Give Better Gifts.</span>
         <span>Get Better Gifts.</span>
     </div>
@@ -75,8 +68,7 @@
 
 </div><!-- end home main section -->
 
-
-
+</div>
 
 
 

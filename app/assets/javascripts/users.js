@@ -61,6 +61,11 @@ $(document).ready(function(){
 
 $('img[src="/assets/no_product_image.jpg"]').addClass('no-product-image');
 
+$('.responsive-nav-btn').on('click', function() {
+    $('.so-main-menu').toggleClass('so-menu-open');
+    $('.inner-wrap-all').toggleClass('responsive-menu-active')
+});
+
 });
 
 
