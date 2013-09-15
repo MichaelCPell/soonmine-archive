@@ -1,93 +1,97 @@
-<div class="contain-to-grid">
-  <nav class="top-bar inner-page-nav">
-    <ul class="title-area">
-      <li class="name inner-page-logo">
-        <h1 class="logo">
-          <% if current_user %>
-            <%= link_to "soonmine", current_user %>
-          <% else %>
-            <a>Give Better Gifts. Get Better Gifts.</a>
-          <% end %>
-        </h1> 
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-    </ul>
+<div class=" so-inner-header-wrap">
 
-    <section class="top-bar-section">
-      <ul class="right">           
-          <li class="has-dropdown">
+<div class="row so-inner-header">
+  <div class="large-4 columns small-6">
+      <h1 class="logo">
         <% if current_user %>
-              <a>        
-                <%= image_tag current_user.image_url, width: 33, class: "avatar-img" %>
-                <%= current_user.firstname ? current_user.fullname : current_user.email %>
-              </a>
-              </a>
-              <ul class="dropdown">
-                <li>
-                  <%= link_to "MY SOONMINE", current_user%>
-                </li>
-                <li>
-                  <%= link_to "ADD CONTACTS", new_contact_path %>
-                </li>
-                <li>
-                  <%= link_to "ADD PRODUCTS", new_product_path %>
-                </li>
-                <li>
-                  <%= link_to "ADD REMINDERS", new_reminder_path %>
-                </li>
-                <li>
-                  <a href="#" data-reveal-id="socialShare">SHARE MY LIST</a>
-                </li>
-                <li>
-                  <%= link_to "SETTINGS", edit_user_registration_path %>
-                </li>
-                <li>
-                  <%= link_to "SIGN OUT", destroy_user_session_path, method: "delete" %>
-                </li>
-              </ul>
-          </li> 
+          <%= link_to "soonmine", current_user %>
         <% else %>
-          <li><%= link_to "Log In", new_user_session_path %></li>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <a>Give Better Gifts. Get Better Gifts.</a>
         <% end %>
-        <li class="has-dropdown">
-          <a>ABOUT</a>
-          <ul class="dropdown">
-            <li>
-              <%= link_to "HOW IT WORKS", how_it_works_path %> 
-            </li>
-            <li>
-              <%= link_to "THE TEAM", team_path %> 
-            </li>
+      </h1> 
+  </div>
 
-            <li>
-              <%= link_to "CONTACT", contact_us_path %> 
-            </li>
+    <div class="large-8 small-6 columns">
 
-            <li>
-              <%= link_to "PRIVACY", privacy_path %> 
-            </li>
-            <li>
-              <%= link_to "COPYRIGHT", copyright_path %> 
-            </li>
-          </ul>
-        </li>
-        <li class="has-dropdown">
-          <a class="menu-search" id="search-dropdown"></a>
-          <ul class="dropdown">
-            <li class="has-form search">
-              <%= form_tag "/users", {method: :get} do %>
-                <div class="row collapse inner-nav-search-form">
-                    <%= search_field_tag :search,nil, placeholder: "Find Users" %>
-                    <%= submit_tag "", id: "user-search-submit" %>
-                  </div>
-                </div>
-              <% end %>
-            </li>
-          </ul>
-        </li>
+      <nav class="so-inner-menu-wrap">
+        <div class="responsive-nav-btn right"><%= image_tag "menu-icon@2x.png",  height: '25', width: '25' %></div>
+        <ul class="right  so-inner-menu so-main-menu">
+          <li class="dropdown so-menu-user">
+          <% if current_user %>
+                <a>        
+                  <%= image_tag current_user.image_url, width: 33, class: "avatar-img" %>
+                  <%= current_user.firstname ? current_user.fullname : current_user.email %>
+                </a>
+                </a>
+                <ul>
+                  <li>
+                    <%= link_to "MY SOONMINE", current_user%>
+                  </li>
+                  <li>
+                    <%= link_to "ADD CONTACTS", new_contact_path %>
+                  </li>
+                  <li>
+                    <%= link_to "ADD PRODUCTS", new_product_path %>
+                  </li>
+                  <li>
+                    <%= link_to "ADD REMINDERS", new_reminder_path %>
+                  </li>
+                  <li>
+                    <a href="#" data-reveal-id="socialShare">SHARE MY LIST</a>
+                  </li>
+                  <li>
+                    <%= link_to "SETTINGS", edit_user_registration_path %>
+                  </li>
+                  <li>
+                    <%= link_to "SIGN OUT", destroy_user_session_path, method: "delete" %>
+                  </li>
+                </ul>
+            </li> 
+          <% else %>
+            <li><%= link_to "Log In", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
+          <li class="dropdown so-inner-about">
+            <a>ABOUT</a>
+            <ul class="dropdown-large">
+              <li>
+                <%= link_to "HOW IT WORKS", how_it_works_path %> 
+              </li>
+              <li>
+                <%= link_to "THE TEAM", team_path %> 
+              </li>
 
-      </ul>
-    </section>
-  </nav>
+              <li>
+                <%= link_to "CONTACT", contact_us_path %> 
+              </li>
+
+              <li>
+                <%= link_to "PRIVACY", privacy_path %> 
+              </li>
+              <li>
+                <%= link_to "COPYRIGHT", copyright_path %> 
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown so-menu-search">
+            <a class="menu-search" id="search-dropdown" href="/users"></a>
+
+            <ul class="dropdown-so-search">
+                <li>
+                  <%= form_tag "/users", {method: :get} do %>
+                    <div class="row collapse so-menu-search-form">
+                        <%= search_field_tag :search,nil, placeholder: "Find Users" %>
+                        <%= submit_tag "", id: "user-search-submit" %>
+                      </div>
+                  <% end %>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+</div>
+
 </div>
