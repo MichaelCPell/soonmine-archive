@@ -18,10 +18,9 @@
         <ul class="right  so-inner-menu so-main-menu">
           <li class="dropdown so-menu-user">
           <% if current_user %>
-                <a>        
+                <a class="pointer">     
                   <%= image_tag current_user.image_url, width: 33, class: "avatar-img" %>
                   <%= current_user.firstname ? current_user.fullname : current_user.email %>
-                </a>
                 </a>
                 <ul>
                   <li>
@@ -43,7 +42,7 @@
             <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <% end %>
           <li class="dropdown so-inner-about">
-            <a>ABOUT</a>
+            <a href="">ABOUT</a>
             <ul class="dropdown-large">
               <li>
                 <%= link_to "HOW IT WORKS", how_it_works_path %> 
