@@ -18,16 +18,26 @@
         <ul class="right  so-inner-menu so-main-menu">
           <li class="dropdown so-menu-user">
           <% if current_user %>
-                <a class="pointer">     
+                <a>        
                   <%= image_tag current_user.image_url, width: 33, class: "avatar-img" %>
                   <%= current_user.firstname ? current_user.fullname : current_user.email %>
+                </a>
                 </a>
                 <ul>
                   <li>
                     <%= link_to "MY SOONMINE", current_user%>
                   </li>
                   <li>
-                    <%= link_to "SHARE MY LIST", new_reminder_path %>
+                    <%= link_to "ADD CONTACTS", new_contact_path %>
+                  </li>
+                  <li>
+                    <%= link_to "ADD PRODUCTS", new_product_path %>
+                  </li>
+                  <li>
+                    <%= link_to "ADD REMINDERS", new_reminder_path %>
+                  </li>
+                  <li>
+                    <a href="#" data-reveal-id="socialShare">SHARE MY LIST</a>
                   </li>
                   <li>
                     <%= link_to "SETTINGS", edit_user_registration_path %>
@@ -42,7 +52,7 @@
             <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <% end %>
           <li class="dropdown so-inner-about">
-            <a href="">ABOUT</a>
+            <a>ABOUT</a>
             <ul class="dropdown-large">
               <li>
                 <%= link_to "HOW IT WORKS", how_it_works_path %> 
@@ -76,8 +86,12 @@
                       </div>
                   <% end %>
                 </li>
-              </ul>
-          </li> 
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
+    </div>
+</div>
 
 </div>
