@@ -65,38 +65,38 @@ ul, li, a:not(.button){
   margin-top: 156px;
 }
 
-.home-nav .toggle-topbar span {
-    font-size:13px;
-}
+// .home-nav .toggle-topbar span {
+//     font-size:13px;
+// }
 
-.home-nav .top-bar-section ul li > a, .home-nav .top-bar-section ul li.has-dropdown > a {
-  padding-left:0 !important;
-  padding-right:0 !important;
-  padding:0 21px !important;
-}
+// .home-nav .top-bar-section ul li > a, .home-nav .top-bar-section ul li.has-dropdown > a {
+//   padding-left:0 !important;
+//   padding-right:0 !important;
+//   padding:0 21px !important;
+// }
 
-.home-nav .top-bar-section ul li.has-dropdown > a {
-  top:0;
-}
+// .home-nav .top-bar-section ul li.has-dropdown > a {
+//   top:0;
+// }
 
-.home-nav .top-bar-section ul li .dropdown {
-    background:#474747 !important;
-}
+// .home-nav .top-bar-section ul li .dropdown {
+//     background:#474747 !important;
+// }
 
-.home-nav .top-bar-section ul li.has-dropdown:hover > #search-dropdown {
-  background: url(search-icon@2x.png) center center no-repeat #474747 !important;
-  background-size:20px 20px !important;
-}
+// .home-nav .top-bar-section ul li.has-dropdown:hover > #search-dropdown {
+//   background: url(search-icon@2x.png) center center no-repeat #474747 !important;
+//   background-size:20px 20px !important;
+// }
 
-.home-nav .inner-nav-search-form {
-  width:280px !important;
-}
+// .home-nav .inner-nav-search-form {
+//   width:280px !important;
+// }
 
-.home-nav li.has-dropdown a#search-dropdown {
-  padding-top:83px !important;
-  padding-bottom: 0 !important;
-  position:static;
-}
+// .home-nav li.has-dropdown a#search-dropdown {
+//   padding-top:83px !important;
+//   padding-bottom: 0 !important;
+//   position:static;
+// }
 
 .tagline span {
   display: block;
@@ -141,10 +141,8 @@ ul, li, a:not(.button){
   display: inline-block;
   width: 20px !important;
   height:20px;
-  background: url(search-icon@2x.png) center center no-repeat !important;
+  background: url(search-icon@2x.png) center 40px no-repeat !important;
   background-size:20px 20px !important;
-  padding-bottom: 40px !important;
-  padding-top: 40px !important;
 }
 
 .top-bar-section .has-form {
@@ -465,7 +463,7 @@ form.custom .custom.radio.checked {
 #sort-show {
     font-weight: 500;
     display: inline-block;
-    margin:26px 0 0 9px;
+    margin:25px 0 0 9px;
     font-family: "p22-underground";
 }
 
@@ -628,7 +626,7 @@ input.parsley-error, input:focus.parsley-error {
 
 @media only screen and (max-width: 480px) {
   .home-main-section {
-    margin-top: 0;
+    margin-top: 30px;
   }
 
   .products-grid-list {
