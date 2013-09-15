@@ -96,34 +96,29 @@
   </div>
 </div>
 <div class="row">
-  <div class="large-centered large-6 columns user-signup-block share-social-block addthis_toolbox">
-    <a class="button expand facebook-signup-button addthis_button_facebook" 
-       addthis:url="<%= user_url(current_user) %>"
-      addthis:title="Soonmine List">Share Via Facebook</a>
+<div class="large-6 large-centered columns">
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
+        <a class="addthis_button_facebook" 
+        addthis:url="<%= user_url(current_user) %>"
+        addthis:title="Soonmine List"></a>
+        
+        <a class="addthis_button_twitter" 
+        addthis:url="<%= user_url(current_user) %>"
+        addthis:title="Soonmine List"></a>        
 
-    <a class="button expand twitter-signup-button" href="#">Share via Twitter</a>
-    <a class="button expand email-signup-button" href="#">Share via email</a>
+        <a class="addthis_button_pinterest_share"
+        addthis:url="<%= user_url(current_user) %>"
+        addthis:title="Soonmine List"></a>    
 
-  <!-- AddThis Button BEGIN -->
-  <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
-    <a class="addthis_button_facebook" 
-    addthis:url="<%= user_url(current_user) %>"
-    addthis:title="Soonmine List"></a>
-    
-    <a class="addthis_button_twitter" 
-    addthis:url="<%= user_url(current_user) %>"
-    addthis:title="Soonmine List"></a>        
+        <a class="addthis_button_email" 
+        addthis:url="<%= user_url(current_user) %>"
+        addthis:title="Soonmine List"></a>    
+      </div>
 
-    <a class="addthis_button_pinterest_share"
-    addthis:url="<%= user_url(current_user) %>"
-    addthis:title="Soonmine List"></a>    
-
-    <a class="addthis_button_email" 
-    addthis:url="<%= user_url(current_user) %>"
-    addthis:title="Soonmine List"></a>    
-  </div>
-  <!-- AddThis Button END --> 
-</div>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+      <!-- AddThis Button END --> 
+    </div>
 </div>
 
 <!-- Manual Contacts Modal -->
