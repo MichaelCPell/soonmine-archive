@@ -16,10 +16,10 @@ class ContactsController < ApplicationController
 
       if valid_contacts
         flash[:notice] = "Successfully Added Contacts!"
-        redirect_to current_user
+        redirect_to new_reminder_path
       else
         flash[:notice] = "Add least one of your contacts failed to save because of a blank email address."
-        redirect_to current_user
+        redirect_to new_reminder_path
       end
 
 
@@ -36,7 +36,7 @@ class ContactsController < ApplicationController
       end
       
       flash[:notice] = "Successfully Added Contacts!"
-      redirect_to current_user
+      redirect_to new_reminder_path
     end
   end
 

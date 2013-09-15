@@ -16,7 +16,7 @@ class RemindersController < ApplicationController
 
 
     flash[:notice] = "We have successfully created your reminder!"
-    redirect_to current_user
+    redirect_to new_reminder_path
   end
 
   def show
