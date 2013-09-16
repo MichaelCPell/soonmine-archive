@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :contacts
   has_many :lists
 
+
   after_create {lists.create(title: "Primary")}
 
 

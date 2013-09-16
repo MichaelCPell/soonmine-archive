@@ -102,8 +102,9 @@
                     Public:
                     <input name="user[primary_list][privacy]" 
                       type="radio" id="user_primary_list_privacy_public" 
-                      style="display:none;" class="hidden-field" value="private">
-                    <span class="custom radio checked"></span> 
+                      style="display:none;" class="hidden-field" value="public"
+                      <%= 'CHECKED' if current_user.primary_list.privacy == 'public' %>>
+                    <span class="custom radio <%= 'checked' if current_user.primary_list.privacy == 'public' %>"></span> 
 
                   </label>
                 </li>
@@ -112,8 +113,9 @@
                     Private:
                     <input name="user[primary_list][privacy]" 
                       type="radio" id="user_primary_list_privacy_private" 
-                      style="display:none;" class="hidden-field" value="private">
-                    <span class="custom radio checked"></span> 
+                      style="display:none;" class="hidden-field" value="private" 
+                      <%= 'CHECKED' if current_user.primary_list.privacy == 'private' %>>
+                    <span class="custom radio <%= 'checked' if current_user.primary_list.privacy == 'private' %>"></span> 
                   </label>
                 </li>
               </ul>

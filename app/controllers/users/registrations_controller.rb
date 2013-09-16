@@ -9,6 +9,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 	def update
 		@user = User.find(current_user.id)
 
+    if primary_list_params = params[:user].delete("primary_list")
+      @user.primary_list.update_attributes(primary_list_params)
+    end
+
 		successfully_updated = if needs_password?(@user, params)
 		@user.update_with_password(devise_parameter_sanitizer.for(:account_update))
 		else
@@ -48,7 +52,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.for(:account_update) do |u|
       u.permit(:first_name, :last_name, :username, :email, :password, 
       	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy, :current_password,
-        :image_url)
+        :image_url, :street_address, :zipcode, :primary_list)
     end
   end
 
