@@ -19,7 +19,7 @@
           <li class="dropdown so-menu-user">
           <% if current_user %>
                 <a>        
-                  <%= image_tag current_user.image_url, width: 33, class: "avatar-img" %>
+                  <%= image_tag current_user.image_url, width: '33', height: '33', class: "avatar-img" %>
                   <%= current_user.firstname ? current_user.fullname : current_user.email %>
                 </a>
                 </a>
