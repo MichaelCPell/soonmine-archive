@@ -17,4 +17,7 @@ class StaticPagesController < ApplicationController
   def welcome
     render layout: "welcome_layout" 
   end
+
+  def terms
+  end
 end
