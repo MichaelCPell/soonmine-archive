@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :check_for_email
+  before_filter :check_for_email, except: :index
   
   def show
     @user = User.find(params[:id])
