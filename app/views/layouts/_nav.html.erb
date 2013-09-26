@@ -6,7 +6,7 @@
         <% if current_user %>
           <%= link_to "soonmine", current_user %>
         <% else %>
-          <a>Give Better Gifts. Get Better Gifts.</a>
+          <%= link_to "soonmine", root_path %>
         <% end %>
       </h1> 
   </div>
@@ -14,8 +14,10 @@
     <div class="large-8 small-6 columns">
 
       <nav class="so-inner-menu-wrap">
-        <div class="responsive-nav-btn right"><%= image_tag "menu-icon@2x.png",  height: '25', width: '25' %></div>
-        <ul class="right  so-inner-menu so-main-menu">
+        <div class="responsive-nav-btn right">
+          <%= image_tag "menu-icon@2x.png",  height: '25', width: '25' %>
+        </div>
+        <ul class="right so-inner-menu so-main-menu">
           <li class="dropdown so-menu-user">
           <% if current_user %>
                 <a>        
