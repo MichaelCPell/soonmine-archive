@@ -14,11 +14,16 @@
   text-align: center;
 }
 
-#sort-container{
-  color:#fff;
-  background-color: rgba(71,71,71,.9); 
+#sort-container {
+  color: #fff;
+  background-color: rgba(71,71,71,0.9);
   position: absolute;
-  top: 152px;
+  top: 155px; 
   left: -200px;
   padding: 20px;
+}
+
+.block-user-name{
+  font-family: "p22-underground";
+  font-weight: 500;
 }

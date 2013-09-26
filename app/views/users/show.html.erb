@@ -10,7 +10,7 @@
           <%= image_tag @user.image_url %>
         </div>
         <div class="block-user-info">
-          <p class="uppercase"><%= @user.fullname.present? ? @user.fullname : @user.email %></p>
+          <p class="uppercase block-user-name"><%= @user.fullname.present? ? @user.fullname : @user.email %></p>
           <p><%= "#{@user.town}, #{@user.state}" rescue "No Location Provided" %></p>
         </div>
       </div>
