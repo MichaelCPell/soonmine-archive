@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     create( firstname: info[:first_name], 
             lastname: info[:last_name],
             email: info[:email], 
-            image_url: info[:image])
+            image_url: info[:image][0..-12] + "height=300&width=300")
   end
 
   def avatar_url
