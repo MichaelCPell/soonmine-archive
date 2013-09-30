@@ -12,8 +12,9 @@ Classes that begin in block- are elements within blocks.
 .block-user-image{
   height: 220px;
   background:#fff;
+  line-height:220px;
   img{
-    height: 220px;
+    vertical-align: middle;
   }
 }
 
@@ -38,8 +39,10 @@ Classes that begin in block- are elements within blocks.
   text-align: center;
   background-color: #fff;
   height: 220px;
+  line-height:220px;
   img{
     max-height: 220px;
+    vertical-align: middle;
   }
 }
 
@@ -122,6 +125,7 @@ Classes that begin in block- are elements within blocks.
   box-shadow: none;
   font-size: 18px;
   margin-top: 10px;
+  vertical-align: top;
 }
 
 .product-delete-btn{
