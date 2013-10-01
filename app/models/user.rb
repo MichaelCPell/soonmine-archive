@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :slug_candidates, use: :slugged
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable
   devise :database_authenticatable, :registerable,
@@ -9,8 +11,16 @@ class User < ActiveRecord::Base
   has_many :lists
 
 
+
+
   after_create {lists.create(title: "Primary")}
 
+
+  def slug_candidates
+    [ [:firstname, :lastname],
+      [:firstname, :lastname, :id]
+    ]
+  end
 
   def self.create_with_omniauth(auth_hash)
     info = auth_hash[:info]

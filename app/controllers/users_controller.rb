@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :check_for_email, except: [:index, :show]
   
   def show
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
     @list = @user.primary_list_of_products(params[:sort])
   end
 
