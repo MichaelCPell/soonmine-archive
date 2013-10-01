@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
   end
 
   def location
-    town = town ? town+", " : ""
+    town = self.town ? self.town+", " : ""
     state = self.state ? self.state : ""
     location = town + state
   end
