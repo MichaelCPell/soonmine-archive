@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass'
 gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
-gem 'devise', '~> 3.0.0.rc'
+gem 'devise', '~> 3.0'
 gem 'factory_girl_rails'
 gem 'filepicker-rails'
 gem 'friendly_id', '5.0.0.rc2'

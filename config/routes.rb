@@ -1,5 +1,7 @@
 Soonmine::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks", registrations: "users/registrations"}
+  ActiveAdmin.routes(self)
 
   devise_scope :user do
     get "users/complete_email", to: "users/registrations#purgatory", :as => "user_complete_email"
