@@ -22,7 +22,7 @@
 
         <div class="row">
           <div class="large-4 columns">
-            <%= f.label :firstname, class: "inline" %>
+            <%= f.label :firstname, "First Name", class: "inline" %>
           </div>
           <div class="large-8 columns">
             <%= f.text_field :firstname %>
@@ -31,7 +31,7 @@
 
         <div class="row">
           <div class="large-4 columns">
-            <%= f.label :lastname, class: "inline" %>
+            <%= f.label :lastname, "Last Name", class: "inline" %>
           </div>
           <div class="large-8 columns">
             <%= f.text_field :lastname %>
@@ -45,43 +45,6 @@
           </div>
           <div class="large-8 columns">
             <%= f.text_field :email %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-4 columns">
-            <%= f.label :street, "Steet Address", class: "inline" %>
-          </div>
-          <div class="large-8 columns">
-            <%= f.text_field :zipcode %>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="large-4 columns">
-            <%= f.label :state, class: "inline" %>
-          </div>
-          <div class="large-8 columns">
-            <%= f.select(:state, states_array, {}, class: "small button dropdown") %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-4 columns">
-            <%= f.label :town, class: "inline" %>
-          </div>
-          <div class="large-8 columns">
-            <%= f.text_field :town %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-4 columns">
-            <%= f.label :zipcode, class: "inline" %>
-          </div>
-          <div class="large-8 columns">
-            <%= f.text_field :zipcode %>
           </div>
         </div>
 
