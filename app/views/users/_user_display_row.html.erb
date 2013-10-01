@@ -14,10 +14,12 @@
       collection: user.primary_list_of_products.limit(5), 
       as: :product, locals: {user: user} %>
       <div class="large-offset-<%= (5 - user.primary_list_of_products.length) if user.primary_list_of_products.length <= 5 %>">
+
       </div>
     </div>
   </div>
 
   <div class="large-2 columns">
+    <%= "And #{(user.primary_list_of_products.length - 5)} More" if user.primary_list_of_products.length >= 6 %> 
   </div>
 </div>
