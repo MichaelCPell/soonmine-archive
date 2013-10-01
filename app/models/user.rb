@@ -36,6 +36,12 @@ class User < ActiveRecord::Base
     firstname.blank? ? email : "#{firstname} #{lastname}"
   end
 
+  def location
+    town = town ? town+", " : ""
+    state = state ? state : ""
+    location = town + state
+  end
+
   def primary_list
     lists.find_by_title("Primary")
   end

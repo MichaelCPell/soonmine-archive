@@ -11,7 +11,7 @@
         </div>
         <div class="block-user-info">
           <p class="uppercase block-user-name"><%= @user.fullname.present? ? @user.fullname : @user.email %></p>
-          <p><%= "#{@user.town}, #{@user.state}" rescue "No Location Provided" %></p>
+          <p><%= @user.location %></p>
         </div>
       </div>
     </li>
