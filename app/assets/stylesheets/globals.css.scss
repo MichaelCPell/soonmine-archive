@@ -514,7 +514,6 @@ form.custom .custom.radio.checked {
 
 .responsive-sort-menu {
   padding:15px 10px;
-  width: 300px;
   text-transform: uppercase;
   margin:0 auto;
   display: none;
@@ -627,8 +626,41 @@ input.parsley-error, input:focus.parsley-error {
 /* === Respnsive styles === */
 
 
+@media only screen and (max-width: 1030px) { 
+  .tagline-text .large-4 {
+    width: 50%;
+  }
+}
+
+
+@media only screen and (max-width: 1010px) { 
+    
+    .products-grid-list {
+      width:80%;
+      margin:0px auto;
+    }
+
+    .products-grid-list li {
+        width:33%;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .products-grid-list li {
+        width:50%;
+    }
+
+    .user-profile-block, .product-block {
+      margin:0 auto;
+    }
+}
+
 @media only screen and (max-width: 760px) {
     
+    .tagline-text .large-4 {
+      width: inherit;
+    }
+
     h1.logo {
     float:none;
    }
@@ -641,7 +673,21 @@ input.parsley-error, input:focus.parsley-error {
     padding:0 20px;
   }
 
+  .products-grid-list {
+    margin-top:20px;
+  }
+
+  .scrollup {
+    right: 40px;
+  }
+
 } 
+
+@media only screen and (max-width: 607px) {
+    .products-grid-list li {
+      width: 100%;
+    }
+}
 
 @media only screen and (max-width: 480px) {
   .home-main-section {
@@ -652,12 +698,16 @@ input.parsley-error, input:focus.parsley-error {
     margin-top: 40px;
   }
 
+  .products-grid-list li {
+    padding:0 !important;
+  }
+
   #sort-container {
-    top: 201px;
-    left: 50% !important;
-    margin-left: -150px;
-    display: none;
-    width:300px;
+   display: none;
+   left: 50% !important;
+   margin-left: -220px;
+   top: 181px;
+   width: 91.6%;
   }
 
   .sort-show-wrap {
@@ -709,7 +759,24 @@ input.parsley-error, input:focus.parsley-error {
    }
 
    .scrollup {
-    right:40px;
+    right:20px;
    }
   
 }
+
+
+@media only screen and (max-width: 440px) { 
+    .user-signup-block {
+        padding:15px !important;
+      } 
+}
+
+@media only screen and (max-width: 320px) { 
+    #sort-container {
+        left: 50% !important;
+        margin-left: -140px;
+        top: 181px;
+        width: 87.5%;
+      } 
+}
+
