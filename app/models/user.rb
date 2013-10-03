@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   has_many :lists
   
   after_create {lists.create(title: "Primary")}
-  after_create {UserMailer.welcome_email(self).deliver}
+  after_save {UserMailer.welcome_email(self).deliver}
 
   validates_presence_of :firstname
   validates_presence_of :lastname
