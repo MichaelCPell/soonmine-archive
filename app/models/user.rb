@@ -23,10 +23,19 @@ class User < ActiveRecord::Base
   def self.create_with_omniauth(auth_hash)
     info = auth_hash[:info]
 
-    create( firstname: info[:first_name], 
+
+    case auth_hash[:provider]
+    when "facebook"
+      create( firstname: info[:first_name], 
             lastname: info[:last_name],
             email: info[:email], 
             image_url: info[:image][0..-12] + "height=300&width=300")
+    else
+     create( firstname: info[:first_name], 
+          lastname: info[:last_name],
+          email: info[:email], 
+          image_url: info[:image])
+    end
   end
 
   def avatar_url
