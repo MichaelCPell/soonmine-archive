@@ -14,20 +14,20 @@ ActiveAdmin.register_page "Dashboard" do
     #
     # columns do
     #   column do
-    #     panel "Recent Posts" do
+    #     panel "Users" do
     #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
+    #         User.all.map do |user|
+    #           li link_to(user.fullname, user)
     #         end
     #       end
     #     end
     #   end
 
-    #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
-    #     end
-    #   end
+      # column do
+      #   panel "Info" do
+      #     para "Welcome to ActiveAdmin."
+      #   end
+      # end
     # end
-  end # content
+   end # content
 end
