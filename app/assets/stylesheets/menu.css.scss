@@ -57,12 +57,17 @@
 
 .responsive-nav-btn {
     display:none;
-    margin-top:27px;
+    margin-top:7px;
     cursor:pointer;
 }
 
+.responsive-nav-btn:hover, .logo a:hover {
+  background-color:none !important;
+}
+
 .so-inner-menu-wrap .responsive-nav-btn {
-  margin-top:20px;
+     position: relative;
+     top: -5px;
 }
 
 .so-home-menu li > a, .so-inner-menu > li > a, .so-inner-menu .dropdown > ul a {
@@ -243,6 +248,7 @@
 
      .responsive-nav-btn {
         display: block;
+        padding:20px;
      }
 
      .so-inner-menu li, .so-inner-menu a {
@@ -313,3 +319,11 @@
       }
 
  } 
+
+ @media only screen and (max-width: 480px) {
+    
+    .responsive-nav-btn {
+      left:34px;
+    }
+
+ }

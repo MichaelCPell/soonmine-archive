@@ -25,7 +25,7 @@ $(document).ready(function(){
 
   $('.responsive-sort-menu').on('click', function() {
       $("#sort-container").slideToggle();
-  }); 
+  });
 
 
   $(".product-name").shorten({showChars: 24});
@@ -62,9 +62,11 @@ $(document).ready(function(){
 $('img[src="/assets/no_product_image.jpg"]').addClass('no-product-image');
 
 $('.responsive-nav-btn').on('click', function() {
-    $('.so-main-menu').toggleClass('so-menu-open');
-    $('body').toggleClass('responsive-menu-active')
+    $('.so-main-menu').toggleClass('so-menu-open')
+    $('body').toggleClass('responsive-menu-active');
 });
+
+
 
 });
 
