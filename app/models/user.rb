@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :lists
   
   after_create {lists.create(title: "Primary")}
+  after_create {UserMailer.welcome_email(self).deliver}
 
 
   def slug_candidates
