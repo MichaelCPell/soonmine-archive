@@ -8,7 +8,9 @@
   <div class="large-7 columns">
     <div class="row">
       <div class="row-user-image-container large-2 columns">
-        <%= image_tag user.image_url, class: "row-user-image" %>
+          <div class="search-result">
+          <%= image_tag user.image_url, class: "row-user-image" %>
+        </div>
       </div>
       <%= render partial: "row_product_display", 
       collection: user.primary_list_of_products.limit(5), 
@@ -20,6 +22,8 @@
   </div>
 
   <div class="large-2 columns">
-    <%= "And #{(user.primary_list_of_products.length - 5)} More" if user.primary_list_of_products.length >= 6 %> 
+    <span class="search-and-more">
+       <%= "And #{(user.primary_list_of_products.length - 5)} More" if user.primary_list_of_products.length >= 6 %> 
+    </span>
   </div>
 </div>

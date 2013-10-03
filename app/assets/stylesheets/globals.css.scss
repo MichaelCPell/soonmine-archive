@@ -65,39 +65,6 @@ ul, li, a:not(.button){
   margin-top: 156px;
 }
 
-// .home-nav .toggle-topbar span {
-//     font-size:13px;
-// }
-
-// .home-nav .top-bar-section ul li > a, .home-nav .top-bar-section ul li.has-dropdown > a {
-//   padding-left:0 !important;
-//   padding-right:0 !important;
-//   padding:0 21px !important;
-// }
-
-// .home-nav .top-bar-section ul li.has-dropdown > a {
-//   top:0;
-// }
-
-// .home-nav .top-bar-section ul li .dropdown {
-//     background:#474747 !important;
-// }
-
-// .home-nav .top-bar-section ul li.has-dropdown:hover > #search-dropdown {
-//   background: url(search-icon@2x.png) center center no-repeat #474747 !important;
-//   background-size:20px 20px !important;
-// }
-
-// .home-nav .inner-nav-search-form {
-//   width:280px !important;
-// }
-
-// .home-nav li.has-dropdown a#search-dropdown {
-//   padding-top:83px !important;
-//   padding-bottom: 0 !important;
-//   position:static;
-// }
-
 .tagline span {
   display: block;
   font-size: 36px;
@@ -251,7 +218,7 @@ li:hover.inner-page-logo {
 /* === Signup === */
 
 .center-text h2 {
-  font-size:30px;
+  font-size:27px;
   color: #d2a33f;
   font-weight: 500;
   margin-top:20px;
@@ -260,6 +227,47 @@ li:hover.inner-page-logo {
 .user-signup-block {
   background:#fff;
   padding:61px 50px 46px 50px !important;
+}
+
+.signup-standalone {
+  margin-bottom:20px;
+}
+
+.signup-standalone > p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 15px;
+}
+
+.signup-standalone > p > a {
+  color:#77a3d9 !important;
+}
+
+.user-signup-block.signup-standalone .button {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "p22-underground";
+  font-weight:400;
+  padding-top:17px;
+  padding-bottom: 13px;
+  text-align: left;
+  padding-left: 49px;
+}
+
+.user-signup-block.signup-standalone .facebook-signup-button:after {
+  top: 7px;
+  left: 14px;
+}
+
+.user-signup-block.signup-standalone .twitter-signup-button:after {
+  left: 9px;
+}
+
+.user-signup-block.signup-standalone .google-signup-button:after {
+  top:8px;
+}
+
+.user-signup-block.signup-standalone .email-signup-button:after {
+  top:16px;
 }
 
 /* we are using top and bottom instead of the shortheand so we don't interfere with the foundations styling */
@@ -585,6 +593,25 @@ input.parsley-error, input:focus.parsley-error {
   margin-right:-15px;
   margin-bottom: 0;
 }
+
+/* === Search Results === */ 
+
+.user-diplay-row {
+  margin-bottom:10px;
+}
+
+.search-result {
+  width: 61px;
+  height:60px;
+  padding:5px;
+  background:#fff;
+}
+
+.search-and-more {
+  display: inline-block;
+  margin-top: 22px;
+}
+
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
     /* Safari only override */
