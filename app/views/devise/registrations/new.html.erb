@@ -6,12 +6,12 @@
           <a href="/">soonmine. Start giving better gifts. Start Getting better gifts.</a>
         </h1>    
       </div>
-        <h2 class="title-standalone">Sign Up</h2>
+        <h2 class="title-standalone">Sign-Up</h2>
     </div>
   </div>
 
   <div class="row">
-    <div class="large-4 large-centered columns center-text user-signup-block">
+    <div class="large-5 large-centered columns center-text user-signup-block signup-standalone">
       
       <%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook), class: "button expand facebook-signup-button" %>
 
@@ -20,6 +20,8 @@
       <%= link_to "Sign up with Google", user_omniauth_authorize_path(:google_oauth2), class: "button expand google-signup-button" %>
 
       <%= link_to "Sign up with Email", new_from_email_path, class: "button expand email-signup-button" %>
+      
+      <p>Already signed up? <%= link_to "Log In", new_user_session_path %></p>
 
     </div>      
   </div>
