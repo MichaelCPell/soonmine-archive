@@ -57,6 +57,16 @@ input[type="radio"]{
 }
 
 
+#error_explanation{
+  h2{
+    font-size: 12px !important;
+  }
+  
+  ul li{
+    color: black !important;
+  }
+}
+
 // .top-bar-section .dropdown li a {
 //   background-color: rgba(71,71,71,.9); 
 //   &:hover:not(.button) {background-color:rgba(71,71,71,1)}

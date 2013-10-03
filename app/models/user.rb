@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
   after_create {lists.create(title: "Primary")}
   after_create {UserMailer.welcome_email(self).deliver}
 
+  validates_presence_of :firstname
+  validates_presence_of :lastname
+
 
   def slug_candidates
     [ [:firstname, :lastname],
