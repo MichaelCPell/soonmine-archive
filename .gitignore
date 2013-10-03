@@ -28,3 +28,5 @@ app/assets/images/.DS_Store
 app/assets/stylesheets/.DS_Store
 
 db/schema.rb
+
+db/schema.rb
