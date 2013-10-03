@@ -1,6 +1,9 @@
-ActiveAdmin.register List do
+ActiveAdmin.register Product do
   index do
-    column :email
+    column :name
+    column :price
+    column :intensity
+    column :list_id
     default_actions
   end
 
