@@ -1,11 +1,17 @@
 <div class="sign-up-wrap">
-<div class="row">
-  <div class="row center-text">
-    <h2>Log in</h2>
+  <div class="row">
+    <div class="large-4 large-centered columns center-text">
+      <div class="logo-standalone">
+        <h1 class="logo">
+          <a href="/">soonmine. Start giving better gifts. Start Getting better gifts.</a>
+        </h1>    
+      </div>
+        <h2 class="title-standalone">Sign-Up</h2>
+    </div>
   </div>
 
   <div class="row">
-    <div class="large-5 large-centered columns center-text user-signup-block">
+    <div class="large-5 large-centered columns center-text user-signup-block signup-standalone">
 
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
@@ -26,7 +32,7 @@
       </div>
 
 
-      <%= f.submit "LOG IN", class: "button  expand" %>
+      <%= f.submit "LOG IN", class: "button standalone-signup-btn  expand" %>
     <% end %>
   </div>
 </div>
