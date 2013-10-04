@@ -23,9 +23,18 @@ $(document).ready(function(){
 
 (function () {
 
-  $('.responsive-sort-menu').on('click', function() {
+  $('.responsive-sort-menu').on('click', function(e) {
+      e.stopPropagation();
       $("#sort-container").slideToggle();
   });
+
+ 
+     $("#sort-container").on('clickoutside', function() {
+            $(this).hide();
+        });
+ 
+
+
 
 
   $(".product-name").shorten({showChars: 24});
@@ -61,12 +70,114 @@ $(document).ready(function(){
 
 $('img[src="/assets/no_product_image.jpg"]').addClass('no-product-image');
 
-$('.responsive-nav-btn').on('click', function() {
-    $('.so-main-menu').toggleClass('so-menu-open')
-    $('body').toggleClass('responsive-menu-active');
-});
+  (function () {
+
+      var responsiveMenu = {
+
+          init: function () {
+
+              var self = this;
+              self.toggleMenu();
+              self.clickAnywhereToClose();
+
+          },
+
+          toggleMenu: function () {
+
+              var mainMenu = $('.so-main-menu');
+              var siteBody = $('body');
+              var self = this;
+
+              $('.responsive-nav-btn').on('click', function () {
 
 
+
+                  if (mainMenu.hasClass("isOpen")) {
+                      mainMenu.animate({
+                          right: '-262px',
+                      }, {
+                          duration: 300,
+                          complete: function () {
+
+                              siteBody.removeClass('responsive-menu-active');
+                              mainMenu.removeClass('isOpen');
+
+                          }
+
+                      });
+
+
+                  } else {
+
+                      mainMenu.animate({
+                          right: '0px',
+                          display: 'block'
+                      }, {
+                          duration: 300,
+                          complete: function () {
+
+                              mainMenu.addClass('isOpen');
+
+                          }
+
+                      });
+
+                      siteBody.addClass('responsive-menu-active');
+
+                  }
+
+
+              });
+
+
+          },
+
+          clickAnywhereToClose: function () {
+
+
+
+            $(document).on('click', 'html', function() {
+
+              var mainMenu = $('.so-main-menu');
+              var siteBody = $('body');
+              var positionRight = $('.so-main-menu').css('right');
+
+              mainMenu.on('click', function(e) {
+                  e.stopPropagation();
+              });
+
+                 if ( positionRight === '0px' ) {
+
+                    mainMenu.animate({
+                        right: '-262px',
+                    }, {
+                        duration: 300,
+                        complete: function () {
+
+                            siteBody.removeClass('responsive-menu-active');
+                            mainMenu.removeClass('isOpen');
+
+                        }
+
+                    });
+
+                 } else {
+                    return
+                 }
+                    
+                    
+                   
+              });
+
+          
+
+          } 
+
+      }
+
+      responsiveMenu.init();
+
+  })();
 
 });
 
