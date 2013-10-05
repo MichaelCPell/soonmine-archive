@@ -599,19 +599,28 @@ input.parsley-error, input:focus.parsley-error {
 .button.save-settings-btn {
   margin-right:-15px;
   margin-bottom: 0;
+  font-family: "p22-underground";
+  font-weight: 200;
+  font-size: 19px;
+  padding-bottom: 15px !important;
 }
 
 /* === Search Results === */ 
 
-.user-diplay-row {
+.large-10.columns .user-diplay-row {
   margin-bottom:10px;
 }
 
 .search-result {
   width: 61px;
   height:60px;
-  padding:5px;
   background:#fff;
+  line-height: 56px;
+  text-align: center;
+}
+
+.search-result img {
+  vertical-align: middle;
 }
 
 .search-and-more {
@@ -653,6 +662,15 @@ input.parsley-error, input:focus.parsley-error {
     }
 }
 
+@media only screen and (max-width: 1010px) { 
+
+
+.large-block-grid-4 > li:nth-of-type(4n+1) {
+  clear:none !important;
+}
+
+}
+
 @media only screen and (max-width: 875px) {
     .products-grid-list li {
         width:50%;
@@ -660,6 +678,15 @@ input.parsley-error, input:focus.parsley-error {
 
     .user-profile-block, .product-block {
       margin:0 auto;
+    }
+
+    .search-and-more {
+      display: none;
+    }
+
+
+    .search-results-wrap .large-2 {
+      float:right;
     }
 }
 
@@ -694,6 +721,7 @@ input.parsley-error, input:focus.parsley-error {
 @media only screen and (max-width: 607px) {
     .products-grid-list li {
       width: 100%;
+      margin-bottom: 10px;
     }
 }
 
@@ -769,6 +797,7 @@ input.parsley-error, input:focus.parsley-error {
    .scrollup {
     right:20px;
    }
+
   
 }
 

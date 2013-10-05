@@ -15,6 +15,7 @@ Classes that begin in block- are elements within blocks.
   line-height:220px;
   img{
     vertical-align: middle;
+    max-height:220px;
   }
 }
 
@@ -128,13 +129,18 @@ Classes that begin in block- are elements within blocks.
   vertical-align: top;
 }
 
-.product-delete-btn{
+#delete-product  {
+  font-family: "p22-underground";
+  font-weight: 700;
+  font-size: 20px;
+  background:#889faf !important;
   position: relative;
-  top: -105px;
-  right: -160px;
+  bottom: 185px;
+  padding: 5px 6px 2px 6px;
+  left: 97px;
 }
 
-.scrollup{
+.scrollup {
     width:63px;
     height:63px;
     position:fixed;
@@ -153,7 +159,7 @@ Classes that begin in block- are elements within blocks.
 /* === Add products === */
 
 .add-products-wrap .intro-instructions p {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 24px;
   font-weight:100;
   text-align: center;
@@ -220,57 +226,6 @@ a#row-user-name {
     margin-top:31px;
 }
 
-.section-container.auto section .title, .section-container.auto .section .title {
-  border:none;
-}
-
-.section-container.auto section .title a {
-  color:#889faf !important;
-  text-transform: uppercase;
-  font-family: "p22-underground";
-  font-size:20px;
-  padding:25px 0 18px;
-  width:235px !important;
-  text-align:center !important;
-}
-
-.section-container.auto section:last-child .title, .section-container.auto .section:last-child .title {
-  border:none;
-}
-
-.section-container.auto section .content, .section-container.auto .section .content {
-  border: none;
-}
-
-.section-container section .content, .section-container .section .content, .section-container.auto section .content, .section-container.auto .section .content {
-  padding:76px 65px 91px 68px;
-}
-
-section .content.content-no-padding {
-  padding:37px 16px !important;
-}
-
-.section-container.auto section .title {
-  background: #d1d1d1;
-}
-
-.share-tabs-wrap .button.large {
-  padding:22px 29px  18px 29px !important;
-  text-align:center;
-  font-weight:300;
-  margin-bottom:20px !important;
-}
-
-.share-social-block {
-  margin-bottom:40px;
-}
-
-.share-social-block .button, .section-container button.button {
-  text-transform: uppercase;
-  font-family: "p22-underground";
-  font-size: 22px;
-}
-
 .intro-instructions.single-line p {
   margin-bottom:40px;
 
@@ -310,6 +265,169 @@ section .content.content-no-padding {
   margin-bottom: 0;
 }
 
+.tabs-wrap {
+  margin-top: 40px;
+}
+
+ul.resp-tabs-list, p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#share-tabs li {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    color: #889faf !important;
+    text-transform: uppercase;
+    font-family: "p22-underground";
+    font-size: 18px;
+    text-align: center;
+    background:#d1d1d1 !important;
+    padding:22px 46px;
+}
+
+#share-tabs li:first-child {
+  margin-right:5px;
+}
+
+
+#share-tabs-content .button.large {
+  padding:22px 29px  18px 29px !important;
+  text-align:center;
+  font-weight:300;
+  margin-bottom:20px !important;
+}
+
+.share-social-block {
+  margin-bottom:40px;
+}
+
+.share-social-block .button, #share-tabs-content button.button, #share-tabs-content input.button {
+  text-transform: uppercase;
+  font-family: "p22-underground";
+  font-size: 22px;
+}
+
+.resp-tabs-container {
+    padding: 0px;
+    background-color: #fff;
+    clear: left;
+}
+
+h2.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.resp-tab-content {
+    display: none;
+    padding:76px 65px 91px 68px;
+
+}
+
+.resp-tab-content.no-padding {
+  padding:37px 16px !important;
+}
+
+#share-tabs .resp-tab-active {
+    border-bottom: none;
+    margin-bottom: -1px !important;
+    background:#fff !important;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.resp-content-active, .resp-accordion-active {
+    display: block;
+}
+
+h2.resp-accordion {
+    font-size: 13px;
+    margin: 0px;
+}
+
+h2.resp-tab-active {
+    margin-bottom: 0px !important;
+}
+
+
+/*-----------Accordion styles-----------*/
+
+h2.resp-accordion {
+  background: #d1d1d1;
+  color:#889faf !important;
+  font-size:20px !important;
+  padding: 20px 0 !important;
+}
+
+h2.resp-tab-active {
+    background: #fff !important;
+}
+
+.resp-easy-accordion  h2.resp-accordion {
+        display: block;
+}
+.resp-jfit {
+    width: 100%;
+    margin: 0px;
+}
+
+.resp-tab-content-active {
+    display: block;
+}
+
+
+
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 768px) {
+    ul.resp-tabs-list {
+        display: none;
+    }
+
+    h2.resp-accordion {
+        display: block;
+    }
+
+    .resp-vtabs .resp-tabs-container {
+        border: none;
+        float: none;
+        width: 100%;
+        min-height: initial;
+        clear: none;
+    }
+    .resp-accordion-closed {
+        display:none !important;
+    }
+
+    .resp-tab-content {
+      padding:30px 15px;
+    }
+
+    .search-product-single-result {
+      display: none;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+ #share-tabs-content {
+    text-align: center;
+  }
+
+  .search-results-wrap .large-2 {
+    float:left !important;
+  }
+
+}
+
 @media only screen and (max-width: 480px) {
   .user-profile-block, .product-block {
     margin:0 auto !important;
@@ -337,11 +455,8 @@ section .content.content-no-padding {
     font-size:16px !important;
   }
 
-  .section-container section .content, .section-container .section .content, .section-container.auto section .content, .section-container.auto .section .content {
-    padding:15px !important;
-  }
 
-  .share-tabs-wrap .button.large {
+  #share-tabs-content .button.large {
     display: block;
     margin:0 auto;
     padding: 0;
@@ -349,4 +464,48 @@ section .content.content-no-padding {
     padding:22px 14px 18px !important;
   }
 
+  .user-signup-block.signup-standalone .button {
+    font-size: 14px !important;
+  }
+
+  .user-signup-block.signup-standalone .email-signup-button:after {
+    top:13px !important;;
+  }
+
+  .user-signup-block.signup-standalone .google-signup-button:after {
+    top:6px !important;;
+  }
+
+  .twitter-signup-button:after {
+    top:9px !important;;
+  }
+
+  .user-signup-block.signup-standalone .facebook-signup-button:after {
+    top:5px !important;;
+  }
+
+  .search-results-wrap .large-2 {
+
+  }
+
+  #share-tabs-content .button.large {
+    padding:22px 6px 18px !important;
+  }
+
 }
+
+@media only screen and (max-width: 325px) {
+  .user-diplay-row .large-3.small-6 {
+    width: 100% !important;
+  }
+
+  .search-result {
+    margin-top: 31px;
+  }
+
+  .row.search-results-wrap {
+    padding:0;
+  }
+}
+
+

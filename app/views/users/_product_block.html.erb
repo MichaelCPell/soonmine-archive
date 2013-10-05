@@ -2,8 +2,8 @@
   <div class="product-block">
     <div class="product-block-image">
         <div class="product-block-image-overlay">
-          <%= link_to("X", product, method: :delete, confirm: "This will delete the product. forever.", class: "product-delete-btn") if @user == current_user %>
-          <%= link_to "BUY", product.offsite_url, class: "button medium product-buy-btn", target: "_blank" %>
+         <%= link_to("X", product, method: :delete, confirm: "This will delete the product. Forever.", class: "product-delete-btn", id: "delete-product") if @user == current_user %>
+         <%= link_to "BUY", product.offsite_url, class: "button medium product-buy-btn", target: "_blank" %>
         </div>
         <%= image_tag product.image_url %>
     </div>  
