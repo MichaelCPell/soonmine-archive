@@ -13,6 +13,9 @@ class StaticPagesController < ApplicationController
 
   def team
   end
+
+  def confirmation
+  end
   
   def welcome
     render layout: "welcome_layout" 

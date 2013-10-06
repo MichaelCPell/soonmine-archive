@@ -67,7 +67,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) do |u|
-      u.permit(:first_name, :last_name, :username, :email, :password, 
+      u.permit(:firstname, :lastname, :username, :email, :password, 
       	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy)
     end
     devise_parameter_sanitizer.for(:account_update) do |u|
@@ -77,6 +77,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def after_sign_up_path_for(resource)
+    confirmation_path
+  end
 
 	private
 

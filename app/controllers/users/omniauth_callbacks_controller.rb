@@ -37,14 +37,34 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
             @authentication.save
             flash[:notice] = "We've successfully created your new account!"
           end
-          sign_in_and_redirect(User.find(@authentication.user_id))  
+
+          user = User.find(@authentication.user_id)
+
+          if user.sign_in_count == 0
+            sign_in user
+            redirect_to after_sign_up_path_for user
+          else
+            sign_in_and_redirect(user)  
+          end
         end
       else
         flash[:notice] = "Login Successful"
-        sign_in_and_redirect(User.find(@authentication.user_id))  
+        user = User.find(@authentication.user_id)
+
+        if user.sign_in_count == 0
+          sign_in user
+          redirect_to after_sign_up_path_for user
+        else
+          sign_in_and_redirect(user)  
+        end
       end
   end
 
+  protected
+
+  def after_sign_up_path_for(resource)
+    confirmation_path
+  end
 
 
 
