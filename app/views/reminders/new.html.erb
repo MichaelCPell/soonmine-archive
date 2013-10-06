@@ -23,69 +23,71 @@
 </div>
 <div class="row">
   <div class="large-centered large-6 columns">
-    <div class="section-container auto share-tabs-wrap" data-section>
-      <section>
-        <p class="title" data-section-title><a href="#panel1">Add Contacts</a></p>
-        <div class="content" data-section-content>
-          <button data-reveal-id="add-by-hand" class="button large">Add Contacts by hand</button>
-          <% if current_user.authentications.where(provider: "google_oauth2").first %>
-            <%= button_to "Add Google Contacts", add_google_contacts_path, class: "button large", method: :get, remote: true  %>
-          <% else %>
-            Authorize with Google to access your Google contacts
-          <% end %> 
+
+    <div class="tabs-wrap">
+        <div id="horizontalTab">
+            <ul class="resp-tabs-list" id="share-tabs">
+                <li>Add Contacts</li>
+                <li>Add Reminders</li>
+            </ul>
+            <div  id="share-tabs-content" class="resp-tabs-container">
+                <div>
+                   <button data-reveal-id="add-by-hand" class="button large">Add Contacts by hand</button>
+                   <% if current_user.authentications.where(provider: "google_oauth2").first %>
+                     <%= button_to "Add Google Contacts", add_google_contacts_path, class: "button large", method: :get, remote: true  %>
+                   <% else %>
+                     Authorize with Google to access your Google contacts
+                   <% end %> 
+                </div>
+                <div class="no-padding">
+                    <%= form_for @reminder, html: {class: "custom add-reminders-form"} do |f| %> 
+
+                      <div class="row">
+                        <div class="small-4 columns">
+                          <%= f.label :email,"E-mail", for: "right-label", class: "left inline" %>
+                        </div>
+                        <div class="small-8 columns">
+                          <%= f.collection_select :recipient_email, 
+                                                  current_user.contacts, 
+                                                  :email, :firstname,{},
+                                                  {:class => "small button dropdown"} %>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="small-4 columns">
+                          <%= f.label :name, "Occasion", for: "right-label", class: "left inline" %>
+                        </div>
+                        <div class="small-8 columns">
+                          <%= f.text_field :name, id: "right-label", placeholder: "What's the occasion?" %>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="small-4 columns">
+                          <%= f.label :date, "Occasion date", for: "right-label", class: "left inline" %>
+                        </div>
+                        <div class="small-8 columns">
+                          <%= f.date_select :date,{ 
+                            discard_year: true, 
+                            allow_blank: true},
+                            {:class => "small button dropdown"} %>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="small-12 columns">
+                          <button class="add-reminder-btn button">Add reminder</button>
+                        </div>
+                        
+                      </div>
+                      
+                    <% end %>
+                </div>
+            </div>
         </div>
-      </section>
-      <section>
-        <p class="title" data-section-title>
-          <a href="#panel2">Add Reminders</a>
-        </p>
-        <div class="content content-no-padding" data-section-content>
-          <%= form_for @reminder, html: {class: "custom add-reminders-form"} do |f| %> 
-
-            <div class="row">
-              <div class="small-4 columns">
-                <%= f.label :email,"E-mail", for: "right-label", class: "left inline" %>
-              </div>
-              <div class="small-8 columns">
-                <%= f.collection_select :recipient_email, 
-                                        current_user.contacts, 
-                                        :email, :firstname,{},
-                                        {:class => "small button dropdown"} %>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-4 columns">
-                <%= f.label :name, "Occasion", for: "right-label", class: "left inline" %>
-              </div>
-              <div class="small-8 columns">
-                <%= f.text_field :name, id: "right-label", placeholder: "What's the occasion?" %>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-4 columns">
-                <%= f.label :date, "Occasion date", for: "right-label", class: "left inline" %>
-              </div>
-              <div class="small-8 columns">
-                <%= f.date_select :date,{ 
-                  discard_year: true, 
-                  allow_blank: true},
-                  {:class => "small button dropdown"} %>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-12 columns">
-                <button class="add-reminder-btn button">Add reminder</button>
-              </div>
-              
-            </div>
-            
-          <% end %>
-        </div>
-      </section>
     </div>
+
   </div>
 </div>
 

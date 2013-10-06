@@ -139,7 +139,7 @@
  }
 
  .so-inner-menu ul.dropdown-so-search {
-  top:83px;
+  top:84px;
  }
 
  .so-inner-menu .so-menu-search > a {
@@ -204,6 +204,10 @@
 
       .logo a {
         margin-top:15px;
+      }
+
+      .so-inner-menu .dropdown ul.dropdown-large {
+        width: 100%;
       }
      
      .so-main-menu {
@@ -329,6 +333,16 @@
     
     .responsive-nav-btn {
       left:34px;
+    }
+
+    .so-inner-menu .dropdown > ul a {
+        font-size:14px !important;
+    }
+
+    .avatar-img {
+      display: block;
+      top: 0;
+      margin:0 auto 10px;
     }
 
  }

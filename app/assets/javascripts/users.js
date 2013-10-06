@@ -179,6 +179,14 @@ $('img[src="/assets/no_product_image.jpg"]').addClass('no-product-image');
 
   })();
 
+
+  $('#horizontalTab').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion           
+      width: 'auto', //auto or any width like 600px
+      fit: true,   // 100% fit in a container
+      closed: 'accordion'
+  });
+
 });
 
 
