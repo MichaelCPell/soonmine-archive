@@ -9,6 +9,8 @@ ActiveAdmin.register User do
   end
   index do
     column :email
+    column :firstname
+    column :lastname
     column :current_sign_in_at
     column :last_sign_in_at
     column :sign_in_count
