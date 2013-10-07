@@ -3,7 +3,7 @@ ActiveAdmin.register Product do
     column :name
     column :price
     column :intensity
-    column :list_id
+    column :offsite_url
     default_actions
   end
 
@@ -11,16 +11,18 @@ ActiveAdmin.register Product do
 
   form do |f|
     f.inputs "Admin Details" do
-      f.input :email
-      f.input :password
-      f.input :password_confirmation
+      f.input :name
+      f.input :price
+      f.input :list_id
+      f.input :intensity
+      f.input :offsite_url
     end
     f.actions
   end
 
   controller do
     def permitted_params
-      params.permit admin_user: [:email, :password, :password_confirmation]
+      params.permit product: [:name, :price, :intensity, :offsite_url, :list_id]
     end
   end
 end 
