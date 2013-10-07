@@ -70,7 +70,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       u.permit(:firstname, :lastname, :username, :email, :password, 
       	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy)
     end
-    devise_parameter_sanitizer.for(:account_update) do |u|
+     devise_parameter_sanitizer.for(:account_update) do |u|
       u.permit(:first_name, :last_name, :username, :email, :password, 
       	:password_confirmation, :state, :town, :"birthday(1i)", :"birthday(2i)", :"birthday(3i)", :privacy, :current_password,
         :image_url, :street_address, :zipcode, :primary_list)
