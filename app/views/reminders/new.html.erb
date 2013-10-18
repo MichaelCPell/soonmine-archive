@@ -39,6 +39,7 @@
                    <% end %> 
                 </div>
                 <div class="no-padding">
+                  <% if current_user.contacts.any? %>
                     <%= form_for @reminder, html: {class: "custom add-reminders-form"} do |f| %> 
 
                       <div class="row">
@@ -46,10 +47,12 @@
                           <%= f.label :email,"Contact", for: "right-label", class: "left inline" %>
                         </div>
                         <div class="small-8 columns">
-                          <%= f.collection_select :recipient_email, 
+                          
+                            <%= f.collection_select :recipient_email, 
                                                   current_user.contacts, 
                                                   :email, :firstname,{},
                                                   {:class => "small button dropdown"} %>
+                                           
                         </div>
                       </div>
 
@@ -78,10 +81,11 @@
                         <div class="small-12 columns">
                           <button class="add-reminder-btn button">Add reminder</button>
                         </div>
-                        
-                      </div>
-                      
+                      </div>                      
                     <% end %>
+                  <% else %>
+                    Please add contacts before adding reminders.
+                  <% end %>    
                 </div>
             </div>
         </div>
