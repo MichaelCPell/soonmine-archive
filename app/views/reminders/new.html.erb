@@ -36,7 +36,6 @@
                    <% if current_user.authentications.where(provider: "google_oauth2").first %>
                      <%= button_to "Add Google Contacts", add_google_contacts_path, class: "button large", method: :get, remote: true  %>
                    <% else %>
-                     Authorize with Google to access your Google contacts
                    <% end %> 
                 </div>
                 <div class="no-padding">
