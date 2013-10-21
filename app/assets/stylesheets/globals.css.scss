@@ -609,6 +609,8 @@ input.parsley-error, input:focus.parsley-error {
 
 .large-10.columns .user-diplay-row {
   margin-bottom:10px;
+  border-top: 1px solid #d5d5d5;
+  padding-top: 10px;
 }
 
 .search-result {
@@ -621,6 +623,10 @@ input.parsley-error, input:focus.parsley-error {
 
 .search-result img {
   vertical-align: middle;
+}
+
+.search-result img:hover {
+  opacity: 0.8;
 }
 
 .search-and-more {
