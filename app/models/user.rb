@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   end
 
   def fullname
-    firstname.blank? ? email : "#{firstname} #{lastname}"
+    firstname.blank? ? "" : "#{firstname} #{lastname}"
   end
 
   def location

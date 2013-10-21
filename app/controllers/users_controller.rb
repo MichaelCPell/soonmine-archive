@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       search = params[:search].gsub(/\s/,'')
       @users = User.where("CONCAT(firstname, lastname) ILIKE ?","%#{search}%")
     else
-      @users = User.all
+      @users = []
     end
   end
 
