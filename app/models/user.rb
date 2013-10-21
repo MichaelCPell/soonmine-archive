@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :firstname, :lastname, :email
 
+  
+
 
   def slug_candidates
     [ [:firstname, :lastname],
