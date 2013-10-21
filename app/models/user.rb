@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :omniauthable
+         :recoverable, :rememberable, :trackable, :omniauthable, :validatable
 
   has_many :authentications, dependent: :destroy
   has_many :contacts
@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
 
   def self.create_with_omniauth(auth_hash)
     info = auth_hash[:info]
+    password = User.generate_token('encrypted_password')
 
 
     case auth_hash[:provider]
@@ -31,12 +32,16 @@ class User < ActiveRecord::Base
       create( firstname: info[:first_name], 
             lastname: info[:last_name],
             email: info[:email], 
-            image_url: info[:image][0..-12] + "height=300&width=300")
+            image_url: info[:image][0..-12] + "height=300&width=300",
+            password: password,
+            password_confirmation: password)
     else
      create( firstname: info[:first_name], 
           lastname: info[:last_name],
           email: info[:email], 
-          image_url: info[:image])
+          image_url: info[:image],
+          password: password,
+          password_confirmation: password)
     end
   end
 
