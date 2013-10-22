@@ -56,7 +56,12 @@ class User < ActiveRecord::Base
   end
 
   def location
-    town = self.town != "" ? self.town+", " : ""
+
+    if (self.town == "") || (self.town == nil)
+      town = ""
+    else
+      town = self.town+", "
+    end
     state = self.state ? self.state : ""
     location = town + state
   end
