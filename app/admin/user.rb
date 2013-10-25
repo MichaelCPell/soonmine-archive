@@ -7,7 +7,8 @@ ActiveAdmin.register User do
       end
     end
   end
-  index do
+
+  index :download_links => [:pdf, :csv] do
     column :email
     column :firstname
     column :lastname
@@ -17,7 +18,8 @@ ActiveAdmin.register User do
     default_actions
   end
 
-  filter :email
+  filter :email, :input_html => { :class => "Hello World" }
+  filter :lists, as: :select
 
   form do |f|
     f.inputs "Admin Details" do
