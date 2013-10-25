@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def index
     if params[:search]
       search = params[:search].gsub(/\s/,'')
-      @users = User.where("CONCAT(firstname, lastname) ILIKE ?","%#{search}%")
+      @users = User.where("CONCAT(firstname, lastname) ILIKE ?","%#{search}%").joins(:lists).where(lists: {privacy: "public"})
     else
       @users = []
     end
