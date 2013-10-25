@@ -1,13 +1,6 @@
 GIT
-  remote: git://github.com/milgner/compass-rails.git
-  revision: c86e7fd9c2605c80816a2f64a3fb8b7c3a09e494
-  branch: rails4
-  specs:
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
-
-PATH
-  remote: ./vendor/gems/active_admin
+  remote: git://github.com/gregbell/active_admin.git
+  revision: 0f663e3ad728e1791be138d42e35f9f52c93d93b
   specs:
     activeadmin (0.6.1)
       arbre (~> 1.0)
@@ -22,6 +15,14 @@ PATH
       rails (>= 3.2, < 4.1)
       ransack (~> 1.0)
       sass-rails
+
+GIT
+  remote: git://github.com/milgner/compass-rails.git
+  revision: c86e7fd9c2605c80816a2f64a3fb8b7c3a09e494
+  branch: rails4
+  specs:
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
 
 GEM
   remote: https://rubygems.org/
@@ -175,8 +176,6 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
-    pry-nav (0.2.3)
-      pry (~> 0.9.10)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -283,7 +282,6 @@ DEPENDENCIES
   omniauth-twitter
   pg
   pry
-  pry-nav
   rails (= 4.0.0)
   rails_12factor
   rspec-rails (~> 2.0)
