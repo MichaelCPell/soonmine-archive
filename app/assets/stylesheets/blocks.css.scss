@@ -122,7 +122,6 @@ Classes that begin in block- are elements within blocks.
 .button.medium.product-buy-btn {
   padding: 11px 45px 9px 45px;
   border:1px solid #d2a33f;
-  left: -10px;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 18px;
@@ -134,11 +133,14 @@ Classes that begin in block- are elements within blocks.
   font-family: "p22-underground";
   font-weight: 700;
   font-size: 20px;
-  background:#889faf !important;
-  position: relative;
-  bottom: 185px;
+  line-height: 20px;
+  background: #889faf !important;
+  position: absolute;
+  top: 0px;
   padding: 5px 6px 2px 6px;
-  left: 162px;
+  right: 0px;
+  height: 25px;
+  width: 28px;
 }
 
 .scrollup {
