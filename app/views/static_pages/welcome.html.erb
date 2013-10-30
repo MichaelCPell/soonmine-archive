@@ -51,7 +51,7 @@
 
       <div class="small-white">
         <div class="normal video-tagline">
-          <%= link_to how_it_works_path do %>
+          <%= link_to "#", :"data-reveal-id" => "video" do %>
             <span class="video-icon"></span>find out more
           <% end %>
         </div>
@@ -65,13 +65,20 @@
 
     </div>
   </div>
+
+
+  <div id="video" class="reveal-modal large">
+    <iframe src="//player.vimeo.com/video/78111929" width="710" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/78111929">Welcome to soonmine!</a> from <a href="http://vimeo.com/soonmine">soonmine</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  </div>
 </div><!-- end home main section -->
 </div>
 
 
 
 
-
+$("iframe").each(function() {
+  this.contentWindow.postMessage('{ "method": "pause" }', "http://player.vimeo.com");
+});
 
 
 
